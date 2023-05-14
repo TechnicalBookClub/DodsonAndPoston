@@ -1,0 +1,148 @@
+%% draft -- replace Dxf with $D_xf$
+% Ddxf -> $D_x^{prime}f$
+
+\documentclass[11pt]{article}
+% default ORG mode 
+\usepackage[utf8]{inputenc}  \usepackage[T1]{fontenc} \usepackage{fixltx2e}
+\usepackage{graphicx}        \usepackage{longtable}   \usepackage{float}
+\usepackage{wrapfig}         \usepackage{soul}        \usepackage{textcomp}
+\usepackage{marvosym}        \usepackage{wasysym}     \usepackage{latexsym}
+\usepackage{amsmath}         \usepackage{amssymb}     \usepackage{color}
+\usepackage{rotating}        \usepackage{hyperref}    \usepackage{xcolor} 
+\usepackage{palatino}
+% my customizations
+\usepackage{enumitem}
+\usepackage{amsthm}
+\tolerance=1000
+%\providecommand{\alert}[1]{\textbf{#1}}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\title{Dodson \& Poston Exercise VII.1.3}
+\author{Peter Mao, $\ldots$}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\pagestyle{empty}
+
+\begin{abstract}
+  In-progress solution.  Feel free to add/comment/disparage.
+
+  This problem aims to fill in some gaps in the book regarding the derivative map $D_xf$.
+\end{abstract}
+
+Show that if a map $f\colon X \to X^\prime$ between affine spaces has a derivative $D_xf$ at $x \in
+X$:
+
+\begin{itemize}
+\item[\textbf{(a)}] $D_xf$ is \textbf{unique}
+\item[\emph{Solution}] Consider a (possibly different) linear map $\mathcal{D}_xf$ which satisfies
+  the same definition as $D_xf$, so that for any neighborhood $N$ of the zero map in $L(T_xX;
+  T_{f(x)}X^\prime)$, there is a neighborhood $N^\prime(0) \subset T_xX$ such that if $t \in
+  N^\prime(0)$, then for some $B \in N$,
+  \begin{equation}
+    d^\prime(f(x),f(x+t)) = d^\prime_{f(x)}(\mathcal{D}_xf(t) + B(t)).
+    \label{Eqn1}
+  \end{equation}
+  Combining this definition with the definition for $D_xf$, we arrive at the relation
+  \begin{equation}
+    \mathcal{D}_xf(t) + B(t) = D_xf(t) + A(t)
+  \end{equation}
+  for some $A,B \in N(0)$ if $t \in N^\prime(0)$.  $A$ and $B$ are arbitrarily close to 0,
+  $\mathcal{D}_xf(t) =D_xf(t)$; therefore, $D_xf$ is the unique linear map with the stated
+  properties.
+
+\item[\textbf{(b)}] $D_xf(t) = \lim_{h \to 0} d^{\prime\leftarrow}_{f(x)}(\frac{d'(f(x),f(x+ht))}{h})$
+\item[\emph{Solution}] First we need a small lemma:  Given affine space
+  $X$, $x,y \in X$ and scalar $a \in \mathbb{R}$,
+  \begin{equation}
+    [\mathbf{d_x^\leftarrow}(\mathbf{d}(x,y))]a = \mathbf{d_x^\leftarrow}[(\mathbf{d}(x,y))a]
+    \label{Eqn:lem}
+  \end{equation}
+  \begin{proof}
+    Geometrically, this identity says we get the same resulting bound vector
+    whether we multiply a bound vector by a scalar (LHS of Eq.~\ref{Eqn:lem}) or
+    if we multiply the associated free vector by the same scalar and then bind
+    the resulting free vector to $x$ (RHS of Eq.~\ref{Eqn:lem}).  From Section
+    II.1.01 (Definition: \emph{affine space}), Equation Aii, the restricted
+    difference map is bijective:
+    \begin{equation}
+      \mathbf{d_x}(x,y) = \mathbf{d}(x,y)
+      \label{Eqn:d_x}
+    \end{equation}
+    From Section II.1.02 (Tangent spaces, p. 44), we have:
+    \begin{align*}
+      (x,y)a &= \mathbf{d_x^{\leftarrow}}[(\mathbf{d}(x,y))a] & \text{given} &\\
+      [\mathbf{d_x^\leftarrow}(\mathbf{d_x}(x,y))]a &=
+      \mathbf{d_x^\leftarrow}[(\mathbf{d}(x,y))a] & \mathbf{d_x} \text{ is a bijection} & \\
+      [\mathbf{d_x^\leftarrow}(\mathbf{d}(x,y))]a &=
+      \mathbf{d_x^\leftarrow}[(\mathbf{d}(x,y))a] & \text{by Equation~\ref{Eqn:d_x}} & \\
+    \end{align*}
+  \end{proof}
+  To find the expression for $D_xf$, we start from the defining equation for the
+  derivative:
+  \begin{equation}
+    d^\prime_{f(x)}(D_xf(t) + A(t)) = d^\prime(f(x),f(x+t))
+  \end{equation}
+  Apply $d^{\prime\leftarrow}_{f(x)}$ to both sides of the above equation and
+  isolate $D_xf(t)$:
+  \begin{align*}
+    D_xf(t)  &= d^{\prime\leftarrow}_{f(x)}[d'(f(x),f(x+t)] - A(t)   &          &\\
+    D_xf(ht) &= d^{\prime\leftarrow}_{f(x)}[d'(f(x),f(x+ht)] - A(ht) & t \to ht &\\
+    hD_xf(t) &= d^{\prime\leftarrow}_{f(x)}[d'(f(x),f(x+ht)] - A(ht) & \text{Linearity of } D_xf &\\
+    D_xf(t)  &= \frac{d^{\prime\leftarrow}_{f(x)}(d'(f(x),f(x+ht))) - A(ht)}{h} &               &\\
+    D_xf(t)  &= \lim_{h \to 0}\frac{d^{\prime\leftarrow}_{f(x)}(d'(f(x),f(x+ht))) - A(ht)}{h} &
+     \lim_{h\to0} \text{has no effect on the LHS} &\\
+    D_xf(t)  &= \lim_{h \to 0}\frac{d^{\prime\leftarrow}_{f(x)}(d'(f(x),f(x+ht)))}{h} &
+     \lim_{h\to0}\frac{A(ht)}{h} = 0 \text{, by design} &\\
+    D_xf(t)  &= \lim_{h \to 0}d^{\prime\leftarrow}_{f(x)}\bigg(\frac{d'(f(x),f(x+ht))}{h}\bigg) &
+     \text{by the lemma (Eqn~\ref{Eqn:lem}) with scalar } \frac{1}{h} &\\
+  \end{align*}
+  Note: $\lim_{h\to0}A(ht)$ goes to 0 faster than linear.  Otherwise, we have the wrong $D_xf$
+  (which \emph{is} linear).  In particular, $A(ht) \ne (A(t))h$.
+  
+\item[\textbf{(c)}] Construct an example in the style of Ex 2 to show that Theorems 1.04 and 1.05 become
+  false if we use $\tilde{D}_xf$ ($D_xf$ without the binding map $d^{\prime\leftarrow}_{f(x)}$).
+\item[\emph{Solution}] No idea, although this would give us a good understanding
+  of the importance of the binding map.
+  
+\item[\textbf{(d)}] If $f$ is differentiable at $x$, it is continuous at $x$.
+\item[\emph{Solution}] $f$ differentiable means that $D_xf(t) = \lim_{h \to 0}
+  d^{\prime\leftarrow}_{f(x)}(\frac{d'(f(x),f(x+ht))}{h})$ exists for all $t$, while continuity requires
+  that for every open set in $B' \subset X'$, there exists an open set in $B \subset X$ such that $f(B) =
+  B'$.
+
+  Let the open ball $B'(f(x), |d'_{f(x)}(f(x + ht))|)$ be the open set in $X'$ and $B(x, |ht|)$ be the
+  open set in $X$.  If $f(B) = B'$ for any value of $h$, then $f$ is continuous.  It is not completely
+  clear to me that this should hold, but since we are taking $\lim_{h\to0}$, it applies to arbitrarily
+  small open sets around $f(x)$ and $x$.
+
+\item[\textbf{(e)}] If $f$ is an affine map, then $\hat{D}_xf$ is the linear part of $f$.
+\item[\emph{Solution}] An affine map has the form $f(\vec{x}) = \mathbf{A}\vec{x} + \vec{b}$, where
+  $\mathbf{A}$ is the linear part and $\vec{b}$ is a constant translation.  By high-school calculus,
+  \begin{equation}
+    \hat{D}_xf = \frac{df}{dx} = \mathbf{A},
+  \end{equation}
+  so $\hat{D}_xf$ is the linear part of $f$.
+\end{itemize}
+\end{document}
+
+
+
+%% commonly used blocks
+\begin{quote}
+\end{quote}
+
+\begin{proof}
+\end{proof}
+
+\begin{align}
+\end{align}
+
+\begin{equation}
+\end{equation}
+
+\begin{remark}
+\end{remark}
+

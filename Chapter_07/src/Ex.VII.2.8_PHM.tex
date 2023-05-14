@@ -1,0 +1,121 @@
+\documentclass[11pt]{article}
+% default ORG mode 
+\usepackage[utf8]{inputenc}  \usepackage[T1]{fontenc} 
+\usepackage{graphicx}        \usepackage{longtable}   \usepackage{float}
+\usepackage{wrapfig}         \usepackage{soul}        \usepackage{textcomp}
+\usepackage{marvosym}        \usepackage{wasysym}     \usepackage{latexsym}
+\usepackage{amsmath}         \usepackage{amssymb}     \usepackage{color}
+\usepackage{rotating}        \usepackage{hyperref}    \usepackage{xcolor} 
+\usepackage{palatino}
+% my customizations
+\usepackage{enumitem}
+\usepackage{amsthm}
+\tolerance=1000
+%\providecommand{\alert}[1]{\textbf{#1}}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\title{Commentary on Dodson \& Poston Exercise VII.2.8}
+\author{Peter Mao, $\ldots$}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\pagestyle{empty}
+
+\begin{abstract}
+  Not a complete solution to this problem, just comments and sketches of concrete
+  examples to illustrate the problem.  Feel free to add/comment/disparage.
+\end{abstract}
+
+\section{Commentary on Ex. VII.2.8}
+D\&P use $x$ both as the point in the manifold $M$ and as the coordinate labels
+in the affine spaces that the charts in $M$ and $M'$ map to.  This leads to some
+confusion in reading the problem, so in this document, I take $p \in M$, $N$ is
+a neighborhood of $p$ and leave the $x^i \in X, X'$ as coordinate in the affine
+spaces.
+
+\begin{quote}
+  Suppose that $f \colon M \rightarrow M'$ is a $C^k$ map between manifolds and
+  that for some $p \in M$, the derivative ${\bf D}_pf$ is surjective with $\dim
+  M = m > n = \dim M'$.
+\end{quote}
+
+\begin{itemize}
+\item[\textbf{(a)}] Show similarly to Ex VII.2.7 that $p$ and $f(p)$ have charts
+  around them giving $f$ the local form
+  \begin{align}
+    (x^1,\ldots, x^{m-n}, x^{m-n+1},\ldots,x^m) \mapsto (x^{m-n+1},\ldots,x^m).
+  \end{align}
+
+\item[\emph{Comment}] As with Ex VII.2.7, this is easier to see with a concrete
+  example.  Taking the same spaces used in VII.2.7b-d, let $M =
+  S^1\times\mathbb{R}$ (unit cylinder) and $M' = S^1$ (unit circle).  Let $f
+  \colon (p^1,p^2,p^3) \mapsto (q^1,q^2)$, and per the hint, $F \colon
+  (p^1,p^2,p^3) \mapsto (q^1,q^2,q^3 )$.
+
+  A less obvious example is a mapping from $M = S^2\backslash\{x^3 = \pm 1\}$ (unit
+  sphere with poles taken out) to $M' = S^1$ (unit circle) where $f$ takes each
+  slice in the $(x^1,x^2)$-plane to the corresponding azimuthal position on the
+  unit circle.  The corresponding $F$ mapping would take $M$ into a unit-radius
+  cylinder spanning the range $(-1,1)$ in the third coordinate.
+
+  In both cases, the local form of $f$ then drops the extra dimension.
+
+\item[\textbf{(b)}] Deduce that if for some $q \in M'$, every $x \in
+  f^\leftarrow(q)$ has ${\bf D}_pf$ surjective, then a chart giving coordinates
+  $(x^1,\ldots,x^{m-n})$ of $f^\leftarrow(q)$ may be constructed around each $p
+  \in f^\leftarrow(q)$.  Prove that these make $f^\leftarrow(q)$ into a $C^k$
+  manifold by satisfying Mi -- Miii.
+
+\item[\emph{Comment}] Note that $f^\leftarrow(q)$ is a subset of $M$ -- the set of
+  points in $M$ that $f$ maps to $q \in M'$.  In the examples proposed in part
+  (a), we are left with $\mathbb{R}$ or $(-1,1) \subset \mathbb{R}$, which are
+  clearly 1-dimensional charts as desired.
+
+  In the general case, we need to make use of the fact that the derivative is
+  surjective so show that the slices of $M$ formed by $f^\leftarrow(q)$ satisfy
+  Mi -- Miii.  If ${\bf D}_pf$ were \emph{not} surjective, what would it look
+  like, and how would that change the result?  I suspect that a deep
+  understanding of this question requires understanding how it breaks if the key
+  assumption is taken away, but I do not have that understanding right now.
+
+ 
+\item[\textbf{(c)}] Deduce in particular that if $f\colon \mathbb{R}^n
+  \rightarrow \mathbb{R}$ is $C^\infty$ and has ${\bf D}_pf \neq 0$ for every
+  $p\in f^\leftarrow(1)$, then $f^\leftarrow(1)$ has the structure of a smooth
+  $(n-1)$-manifold.  Construct such functions $f$ to deduce with less work than
+  in Ex VII.2.1 that the sets there given in a,b,c are manifolds.
+\item[\emph{Comment}]  If we believe part b, the deduction is elementary.
+  \begin{enumerate}
+  \item[a.] Let $M = \mathbb{R}^3$ and $f\colon (p^1,p^2,p^3) \mapsto
+    \sqrt{(p^1)^2 + (p^2)^2 + (p^3)^2}$.
+  \item[b.] Let $M = \mathbb{R}^3$ and $f\colon (p^1,p^2,p^3) \mapsto
+    \sqrt{-(p^1)^2 + (p^2)^2 + (p^3)^2}$.
+  \item[c.] (unit rod in plane) Let $M = \mathbb{R}^4$ and $f\colon (p^1,p^2,p^3,p^4) \mapsto
+    \sqrt{(p^3)^2 + (p^4)^2}$.
+  \item[c.] (unit rod in $\mathbb{R}^3$) Let $M = \mathbb{R}^6$ and $f\colon
+    (p^1,p^2,p^3,p^4,p^5,p^6) \mapsto \sqrt{(p^4)^2 + (p^5)^2 + (p^6)^2}$.
+  \end{enumerate}
+
+\end{itemize}
+\end{document}
+
+
+
+%% commonly used blocks
+\begin{quote}
+\end{quote}
+
+\begin{proof}
+\end{proof}
+
+\begin{align}
+\end{align}
+
+\begin{equation}
+\end{equation}
+
+\begin{remark}
+\end{remark}
+

@@ -1,0 +1,203 @@
+\documentclass[11pt]{article}
+% default ORG mode 
+%\usepackage[utf8]{inputenc}  \usepackage[T1]{fontenc} \usepackage{fixltx2e}
+%\usepackage{graphicx}        \usepackage{longtable}   \usepackage{float}
+%\usepackage{wrapfig}         \usepackage{soul}        \usepackage{textcomp}
+%\usepackage{marvosym}        \usepackage{wasysym}     \usepackage{latexsym}
+\usepackage{amsmath}         \usepackage{amssymb}     \usepackage{color}
+%\usepackage{rotating}        \usepackage{hyperref}    \usepackage{xcolor} 
+% my customizations
+%\definecolor{dark-red}{rgb}{0.4,0.15,0.15} 
+%\definecolor{dark-blue}{rgb}{0.15,0.15,0.4} 
+%\definecolor{medium-blue}{rgb}{0,0,0.5} 
+%\hypersetup{ colorlinks, linkcolor={dark-red}, citecolor={dark-blue}, urlcolor={medium-blue} }
+\tolerance=1000
+
+\usepackage[top=1.5in, bottom=1.5in, left=1in, right=1in]{geometry}
+
+\title{Dodson \& Poston: Problem I.2.6b \\
+Change of basis matrix}
+\author{Peter Mao}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+If $\beta$ is a basis for vector space $X$ and ${\textbf{A}: X
+\rightarrow X$ is an isomorphism, the change of basis matrix
+$[\textbf{I}]^{\textbf{A}\beta}_\beta$ is exactly the matrix
+$([\textbf{A}]^\beta_\beta)^\leftarrow.$
+
+\end{abstract}
+
+\section{Ground rules}
+
+For the standard basis of $\mathbb{R}^n$, I will use the symbol $\mathcal{E} =
+[e_1, e_2, \ldots, e_n]$, where $e_j$ is a vector with 1 in the $j^{\text{th}}$
+position and 0's everywhere else.
+
+We consider the basis $\beta$ as an ordered set of vectors in $\mathbb{R}^n$,
+which we represent as the columns of the matrix
+$[\beta] = [b_1,b_2,\ldots,b_n]$ (with the choice of basis not yet
+explicitly stated).  Since \textbf{A} is an isomorphism,
+the matrix-matrix product $\textbf{A}\beta$ is also a basis for $X$ with
+columns determined by the matrix-vector product $\textbf{A}b_i$,
+established in problem I.2.6a.
+
+The matrix $[\textbf{I}]^{\textbf{A}\beta}_\beta$ is the change of
+basis matrix from the $\beta$ basis to the $\textbf{A}\beta$ basis,
+while the matrix $[\textbf{A}]^\beta_\beta$ is the operator
+$\textbf{A}$ written in the $\beta$ basis.
+
+We want to show that $[\textbf{A}]^\beta_\beta$ is the change of basis
+matrix from the new basis $\textbf{A}\beta$ back to the original
+$\beta$ basis, ie, 
+\begin{align*}
+  [\textbf{I}]_{\textbf{A}\beta}^\beta &= [\textbf{A}]^\beta_\beta
+\end{align*}
+or equivalently,
+\begin{align*}
+  [\textbf{I}]^{\textbf{A}\beta}_\beta &= ([\textbf{A}]^\beta_\beta)^\leftarrow.
+\end{align*}
+
+\newpage
+\section{A matrix is$\ldots$}
+
+Section I.2.07 of Dodson and Poston essentially demonstrates that a
+matrix representing a linear transformation consists of the vectors
+\emph{to which} the standard basis transforms, as it's column
+vectors.   We can see this is so because the $e_j$, the
+$j^{\text{th}}$ standard basis vector ``picks out'' the
+$j^{\text{th}}$ column of A:
+\begin{align*}
+  \textbf{A}e_j = a^i_j.
+\end{align*}
+For the problem at hand, consider the matrix of $\beta$'s vectors
+written in the standard basis:
+\begin{align*}
+  [\beta]^\mathcal{E}_\mathcal{E} = \left[[b_1]^\mathcal{E}
+    [b_2]^\mathcal{E} \cdots [b_n]^\mathcal{E}\right].
+\end{align*}
+If we multiply this matrix with one of the standard basis vectors, we
+get the corresponding basis vector:
+\begin{align*}
+  [\beta]^\mathcal{E}_\mathcal{E} [e_j]^\mathcal{E} =
+  \left[[b_1]^\mathcal{E} [b_2]^\mathcal{E} \cdots [b_n]^\mathcal{E}\right]
+  [e_j]^\mathcal{E} = 
+  [b_j]^\mathcal{E}.
+\end{align*}
+
+Another way to think about the matrix is that it is the identity
+transform from the basis that its columns make up to the standard
+basis.  The first important identity to remember here is that $b_1$ in
+the $\beta$ basis \emph{looks like} $e_1$ in the standard basis:
+\begin{align*}
+  [b_1]^\beta = \left[
+    \begin{matrix}
+      1 \\ 0 \\ \vdots \\ 0
+    \end{matrix}
+    \right] = [e_1]^\mathcal{E}.
+\end{align*}
+In this context, it doesn't make sense to multiply a matrix in one
+basis, say $\beta$, with one in a different basis, say $\mathcal{E}$.
+Numerically, however, we know can multiply the matrix we are calling
+$[\beta]^\mathcal{E}_\mathcal{E}$ with $[b_1]^\beta$ and, numerically,
+the result will be $[b_1]^\mathcal{E}$.  So, following the discussion
+in Section I.2.08 in Dodson and Poston, we call this the identity
+matrix that changes our basis from $\beta$ to $\mathcal{E}$:
+\begin{align*}
+  [\beta]^\mathcal{E}_\mathcal{E} [e_j]^\mathcal{E} &=  [b_j]^\mathcal{E} &
+  (\text{Standard method for extracting a column from a matrix})\\
+  [\beta]^\mathcal{E}_\mathcal{E} [b_j]^\beta &=  [b_j]^\mathcal{E} &
+  (\text{Numerically equivalent ``nonsense equation'' with $e_j \mapsto b_j$})\\
+  [\textbf{I}]^\mathcal{E}_\beta [b_j]^\beta &=  [b_j]^\mathcal{E} &
+  (\text{Operator replaced to formalize the change of basis})
+\end{align*}
+
+The takeaway from this section is that \textbf{a matrix of basis
+  vectors ($[b_1 \cdots b_n]$) written in an arbitrary basis
+  ($\mathcal{E}$)is numerically equivalent to the identity change of
+  basis matrix from the basis of the matrix ($\beta$) to the basis in
+  which it is written ($\mathcal{E}$).}  Succinctly,
+\begin{align}
+  [\beta]^\mathcal{E}_\mathcal{E} = [\textbf{I}]^\mathcal{E}_\beta,
+  \label{Eqn:important_identity}
+\end{align}
+where we interpret the right side as an identity change of basis from
+$\beta$ to $\mathcal{E}$.  We almost have the result we seek.
+
+\newpage
+\section{Solution via the change of basis equation}
+
+In order to save you from flipping pages, the important result of the
+last section (aka, Equation~\ref{Eqn:important_identity}) is:
+\begin{align*}
+  [\beta]^\mathcal{E}_\mathcal{E} = [\textbf{I}]^\mathcal{E}_\beta.
+\end{align*}
+
+
+To change the basis of operator \textbf{A}, we conjugate it with the
+identity ``change of basis'' matrix of section I.2.08, middle of page
+29:
+\begin{align*}
+  [\textbf{A}]^\beta_\beta = [\textbf{I}]^\beta_\mathcal{E}
+  [\textbf{A}]^\mathcal{E}_\mathcal{E}
+  [\textbf{I}]^\mathcal{E}_\beta.
+\end{align*}
+I prefer to start from the standard basis, because I am weak-minded,
+and if I see a matrix, it is hard for me to imagine it as anything
+other than a matrix in the standard basis representation.  The terms
+on the right side of the above equation should all be familiar:
+$[\textbf{A}]^\mathcal{E}_\mathcal{E}$ is the standard basis
+representation of \textbf{A}, and $[\textbf{I}]^\mathcal{E}_\beta$ is
+$[\beta]^\mathcal{E}_\mathcal{E}$
+(Equation~\ref{Eqn:important_identity}), the standard basis
+representation of $\beta$.  We can therefore rewrite the above
+equation as:
+\begin{align*}
+  [\textbf{A}]^\beta_\beta &= [\textbf{I}]^\beta_\mathcal{E}
+                            [\textbf{A}]^\mathcal{E}_\mathcal{E}
+                            [\textbf{I}]^\mathcal{E}_\beta
+                                 & (\text{change basis of $\textbf{A}$ from $\mathcal{E}$ to $\beta$})\\
+                         &= [\textbf{I}]^\beta_\mathcal{E}
+                            [\textbf{A}]^\mathcal{E}_\mathcal{E} 
+                            [\beta]^\mathcal{E}_\mathcal{E}
+                                 & (\text{using Equation~\ref{Eqn:important_identity}}) \\
+                        &= [\textbf{I}]^\beta_\mathcal{E}
+                           [\textbf{A}\beta]^\mathcal{E}_\mathcal{E}
+                                 & (\text{last 2 terms are in the same basis})\\
+                        &= [\textbf{I}]^\beta_\mathcal{E}
+                           [\textbf{I}]^\mathcal{E}_{\textbf{A}\beta}
+                                 & (\text{using Equation~\ref{Eqn:important_identity} with }\beta\mapsto\textbf{A}\beta )\\
+ [\textbf{A}]^\beta_\beta &= [\textbf{I}]^\beta_{\textbf{A}\beta}
+                                 & (\text{the total change of basis is from $\textbf{A}\beta$ to $\beta$}).
+\end{align*}
+Voil\`{a}!  This is the result we seek.  The importance of this result is
+that it allows us to explicitly calculate an operator in any basis
+from standard ``knowns.''
+
+This identity is used in the next I.2.6c to establish a ``physical'' meaning for operators that are similar by conjugation.
+For comparison with group theory, see section 1.9 of Alekseev.
+
+\newpage
+\section{A more concrete example}
+
+This section's approach falls far short of a mathematical proof, but
+it may be useful as a way to pull out the stated identity and,
+perhaps, elucidate its geometric meaning.
+
+We are asked to show that [\textbf{I}]_{\textbf{A}\beta}^\beta &=
+[\textbf{A}]^\beta_\beta\].  In order to get away from the standard
+basis, let's use the normalized eigenvectors of \textbf{A} as the
+basis $\beta$.  Then $[\textbf{A}]^\beta_\beta$ is diagonal with the
+corresponding eigenvalues on the diagonal, and the normalized
+eigenvectors in their own basis look exactly like standard basis
+vectors for $\mathbb{R}^n$.  The $\textbf{A}\beta$ basis is the
+$\beta$ basis scaled by the eigenvalues,\footnote{Since each basis
+  vector in $\beta$ is an eigenvector of \textbf{A}.} so the vector
+$(1,0, \cdots, 0)$ in the $\textbf{A}\beta$ basis is $(\lambda_1,0,
+\cdots, 0)$ in the $\beta$ basis.  The identity follows.
+
+\end{document}

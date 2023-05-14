@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+% default ORG mode 
+\usepackage[utf8]{inputenc}  \usepackage[T1]{fontenc} \usepackage{fixltx2e}
+\usepackage{graphicx}        \usepackage{longtable}   \usepackage{float}
+\usepackage{wrapfig}         \usepackage{soul}        \usepackage{textcomp}
+\usepackage{marvosym}        \usepackage{wasysym}     \usepackage{latexsym}
+\usepackage{amsmath}         \usepackage{amssymb}     \usepackage{color}
+\usepackage{rotating}        \usepackage{hyperref}    \usepackage{xcolor} 
+\usepackage{palatino}
+% my customizations
+\usepackage{amsthm}
+\tolerance=1000
+%\providecommand{\alert}[1]{\textbf{#1}}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\title{Dodson \& Poston Exercise VI.4.1a}
+\author{Peter Mao}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{quote}
+(a) If the function $g:[0,1] \rightarrow \mathbb{R}$ is continuous,
+  with $g(x) \neq 0$ for any $x \in [0,1]$, show that $\frac{1}{g} :
+  [0,1] \rightarrow \mathbb{R} : x \rightarrow \frac{1}{g(x)}$ is also
+  continuous.
+\end{quote}
+
+This is pretty obviously true, but since I have no formal training in
+continuity proofs, I wanted to write up something semi-credible.  The
+attempted proof that I tried in our February 13, 2022 meeting had the
+failing that I inadvertently assumed that $g$ is bijective, which
+leaves many holes in the solution.  Hopefully, this version of the
+proof is more solid.
+
+\begin{proof}
+  For brevity, let $X = [0,1]$, and $0 < a < b \in
+  \mathbb{R}$.\footnote{This seems obvious, but aren't we using the
+  mean value theorem here, while trying to prove a part of it?}
+  
+  By Corollary VI.1.06 (p. 120), the continuity of $g$ ensures that for
+  any open interval $(a,b) \subset g(X)$, $g^{\leftarrow}((a,b)) = U
+  \subset X $ is an open set. In general, $U$ could consist of any
+  number of disjoint open intervals in $X$ (see condition OC for a
+  topology on page 121), so we denote the intervals by $U_i$ and $U =
+  \bigcup_i U_i $.
+
+  By construction,
+  \begin{align}
+    g(U)   &=       (a,b) \label{E1} \\
+    g(U_i) &\subset (a,b).
+  \end{align}
+  Note that the second equation is not necessary for the proof; it
+  merely serves as a reminder that any given $g(U_i)$ man not
+  necessarily cover $(a,b)$.  In order for $\frac{1}{g}$ to be
+  continuous, we need to show that the inverse mapping of any open set
+  in $\frac{1}{g}(X) $ is also open.  For convenience of notation, let
+  us consider the interval $(\frac{1}{b},\frac{1}{a}) \subset
+  \frac{1}{g}(X)$.  We want to show that the preimage of this
+  interval, $\frac{1}{g}^{\leftarrow}((\frac{1}{b},\frac{1}{a})) = V
+  \subset X $, is open. As with $U$ and $g$, we have the relations
+  \begin{align}
+    \label{E3}
+    \frac{1}{g}\Big(V\Big)   &=       \Big(\frac{1}{b},\frac{1}{a}\Big) \\
+    \frac{1}{g}\Big(V_i\Big) &\subset \Big(\frac{1}{b},\frac{1}{a}\Big).
+  \end{align}
+
+  \emph{Claim:} $V = U$, so $V$ is open.
+
+  Suppose there is a $u \in X$ such that $U \ni u \notin V$.  By
+  Equation~\ref{E1}, $g(u) \in (a,b)$, so $a < g(u) < b$.  Since $u
+  \notin V$, $\frac{1}{g}(u) = \frac{1}{g(u)} \notin
+  (\frac{1}{b},\frac{1}{a})$.  Thus, either
+  \begin{equation}
+    \frac{1}{g(u)} \le \frac{1}{b} \Longrightarrow b < g(u),
+  \end{equation}
+  or
+  \begin{equation}
+    \frac{1}{g(u)} \ge \frac{1}{a} \Longrightarrow g(u) < a,
+  \end{equation}
+  which is a contradiction.  Therefore, any $u \in U$ is also in $V$
+  so $U \subseteq V$.
+
+  Likewise, by considering some $v \in X$ such that $U \not\owns v \in
+  V$, we conclude that $V \subseteq U$.
+
+  Therefore, $V = U$, $V$ is open, and $\frac{1}{g}$ is continuous.
+  
+\end{proof}
+
+\begin{quote}
+  (b) If the function $g:[0,1] \rightarrow \mathbb{R}$ is continuous,
+  show that $|g| : [0,1] \rightarrow \mathbb{R} : x \rightarrow
+  |g(x)|$ is also continuous.
+\end{quote}
+
+For this proof, we find a suitable pair of intervals in $g(X)$ that
+have the same preimage as an arbitrary interval in $|g|(X)$.  Although
+we know that the image of $|g|$ is strictly non-negative, let us allow
+the lower end of open interval to be negative in order to capture
+zero.
+
+\begin{proof}
+  Consider an open interval interval in $\mathbb{R}$, $(a,b)$, subject
+  to the conditions that $a < b$ and $|a| < |b|$.  We want to show
+  that $|g|^{\leftarrow}((a,b)) = U \subset X$ is open.
+
+  Notice that $g(U) = (a,b) \cup (-b,-a)$.  If $a > 0$, then $g(U)$
+  consists of two open intervals.  If $a < 0$, then $g(U) = (-b,b)$,
+  since $|a| < |b|$ and $b > 0$ by construction.  In either case,
+  $g(U)$ is open, so $U$ is open by the continuity of $g$.
+
+  Therefore, $|g|$ is also continuous.
+
+  
+\end{proof}
+
+\end{document}

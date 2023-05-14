@@ -1,0 +1,130 @@
+\documentclass[11pt]{article}
+% default ORG mode 
+\usepackage[utf8]{inputenc}  \usepackage[T1]{fontenc} \usepackage{fixltx2e}
+\usepackage{graphicx}        \usepackage{longtable}   \usepackage{float}
+\usepackage{wrapfig}         \usepackage{soul}        \usepackage{textcomp}
+\usepackage{marvosym}        \usepackage{wasysym}     \usepackage{latexsym}
+\usepackage{amsmath}         \usepackage{amssymb}     \usepackage{color}
+\usepackage{rotating}        \usepackage{hyperref}    \usepackage{xcolor} 
+\usepackage{palatino}
+% my customizations
+\usepackage{enumitem}
+\usepackage{amsthm}
+\tolerance=1000
+%\providecommand{\alert}[1]{\textbf{#1}}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\title{Commentary on Dodson \& Poston Exercise VII.2.7}
+\author{Peter Mao, $\ldots$}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\pagestyle{empty}
+
+\begin{abstract}
+  Not a complete solution to this problem, just comments and sketches of concrete
+  examples to illustrate the problem.  Feel free to add/comment/disparage.
+\end{abstract}
+
+\section{Commentary on Ex. VII.2.7}
+D\&P use $x$ both as the point in the manifold $M$ and as the coordinate labels
+in the affine spaces that the charts in $M$ and $M'$ map to.  This leads to some
+confusion in reading the problem, so in this document, I take $p \in M$, $N$ is
+a neighborhood of $p$ and leave the $x^i \in X, X'$ as coordinate in the affine
+spaces.
+
+\begin{quote}
+  Suppose that $f \colon M \rightarrow M'$ is a $C^k$ map between manifolds and
+  that for some $p \in M$, the derivative ${\bf D}_pf$ is injective.  Let $\dim M
+  = m \le n = \dim M'$.
+\end{quote}
+
+\begin{itemize}
+\item[\textbf{(a)}] Deduce from Corollary VII.1.05 that $p$ has a
+  neighborhood $N$ such that $f|_N$ is injective.
+
+\item[\emph{Comment}] Corollary VII.1.05 establishes that $f|_N$ is injective
+  when the domain and range of $f$ are affine spaces.  We need show that this
+  result extends to manifolds as well.  The homeomorphic chart-maps connect the
+  manifolds to affine spaces, but we need to show that ${\bf
+    D}_{\psi(p)} (\phi\circ f\circ \psi^{\leftarrow})$ is injective.
+
+  By the chain rule,
+  \begin{align}
+    {\bf D}_{\psi(p)}(\phi\circ f\circ\psi^{\leftarrow}) = {\bf D}_{f(p)}\phi \circ
+    {\bf D}_pf \circ {\bf D}_{\psi(p)}\psi^{\leftarrow},
+  \end{align}
+  so we need to show that ${\bf D}_{\psi(p)}\psi^{\leftarrow}$ and {\bf
+    D}_{f(p)}\phi$ are both injective.
+
+  Recall that since we are talking about linear transformations here,
+  ``injective'' means that the determinants of these derivatives are non-zero.
+
+
+\item[\textbf{(b)}] Construct a chart $\phi \colon U \rightarrow \mathbb{R}^n$
+  around $f(x)$ such that
+  \begin{align}
+    \phi(f(N)) = \phi(U) \cap \{(x^1, \ldots, x^n) | x^{m+1} = x^{m=2} = \cdots
+      \ x^n = 0\}.
+  \end{align}
+\item[\emph{Comment}] Note that $(U,\phi)$ is a chart on $M'$ and $f(N) \subset
+  U$.  From part (a), we know that $f|_N$ is injective.  It is useful at this
+  point to consider what this looks like, concretely.
+
+  \emph{Example}: Let $M = S^1$, the unit circle, and $M' = S^1 \times
+  \mathbb{R}$, a unit cylinder.  Let $f \colon (p^1,p^2) \mapsto
+  (p^1,p^2,q^3)$, so the unit circle is mapped by $f$ to a particular cut of the
+  cylinder.  In $M'$, let $U = \{(x^1,x^2,x^3) | x^2 > 0\}$ and $\phi(U) =
+  \{(x^1,x^2=0,x^3)\}$.  To satisfy the condition, define the chart map as
+  \begin{align}
+    \phi \colon (x^1, x^2, x^3) \mapsto (x^1, 0, x^3 - q^3)
+  \end{align}
+
+%%   \emph{Example 1}: Let $M = S^2$, the manifold in Ex VII.2.1a (sphere in
+%%   $\mathbb{R}^3$), and $M' = S^2 \times \mathbb{R}^3$, the manifold in Ex
+%%   VII.2.1c (unit rod in $\mathbb{R}^3$).  $f$ takes $S^2 \in M$ and sends it to
+%%   $S^2 \in M'$ at \emph{a particular location} in $\mathbb{R}^3 \in M'$.
+
+
+
+\item[\textbf{(c)}] Show that if $B\colon \mathbb{R}^n \rightarrow \mathbb{R}^m
+  \colon (x^1,\ldots,x^m,\ldots,x^n) \mapsto (x^1,\ldots,x^m)$, then $B\circ
+  \phi\circ f$ is a chart map admissible on M.
+\item[\emph{Comment}] Since $B$ is simply a projection out of the extra
+  dimensions carried by $M'$,
+  \begin{align}
+    \psi = B\circ  \phi\circ f \colon M \rightarrow \mathbb{R}^m
+  \end{align}
+  is $C^k$ and is a chart map admissible on an open set of $M$ containing $N$.
+
+\item[\textbf{(d)}] Deduce that $x$ and $f(x)$ have $C^k$ charts around them
+  which give $f$ the local coordinate form
+  \begin{align}
+    (x^1,\ldots,x^m) \mapsto (y^1,\ldots,y^m,0,\ldots,0)
+  \end{align}
+\item[\emph{Comment}] The chart maps $\psi$ and $\phi$ from parts a-c give $f$
+  the desired local coordinate form $\phi \circ f \circ \psi^\leftarrow$.
+
+\end{itemize}
+\end{document}
+
+
+
+%% commonly used blocks
+\begin{quote}
+\end{quote}
+
+\begin{proof}
+\end{proof}
+
+\begin{align}
+\end{align}
+
+\begin{equation}
+\end{equation}
+
+\begin{remark}
+\end{remark}
+

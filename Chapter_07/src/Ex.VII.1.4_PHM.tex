@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+% default ORG mode 
+\usepackage[utf8]{inputenc}  \usepackage[T1]{fontenc} \usepackage{fixltx2e}
+\usepackage{graphicx}        \usepackage{longtable}   \usepackage{float}
+\usepackage{wrapfig}         \usepackage{soul}        \usepackage{textcomp}
+\usepackage{marvosym}        \usepackage{wasysym}     \usepackage{latexsym}
+\usepackage{amsmath}         \usepackage{amssymb}     \usepackage{color}
+\usepackage{rotating}        \usepackage{hyperref}    \usepackage{xcolor} 
+\usepackage{palatino}
+% my customizations
+\usepackage{enumitem}
+\usepackage{amsthm}
+\tolerance=1000
+%\providecommand{\alert}[1]{\textbf{#1}}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\title{Dodson \& Poston Exercise VII.1.4}
+\author{Peter Mao, $\ldots$}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\pagestyle{empty}
+
+\begin{abstract}
+  In-progress solution.  Feel free to add/comment/disparage.
+\end{abstract}
+
+Let $A$ be a linear map $T \to L(T;T')$ and define
+\begin{align*}
+  A' \colon T \times T &\to T'\\
+                 (x,y) &\mapsto (A(x))y.
+\end{align*}
+Prove:
+
+\begin{itemize}
+\item[\textbf{(a)}] $A'$ is bilinear
+\item[\emph{Solution}] Show that $A'(x+x',y+y') = A'(x,y) + A'(x,y') + A'(x',y) +A'(x',y')$, and
+  scalar multiples of the arguments will follow.
+
+\item[\textbf{(b)}] The map $\Phi \colon L(T;L(T;T')) \to L^2(T;T') \colon A \mapsto A'$ is an isomorphism.
+\item[\emph{Solution}] Let $\dim T = n$ and $\dim T' = m$.  Then $A$ is a linear map from $n$ to $m
+  \times n$ dimensions, while $A'$ is a bilinear map from $n \times n$ dimensions to $m$ dimensions.
+  Therefore $\dim A = \dim A' = n^2m$, which implies that $\Phi$ is surjective.  Now, if we can show
+  that $\ker \Phi = 0$ (which would imply injectivity )then $\Phi$ is an isomorphism.
+
+  Lemma/Definition: if $k$-linear map $Ax = 0 \forall x \in X$, then $A$ is the zero map.
+  
+  The kernel of $\Phi$ is 0 if $A' = 0 \implies A = 0$.  If $A' = 0$ then $A'(x,y) = 0 \forall x,y
+  \in T$.  Using the definition of $A'$, we also have $(A(x))y = 0 \forall x,y \implies A(x) = 0
+  \forall x$; therefore, $A = 0$.  This shows that $\ker \Phi = 0$, so $\Phi$ is an isomorphism.
+
+\item[\textbf{(c)}] (extend to higher orders)
+\item[\emph{Solution}] Proof is exaclty the same with $(x_2,\ldots,x_k)$ standing in for $y$.
+  
+\end{itemize}
+\end{document}
+
+
+
+%% commonly used blocks
+\begin{quote}
+\end{quote}
+
+\begin{proof}
+\end{proof}
+
+\begin{align}
+\end{align}
+
+\begin{equation}
+\end{equation}
+
+\begin{remark}
+\end{remark}
+

@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+% default ORG mode 
+\usepackage[utf8]{inputenc}  \usepackage[T1]{fontenc} \usepackage{fixltx2e}
+\usepackage{graphicx}        \usepackage{longtable}   \usepackage{float}
+\usepackage{wrapfig}         \usepackage{soul}        \usepackage{textcomp}
+\usepackage{marvosym}        \usepackage{wasysym}     \usepackage{latexsym}
+\usepackage{amsmath}         \usepackage{amssymb}     \usepackage{color}
+\usepackage{rotating}        \usepackage{hyperref}    \usepackage{xcolor} 
+\usepackage{palatino}
+% my customizations
+\usepackage{enumitem}
+\usepackage{amsthm}
+\tolerance=1000
+%\providecommand{\alert}[1]{\textbf{#1}}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\title{Dodson \& Poston Exercise VII.1.1}
+\author{Peter Mao, Barney Tam, $\ldots$}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\pagestyle{empty}
+
+\begin{abstract}
+  In-progress solution.  Feel free to add/comment/disparage.
+\end{abstract}
+
+\begin{itemize}
+\item
+  [\textbf{(a)}] [Given] Hausdorff topological spaces $X,Y$ and any
+  map (not necessarily continuous of everywhere defined) $f: X \to Y$,
+  define
+
+  $lim_{x\to p}(f(x)) = q$ if and only if for any neighborhood $N(q)$
+  we can find a neighborhood $N(p)$ such that, if $x \in N(p)$ and
+  $f(x)$ is defined, then $f(x) \in N(q)$.
+
+\item [\emph{Comment}]
+  What is there to prove or show here?  Are there any counterexamples
+  that show how this can go wrong?
+
+\item
+  [\textbf{(b)}] If $X$ is the set of natural numbers $1,2,3,\ldots$
+  together with one extra element which we label $\infty$, find a
+  topology on $X$ which makes Definition VI.2.01 (pg 125-126, sequence
+  of points and the limit of a sequence) a special case of the one
+  above (a).
+
+\item
+  [\emph{Solution}]
+Without loss of generality, we shall assume a metric topology for $X$.
+In VI.2.01, a sequence is defined as a mapping $S: X \to Y$,
+so we want to find a metric (distance function) as defined in VI.1.02
+(pg 116) that makes the sequence definition a special case of (a).
+
+Define the metric
+\begin{alignat}{1}
+  d \colon  X \times X &\to \mathbb{R} \\
+            (m,n)      &\mapsto \bigg|\frac{1}{m} - \frac{1}{n}\bigg|
+\end{alignat}
+with $\frac{1}{\infty} = 0$. This satifies the conditions for a metric:
+\begin{enumerate}[label=\roman*), itemsep=0pt]
+\item $d(m,n) = d(n,m)$
+\item $d(m,n) = 0 \iff m = n$
+\item $d(m,n) \le d(m,r) + d(r,n)$
+\end{enumerate}
+
+The third condition requires a quick check.  If $m < r < n$, we have
+equality because the sign of the $r$ term will differ in the two terms
+on the right side when the absolute-value is ``removed.''  If $m < n <
+r$ (the case $r < m < n$ proceeds similarly), then we use the fact
+that $d(m,r) = d(m,n) + d(n,r)$, so that the triangle inequality now
+reads
+\begin{align}
+  d(m,n) & \le d(m,r) + d(r,n) = d(m,n) + d(n,r) + d(r,n) \\
+         & \le d(m,n) + 2d(n,r)
+\end{align}
+which holds since $d(n,r) > 0$.
+
+Since $d$ maps into $\mathbb{R}$, we can use the usual topology on
+$\mathbb{R}$.  Relating this back to part (a), $p = \infty$, $f = S$,
+and $q$ is the limit of $S$.
+\end{itemize}
+
+
+\end{document}
+
+
+
+%% commonly used blocks
+\begin{quote}
+\end{quote}
+
+\begin{proof}
+\end{proof}
+
+\begin{align}
+\end{align}
+
+\begin{equation}
+\end{equation}

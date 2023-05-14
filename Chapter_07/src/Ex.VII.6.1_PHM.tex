@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+% default ORG mode 
+\usepackage[utf8]{inputenc}  \usepackage[T1]{fontenc} \usepackage{fixltx2e}
+\usepackage{graphicx}        \usepackage{longtable}   \usepackage{float}
+\usepackage{wrapfig}         \usepackage{soul}        \usepackage{textcomp}
+\usepackage{marvosym}        \usepackage{wasysym}     \usepackage{latexsym}
+\usepackage{amsmath}         \usepackage{amssymb}     \usepackage{color}
+\usepackage{rotating}        \usepackage{hyperref}    \usepackage{xcolor} 
+\usepackage{palatino}
+% my customizations
+\usepackage{enumitem}
+\usepackage{amsthm}
+\tolerance=1000
+%\providecommand{\alert}[1]{\textbf{#1}}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\title{Commentary on Dodson \& Poston Exercise VII.6.1}
+\author{Peter Mao, $\ldots$}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\pagestyle{empty}
+
+\begin{abstract}
+  Demonstrate the connection between curves and vector fields in the examples of
+  section VII.6.01.
+\end{abstract}
+
+\section{1a: $c(t) = \frac{t}{1 - t^2}$}
+
+The velocity, as a function of $t$ is simple to calculate, as it is just the
+derivative $\frac{dc}{dt} = \frac{1 + t^2}{(1 - t^2)^2}$.  The problem is to
+write the velocity as a function of position, rather than time.  In this case,
+we need to invert $c(t)$ into $t(c)$.
+
+Suppressing the function notation on $c$, we can rewrite the expression for the
+curve as
+\begin{align}
+  ct^2 + t - c = 0.
+\end{align}
+By the quadratic formula, we have $t$ as a function of $c$:
+\begin{align}
+  t = \frac{-1 + \sqrt{1 + 4c^2}}{2c}.
+\end{align}
+Only the positive square root is valid, as the negative branch gives times
+outside of the domain $]-1,1[$.
+
+    From here, we just plug in the above results:
+    \begin{align}
+      v(c(t)) = c^*(t)/\vec{e_1} &=  \frac{1 + t^2}{(1 - t^2)^2} \\
+      &=  \frac{t^2}{(1 - t^2)^2} +  \frac{1}{(1 - t^2)^2} \\
+      &=  c^2 + \frac{c^2}{t^2} \\
+      &=  c^2 + \frac{4c^4}{(-1 + \sqrt{1 + 4c^2})^2} \\
+      &=  c^2 + \frac{4c^4}{1 + 1 + 4c^2 - 2\sqrt{1 + 4c^2}} \\
+    v(c)  &=  c^2 + \frac{2c^4}{1 + 2c^2 - \sqrt{1 + 4c^2}} 
+    \end{align}
+    as desired.
+    
+\section{1b, TBD.}
+
+\end{document}
+
+
+
+%% commonly used blocks
+\begin{quote}
+\end{quote}
+
+\begin{proof}
+\end{proof}
+
+\begin{align}
+\end{align}
+
+\begin{equation}
+\end{equation}
+
+\begin{remark}
+\end{remark}
+
