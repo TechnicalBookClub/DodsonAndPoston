@@ -1,0 +1,968 @@
+;-*- Org -*- (org-latex-export-to-pdf)
+#+STARTUP: showall entitiespretty
+
+* PLEASE ADD YOUR STATUS HERE
+  (Don't worry about aligning these columns.  It only takes me [PHM] a
+  keystroke to fix it.)
+  | Name         | is working on                            | Notes |
+  |--------------+------------------------------------------+-------|
+  | Peter [PHM]  | read VII.7                               |       |
+  | Joe V        | Read thru VI.2, problems thru VI.1.4a.   |       |
+  | Randy [RJP]  | Reading Chap VII.5&6, selected exercises |       |
+  | Eric         | IV.2.2c                                  |       |
+  | Barney [BKT] | reading VII.4-7, VII.4 exercises         |       |
+  | Anna [AHL]   | Reading V, V probs                       |       |
+  | Craig        | Reading IV                               |       |
+  | Noah  [NBA]  | II.3                                     |       |
+  #+TBLFM:
+
+* Authors' errata to 2009 printing added to Dodson-Poston folder
+
+* potentially useful:
+   :PROPERTIES:
+   :VISIBILITY: content
+   :END:
+** scihub (website)
+** Frederic P Schuller (A thorough introduction to the theory of general relativity)
+  - lecture videos: https://youtube.com/playlist?list=PLFeEvEPtX_0S6vxxiiNPrJbLu9aK1UVC_
+  - associated lecture notes: https://github.com/lazierthanthou/Lecture_Notes_GR/blob/master/main.pdf
+  - associated tutorial videos: https://youtube.com/playlist?list=PLFeEvEPtX_0RQ1ys-7VIsKlBWz7RX-FaL
+  - Note that he has another set of lectures "Lectures on the Geometric Anatomy of Theoretical Physics" with overlapping material
+** notes on Ch I-V
+  - https://faculty.etsu.edu/gardnerr/5310/notes-Dodson-Poston.htm (Bob Gardner)
+** I. Real Vector Spaces
+  - https://textbooks.math.gatech.edu/ila/complex-eigenvalues.html (Dan Margalits)
+** II. Affine Spaces
+  - https://www.cis.upenn.edu/~cis610/geombchap2.pdf (Gallier, J., Geometric Methods and Applications, Springer)
+  - Marcel Berger, Geometry I. (Springer)
+  - Marcel Berger, Geometry revealed (Springer)
+  - Marcel Berger, Problems in Geometry (Springer)
+  - Stillwell, 4 pillars, p 150 (Springer)
+** III. Dual Space
+  - Dual Spaces: https://sites.math.northwestern.edu/~scanez/courses/334/notes/dual-spaces.pdf
+  - Quora answer to dual space and matrix rows question: https://qr.ae/pNkXNa
+** IV. Metric Vector Spaces
+  - Metric Spaces: Set Theory and Metric Spaces by Irving Kaplansky (AMS)
+  - https://www.win.tue.nl/~lflorack/Extensions/2WAH0CourseNotes.pdf
+  - co-vectors and contours: https://www.youtube.com/watch?v=LNoQ_Q5JQMY&list=PLJHszsWbB6hrkmmq57lX8BV-o-YIOFsiG&index=7
+** V. Tensors and Multilinear Forms
+  - description of tensors and co- and contravariant vectors (from the Quora website): https://qr.ae/pN5NLi
+  - Basic discussion of tensor products, "multiplying" vectors: https://www.math3ma.com/blog/the-tensor-product-demystified
+  - Basic discussion of tensor products, intro to universal property: https://jeremykun.com/2014/01/17/how-to-conquer-tensorphobia/
+  - Alternate discussion of tensor products: https://www.dpmms.cam.ac.uk/~wtg10/tensors3.html
+  - Advanced discussion of tensor products: https://kconrad.math.uconn.edu/math5211s13/handouts/tensorprod.pdf (Keith Conrad)
+  - Youtube series of videos “Tensors for Beginners”: https://www.youtube.com/watch?v=8ptMTLzV4-I
+  - Proof of Linear independence of tensor products http://mathonline.wikidot.com/linear-independence-properties-of-tensor-products-of-normed
+** VI. Topological Vector Spaces
+  - Steen and Seebach, Counterexamples in Topology (springer)
+  - Stillwell, Classical Topology and Combinatorial Group Theory (Springer GTM)
+  - Frederic Schuller Lecture on Topological Spaces - https://youtu.be/1wyOoLUjUeI
+  - motivating compact sets: https://youtu.be/1SpnLPcPRU0 (~10 min)
+** VII Differentiation and Manifolds
+  - Tu’s text on Introduction to Manifolds - http://im0.p.lodz.pl/~kubarski/AnalizaIV/Wyklady/L-Tu-1441973990.pdf
+    D&P VII.5-7 == Tu Sec 14.
+  - Manifold's primer by Littlejohn (in folder under Dodson+Poston/Chapter 7)
+  - Example manifolds article (in folder)
+  - A context for tensor bundles - https://unapologetic.wordpress.com/2011/07/06/tensor-bundles/
+  - Diff Geo Course & Notes - http://www.math.toronto.edu/mgualt/courses/18-367/
+  - Manifold videos (bright side of mathematics): (~ 10 min)
+    https://youtube.com/playlist?list=PLBh2i93oe2qvRGAtgkTszX7szZDVd6jh1
+  - Thurston, Three-Dimensional Geometry and Topology, Volume 1 https://www-jstor-org.alumproxy.mit.edu/stable/j.ctt1k3s9kd
+    There is only one volume.
+  - Needham, Visual Differential Geometry and Forms https://www.vdgf.space/
+    I haven't seen this book yet, but it sounds promising.
+  - Guillemin & Pollack, Differential Topology : https://math.ucr.edu/~res/math260s10/old/difftopGP.pdf
+  - <<Marcel Berger 2003>>, A Panoramic View of Riemannian Geometry (Springer, 2003)
+  - Nakahara
+  - Fortney (A Visual Introduction to Differential Forms and Calculus on Manifolds), Birkhauser (Springer)
+  - Bachman, D. A Geometric Approach to Differential Forms, Birkhauser (Springer) 2012
+Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
+- https://www.youtube.com/watch?v=SfOiOPuS2_U&list=PLJHszsWbB6hpk5h8lSfBkVrpjsqvUGTCx&index=24
+\newpage
+* AGENDA (reverse chronological)
+  :PROPERTIES:
+  :COLUMNS: %20ITEM %VISIBILITY %TAGS
+  :END:
+** [2023-06-04 Sun]
+*** index D&P with references to Tu (DG), Needham, and whatever else we come across.
+*** for Craig -- see
+#+begin_src elisp
+  (setq org-image-actual-width nil)
+#+end_src
+#+ATTR_ORG: :width 500    
+    [[file:Chapter_07/LieBracket_rho_theta.png]] [[file:Chapter_07/LieBracket_rho_phi.png]]
+** [2023-05-07 Sun]
+   - Tu, Differential Geometry
+   - Needham, VDGF
+*** Tu def 4.8, on vs along
+    example of inconsisent usage:...(sec 5.2 p30) ``let N be a C^\infty unit
+    normal vector field on M (Figure 5.1).''
+    N is not in the tangent space (and is constructed to be normal to it), so
+    should't the phrasing be "normal vector field *along* M"?
+    - Barney :: proposes that on is intrinsic and along is extrinsic
+*** Shape operator
+    - Tu 5.2 (p 30)
+    - Needham 15 (p 149)
+*** first and second fundamental forms
+    - Tu 5.4 (p 35)
+    - Needham 15.9 (p 164)
+*** EFG vs AB\omega
+    - Tu 5.4 (p 35)
+    - Needham 4.3 (p 34-37)
+*** is torsion the same in both books?
+    Maybe not..
+    - Tu: 6.2 (p 44) :: torsion of the connection
+    - Needham: ch 9 (p 106) :: torsion of a curve
+*** D&P sections in VII
+    1. Curves and Tangent Vectors
+    2. Rolling without turning (pre Levi-Civita connection)
+       - without slipping?
+       - reference Needham Chapter 22.2, 23.2 (Levi-Civita, intrinsic)
+       - reference Tu DG, section 14, p 103
+       - Barney:  how do we calculate a geodesic algebraically?  it is a curve
+         with covariant derivative 0 (intrinsic).
+    3. Differentiating sections (Christoffel symbols)
+       - Christoffel symbols
+       - The funny \nabla: the intrinsic or covariant derivative D_V (Needham) or
+         DV/Dt (Tu)
+       - Needham (still 22 and 23?)
+       - Tu (??)
+    4. Parallel transport
+       - Needham, Act IV, esp chapters 22,23
+    5. Torsion and symmetry
+       - Needham: ch 9 (p 106)
+       - Tu: 6.2 (p 44)
+    6. Metric tensors and connections (\nabla)
+    7. Covariant differentiation of tensors
+** [2023-04-02 Sun]
+*** Find exercises, or write up the point of the D&P ex.
+** [2023-03-05 Sun]
+*** Let's have solutions for 7.2 and 7.4
+*** Start into VIII.
+** [2023-02-05 Sun]
+*** Read through VII.7 including the proof of 7.04
+*** All exercises are ok except 7.2 and 7.4
+** [2023-01-08 Sun]
+*** Sec VII.6
+*** Ex VII.6.1
+    see solution
+    discussed
+*** Ex VII.6.2
+    - typo, should be c(t) = (t/3)^3 and c(t) = 0.
+
+      if c(t) = (1/3)t^3
+      then c'(t) = t^2
+
+      want c'(t) = v(c) = c^{2/3} = (1/3)^{2/3}t^2 \ne c'(t)
+
+      whereas with the correction
+      c'(t) = (t/3)^2
+      v(c) = c^{2/3} = (t/3)^2 = c'(t)
+
+    - reparameterization is mentioned in VII.5.02, t \to t+m for any constant m
+
+      so in this case, another curve that is a reparameterization of c(t) could
+      be h(s) = c(t+s)
+      h(s) = (t+s)^3/3^3
+    
+    - v is not differentiable because it goes to \infty at 0
+*** Sec VII.7
+    - discussed, see Notes.org file (D&P section)
+    - Theorem 7.04 proof needs to be looked at carefully
+    - We will try to have solutions to all problems in this section by next
+      meeting.
+    
+** [2022-12-11 Sun]
+   :PROPERTIES:
+   :VISIBILITY: all
+   :END:
+*** good book: [[Marcel Berger 2003][Berger: Panoramic View of Riemannian Geometry]]
+*** Ex VII.4.6
+    - homomorphism: [RP] linear for vector spaces (?)
+    - isomorphism: bijective homomorphism (I.2.03 p25 "linear bijection", for
+      vector spaces.)
+    - homeomorphism: bijection, continuous in both directions
+    - diffeomorphism: homeomorphism, C^k in both directions
+**** G_up and G_down are inverses of each other.  Linearity => C^k?
+     Ex VII.1.3e: if f is an affine map, D_{x}f is the linear part of f.
+     ie, the derivative of a linear map is itself.
+**** coordinate formalae
+     G_down(x) = g_{ij}x^j etc.
+*** Sec VII.5 Curves
+**** going back to pg 154-155
+     - f: R^n \rightarrow R, scalar function
+     - D_{x}f = [\partial_{1}f,\partial_{2}f,...,\partial_{n}f] Jacobian, and here a covector
+     - f^*: D_{x}f above. and it's a vector.
+**** p 192
+     (**) ds^2 = ...
+         [ 1    1/4   0     ]
+     G = [ 1/4  1     0     ]
+         [ 0    0   (x^{1})^2+1 ]
+**** Ex VII.5.1b: typo MINIMUM, not maximum
+
+*** Ex VII.5.5, esp part b
+    - what do they mean by "even if f is not affine" (not linear/translational)
+** [2022-11-06 Sun]
+   :PROPERTIES:
+   :VISIBILITY: children
+   :END:
+*** [BKT] D&P, Ex. V.1.1 - Is Peter's soln. showing subspace, not vector space?
+    yes, because of laziness.
+*** Randy's Halloween missive on tangent spaces
+*** VII.4 readings: Lee, Chpt 3; Tu, Sections 2-6,8,12,17,18.
+    Tu's sections are helpful even just to skim over. Just a taste (p. 35): "If
+    x,y, and z are the coordinates on R3, then dx, dy, and dz are 1-forms on
+    R3. In this way, we give meaning to what was merely a notation in
+    elementary calculus."
+*** Sec VII.4.01 covariant vectors
+    Barney's favorite section in all of D&P because of the connection to
+    differential forms
+
+    basis covectors: {dx^i}
+
+    dx^i = d_{x^i(u)} \circ D_{u}x^i
+
+*** Sec VII.4.02 contravariant vectors (aka, vectors)
+    basis vectors: $\{\frac{\partial}{\partial x^i}\}$
+
+    $\frac{\partial}{\partial x^i} \hat{i}$ ?
+*** Sec VII.4.03 tensors of higher degree
+    form basis from combinations of basis vectors
+*** Sec VII.4.04 transformation formulae
+    - vector components: $t'^i = t^j \frac{\partial x'^i}{\partial x^j}$
+    - covector components: $v'_i = v_j \frac{\partial x^j}{\partial x'^i}$
+    - warnings about "one-overs" vs matrix inverses.
+*** Sec VII.4.05 Raising and lowering indices
+    - see V.1.13
+*** Ex VII.4.1
+    a. components of a smooth function are smooth (ex??)
+       chain rule proof in D&P  Ex VII.1.6 (if vs iff?)
+       - given: \phi_2 and \phi_1 are smooth because the manifold is defined as such.
+       - (Tu) if function is smooth, then components are smooth (also maybe a
+         D&P exercise)
+    b. same thing...
+*** Ex VII.4.2
+    nothing to talk about
+*** Ex VII.4.3 wtf - is this even a problem?
+    circular reasoning?
+*** Ex VII.4.4 Leibniz rule
+    nothing to talk about
+*** Ex VII.4.5 transformations
+    - (^1,_2):  $\frac{\partial x'^i}{\partial x^i} \otimes \frac{\partial x^j}{\partial x'^j} \otimes \frac{\partial x^k}{\partial x'^k}$
+    - (^0,_2):
+    - (^3,_1,^1,_2):
+*** Ex VII.4.7 Sure, but we don't care...
+
+** [2022-10-09 Sun] VII.3 DONE
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - VII.3.01: Theorem
+     1. terrible proof
+     2. Tu (Intro to Manifolds) p. 129
+     3. Lee (Intro to Smooth Manifolds) p. 66
+     4. youtube vids (Frederic Schuller - Construction of the Tangent Bundle - Lec.10 from Lectures on the Geometric Anatomy of Theoretical Physics)
+	https://youtu.be/XZcKSoI17r0
+   - VII.3.1 product, direct sum, direct product, cartesian product
+     a. is a vector space
+     b. dimension
+     c. "Manhattan distance" is a difference function
+     d. isomorphism from (s,t) \mapsto s + t
+        Do we ever have a situation where S+T doesn't look like P(x)+kerP?
+     e. Topology proof (ugh.) (Munkres?)
+     f. direct sum of tangent spaces and derivative thereof
+        notationally, this is a mess, but it's fairly straight-forward.
+   - VII.3.2 direct product of manifolds
+     a. charts, dimensions
+     b. smoothness (typo?)
+        should be M \rightarrow M \times N
+     c. show tangent space of product manifold is isomorphic to direct sum of
+        tangent spaces
+        (use problem 1 + charts)
+     d. example, torus.  give charts
+     e. product tensor field is metric if the components are
+   - VII.3.3
+     a. continuity proof
+     b. show "by considering what it means to be a member of each set"
+        where does the missing paren go?
+        BT: after (W)
+        PM: before (W)
+        maybe it doesn't matter bc they are matrices anyways
+        ** we are not sure about the essenence of this problem **
+     c. pathalogical case with discontinuous derivative
+        Choice of charts matters. [BT]
+   - VII.3.4 T^k_{h}M is an (n + n^{k+h}) manifold modelled on X\times(T^k_h)
+   - [BKT] Tu, p.24: Lemma 3.11 question.
+** [2022-08-28 Sun] VII.2 DONE
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - VII.2.7 commentary
+     a. use determinants
+        - Randy: On pg. 63 (Sect 6.3), Tu establishes that the coordinate (chart) functions ψ and φ on smooth manifolds are smooth. The proof follows basically the approach described in the 1st reference, namely, that
+          1) A map F between manifolds N and M, F : N → M, is smooth if ψ 𝘰 F 𝘰 φ^-1 is smooth and vice versa, where ψ and φ are chart functions in M and N, respectively.
+          2) Let 𝟙_φ(U) be the identity chart function for φ(U) to itself, i.e.,  𝟙_φ(U) : φ(U) ⟼ φ(U). This gives the chart (φ(U), 𝟙_φ(U)) on ℝ^n. For the chart (U, φ) on N, we have the map
+             𝟙_φ(U) 𝘰  φ 𝘰  φ^-1 : φ(U) ⟼ φ(U)
+             which is of course smooth. Using 1) above, φ can then be seen to be smooth.
+        - above, use Tu, pg 63, sec 6.3 to show that \phi is differentiable (\phi is smooth)
+        - use "inverse function theorem" to show that D\phi, D\psi are injective
+
+     b. f: (\theta) \rightarrow (\theta, z)
+        **Peter - fix typo before eqn 3.**
+
+     c. done
+     d. done!
+
+   - VII.2.8 commentary
+     a. (\theta, p3) -> (\theta)xR
+     c. c: M is rod in R^2. f: (rod in R^2) to (length of rod)
+        (x1,y1,x2,y2):   f: (p1,p2,p3,p4)->  ||(|p3-p1|, |p4-p2|)||
+        "and f^\leftarrow(1) is the set in question which we now know is a manifold."
+
+** [2022-08-07 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - VII.2.5:
+     a. mostly algebraic
+     b. Is Randy's solution sufficient?
+        - subspace: closed, ...
+        - iso: linear, bijective.
+     c. can we do better than the hint?
+   - VII.2.6:
+     a. mostly algebraic
+     b. This part asks us to show that $D_x \phi = (D_{\phi(x)}
+        \phi^\leftarrow)^\leftarrow$
+        f \rightarrow \phi
+        N \rightarrow X
+        u \rightarrow x
+   - VII.2.7: $D_x f$ injective, $\dim M \le \dim M'$
+     $f \colon M \rightarrow M'$ is $C^k$, $x \in M$
+     $N \subset M$, N is a neighborhood of M containing x
+     a. use Cor VII.1.05 p 156
+        "injective" in 1.05 : det(D_x f) \ne 0
+     b. for $U \subset M'$, $\phi \colon U \rightarrow \mathbb{R}^n$ is a chart.
+     c. TYPO: should be "admissible on M" (no prime)
+     d. $f|_N : \mathbb{R}^n \rightarrow \mathbb{R}^n$
+   - VII.2.8: $D_x f$ surjective, $\dim M > \dim M'$
+     $f \colon M \rightarrow M'$ is $C^k$, $x \in M$
+     $N \subset M$, N is a neighborhood of M containing x
+     a. use Inverse function theorem VII.1.04 p 156
+        "all of VII.2.7 for surjective D_x"
+     b. why x^1 \rightarrow x^{m-n}?
+     c. are there typos?  should n be m in this part?
+   - VII.3.1
+     a.
+     b.
+     c.
+     d.
+     e.
+     f. Re: Randy's ? on notation:
+        let $Y = X \times X'$ and $y = (x, x')$
+        then $T_{y}Y = T_{x,x'}(X,X')$
+** [2022-07-10 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - VII.2.3 example [PHM]
+   - VII.2.5 [RJP]
+   - VII.3.01 [BKT]
+** [2022-06-12 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - done up to problem VII.2.04
+** [2022-05-15 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - done up to problem VII.1.06
+** [2022-04-20 Wed]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - discussion on Munkres pg 76-77, Fig 12.1, Fig 12.2.  Three
+     discrete element topology.
+     Subsets of {a,b,c}
+     {}
+     {a}
+     {b}
+     {c}
+     {ab}
+     {bc}
+     {ca}
+     {abc}
+
+     [...] denotes a "collection"
+
+     X = {a,b,c} "is a topological space with topology T1", which we can write as (X,T1)
+     T1 = [ {},{a},{b},{c},{ab},{bc},{ca},{abc} ] "is a topology"
+
+     [{a},{b}] != {a,b} "The collection containing subset a and subset b is
+     not the same as the subset containing a and b"
+
+     There are 29 topologies out of a possible 2^(2^3-2) = 64 collections of
+     subsets that include {} and {abc}.
+
+     For 4 elements, there are 355 topologies
+     (https://oeis.org/A000798) out of 2^(2^4-2) = 2^14 = 16384
+     possible collections of subsets...
+** [2022-03-13 Sun] DONE WITH VI!
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - Ex. VI.4.4 (Lemma 4.07)
+     -a. Boundedness along basis vectors
+     -b. Generalization to affine spaces
+   - Ex. VI.4.5: induced topology
+     -a. Induced topology is given by the induced metric (not clearly
+     defined in D&P)
+     -b. Transitivity of openness, proven with metrics
+     -c. Transitivity of closedness, proven with metrics
+     -d. (*) Repeat b and c with topologies & induced topologies
+     -e. Continuous function restricted to a subspace is continuous on
+     the subspace. (This is surprising?) (barney: proof by contradiction?)
+     -f. Sequence in subspace converges to the same point in the larger
+     space. (This is surprising?)
+   - Ex. VI.4.6 impossibly badly worded
+     -supremum: least upper bound
+     -infimum: greatest lower bound
+   - Ex. VI.4.7
+     - p145 Rmk: "If you are still unconvinced that topological
+       reasoning is necessary to prove that we can diagonalise
+       symmetric operators, do Exercise 7."
+     - Not sure that this problem does (pedagogically) what it claims
+       to do.
+     - Joe: Q and R same algebraic props, but R is complete but Q is
+       not. and completeness is a topological property.
+   - Ex. VI.4.8 yet another pointless sequence problem?
+   - Ex. VII.2 (Barney & Randy's writeups)
+   - EX. VII.1.1
+     b. Joe's solution (see whiteboards)
+   - Ex. VII.1.2
+     - Barney (pass)
+     - Joe (wrong visualization?)
+     - PHM will write this up (maybe)
+   - Ex. VII.1.3
+     - type on part b (should be d'^{-1})
+   - Ex. VII.1.4
+   - Ex. VII.1.5
+     - B: can you use topological reasoning?  or are we stuck with
+       \epsilon-\delta?
+     - J: all of these required a norm
+   - Ex. VII.1.6 (generalized chain rule)
+     - B: Spivak Calc on Manifolds has a proof.
+   - Ex. VII.1.7 (example of differential but not C1)
+** [2022-02-13 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - Compact Sets (Barney)
+     example: f(x) = 1/x (unbounded on "]0,1]")
+     "local/global heartbreak"
+     finite subcovers -- only needing a finite # of subsets allows....
+   - Continuity (Barney) See TappK, Appendix A (in Stillwell_NLT dir),
+     Lem A.6 "The notion of convergence is topological by the second definition
+     below, although it may not initially seem so at first:"... Defn A.7
+   - Ex. VI.4.1 -- see solution Chapter_06 [PHM]
+     Cor. VI.1.06 f_inv(V) for open V is open. (continuity)
+   - Ex. VI.4.2
+     no big problems
+   - Ex. VI.4.3
+     part b ERROR: Definition 1.03 (not 1.05 as stated)
+** [2022-01-16]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+  - [PHM] Cross references between D&P VI.4 (Compactness and
+    Completeness) and Stillwell NLT Chapter 8
+    - VI.4.02 Lemma (Bolzano-Weistrauss) == NLT Ex 8.4.1,8.4.2 (p170)
+    - VI.4.03 Theorem (existence of a convergent subsequence) == NLT
+      Ex 8.4.3, 8.4.4 (p 171)
+    - VI.4.10 Theorem (image of continuous fn) == NLT sec 8.5 (p 171)
+  - [PHM] offered as a concrete example (not worked out, but just to
+    think about) the mapping bewteen a 2D potential surface and a
+    topographic surface with the same dynamical properties (a la
+    Lagrange points in a rotating frame of two gravitating bodies).
+    Note that height is NOT equal to potential.  In particular, the
+    max horizontal force applied by the topographic surface occurs at
+    angle 45 deg -- beyond that the vertical acceleration dominates.
+** [2021-11-21]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+  - (RJP) still would like to see group unpack Ex. VII.2.3
+  - Readings in Tu (Intro to Manifolds, Springer)
+    sections 2 (Tangent Vectors as derivations), 5 (Manifolds), 6
+    (Smooth maps), 8(Tangent Space) are relevant to Chap VII of D&P
+** [2021-10-24]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+- discuss RJP summary of last meeting; Peter’s questions
+
+- Ex. VII.2.3a&b: Clarify def of tangent vectors as equivalence classes
+
+- extra bonus question: tangent vectors and tangent space; tangent to what?
+** [2021-09-26 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - Sec. VI.1.02: [PHM] I don't understand the space of the higher
+     derivatives ($L^k(T;T)$).  The mapping for $\hat{D}f$ makes sense
+     to me, but I don't see how to extend that to higher derivatives.
+
+   - Sec. VI.1.03, pp 154-155: [PHM] I can't follow the discussion
+     surrounding $f^*(x)$.  If $f : \mathbf{R} \rightarrow X^\prime$, then isn't
+     $f(x)$ a vector?  I'd like to hear some discussion about the
+     "Three entries" on pg 155.
+
+   - Fig VI.2.4 pg 162, sec 2.01: [PHM] How is this showing that chart
+     $\phi_b$ is gives a differentiable map and that $\phi_a$ does
+     not?  (See text on pg 163)
+** [2021-08-29 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - VII.1.x
+
+** [2021-08-01 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - VI.3.6b
+   - VI.3.7
+   - VI.3.8
+   - VI.4.1
+   - VI.4.2
+   - VI.4.3
+   - VI.4.4
+   - VI.4.5
+   - VI.4.6
+   - VI.4.7
+   - VI.4.8
+** [2021-07-11 Sun] (10A-12P)
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - VI.3.2
+     - b: **any** collection of subsets?
+     - d: see Randy's solution
+   - VI.3.3
+   - VI.3.4
+   - VI.3.5 square, diamond, Euclidean metrics
+     - c: Lemma 1.10?  Is he referencing the right section? (Use Lem
+       1.12 (Joe))
+   - VI.3.6
+     - a: Munkres Thm 31.2 for topological subspce, see D&P p 143.
+** [2021-06-20 Sun] (10A-12P)
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   - For next time: Review Randy's writeup on Ex VI.2.2c
+   - [RJP]need help w/  Ex.VI.3.2d
+** [2021-05-23 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** VI.1.5: boundary, closure, continuity
+    c. can this be done using parts a & b?
+*** VI.1.6: Hausdorff, open/close
+    a. Where does the Hausdorff axiom come into play here?  If the
+    topology is not Hausdorff, we can have x != y and d(x,y) = 0, but
+    {x} is still a boundary point in that every open ball contains
+    poinsts inside (eg, x) and outside (eg, y).
+*** VI.1.7: unit circle map: X->Y is a continuous bijection but not a homeomorphism.
+    the open neighborhood around (1,0) in Y of arclength 2*pi*d maps
+    back to the intersection of ]0,d[ and ]1-d,1] in X.  Is this an
+    open set in X?
+*** VI.2.2c: sequence in 2nd part of Lemma 2.02 converges to x
+    How to do this formally?
+** [2021-05-02 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** VI.1.1: eps/delta excercise - joe (whiteboarded)
+*** VI.1.2: metric/semimetric
+*** VI.1.3: open/close -- Expect spirited discussion on d
+https://en.wikipedia.org/wiki/Ball_(mathematics)
+https://math.stackexchange.com/questions/2231706/boundary-of-any-open-ball
+https://math.stackexchange.com/questions/108010/when-is-the-closure-of-an-open-ball-equal-to-the-closed-ball/108017#108017
+*** VI.1.4: metric/pseudometric space
+** [2021-04-11 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** clean up on chap V
+    PHM - 6b (discussed), 7b (discussed), 8a
+    Joe - 4, 6b (discussed)
+    Eric - 9 (discussed)
+    Randy - 7b (discussed), 10a, 11b, 11c
+
+*** TODO!!: All: read Randy's solutions and comment.
+*** VI.1
+**** beware ex VI.1.3d https://math.stackexchange.com/questions/2231706/boundary-of-any-open-ball
+** [2021-03-21 Sun] End of Chapter V!
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+   to do: write up 6b, 7b, 8a, 10a
+
+(RJP) What is difference between definitions of tensor product in V.1.03 (pg. 100) and Def. V.1.04 (pg. 102)?
+(RJP) What does the notation L(X_1;X_2)—>X*_1⨂X_2 mean exactly?
+
+*** Ex V.1.8
+    - (a) associativity
+    - (b) permutation
+
+*** Ex V.1.9 contraction is well defined
+
+*** Ex V.1.10 $\Psi A(x,y) = Ax\cdot y$
+
+*** Ex V.1.11 skew symmetric multilinear maps and n-dim volumes
+
+*** Ex V.1.12 volume independent of basis (no one has looked at this yet)
+** [2021-02-28 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** Ex V.1.5/Sec 1.06 (straightforward [PHM, ])
+*** Ex V.1.6/Sec 1.06
+    part b is one of...
+    1. Barney: pick basis, work out algebra.  do not assume that x'
+       and y' are scalar multiples of x and y.
+    2. Poorly stated (need x' and 'y are scalar multiples of x and y
+       respectively) and trivial.
+    3. Incorrect.
+*** Sec 1.07 - PHM will write up proof of lemma
+*** Ex V.1.7/Sec 1.08
+    a - easy
+    b - break into basis components?
+*** Ex V.1.8
+    a. see Conrad Thm. 5.2 and voila.
+    b. see Conrad Thm. 5.1 and voila.
+    [BKT] Essentially, a, b proved by repeatedly invoking the respective theorems.
+** [2021-02-07 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** what is $a \otimes b$?
+    - Joe's paper
+    - Conrad, p5 and p12
+*** [BKT] Sec 1.08 Lemma/ p.104
+    - why does f_hat(g \otimes x_2)) = 0?
+
+*** Ex V.1.4/Sec 1.03 (heavily referenced throughout this chapter)
+
+    a. In showing A spans B, I [PHM] thought I should show things in A
+    are linearly independent and that dimA=dimB, but the
+    dimensionality part seems to be a result of part c of this
+    problem.
+
+    b. straightforward [PHM]
+
+    c.
+
+    d. existence and uniqueness of f-hat
+
+** [2021-01-10 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** Highlights on the Tensor Product
+    JV - upper and lower mappings
+    AHL - eigenchris videos - (BT: very clear)
+*** Reviews of other readings
+    - Gardner
+    - Bradley
+    - Conrad - PHM to find reference to other mathematician...
+    - Kun - tensorphobia (recommended by BT)
+
+*** Ex V.1.1/Sec 1.01
+    - [PHM] Seems trivial, but...
+    do we have to be careful in checking all the properties on pg 18?
+    Closure proof in Chapter 5 directory.
+*** Ex V.1.2/Sec 1.02
+    - [PHM] Easy to hand wave on these two examples.
+    Does anyone have rigorous proofs?
+*** Ex V.1.3/Sec 1.03
+    - [PHM] discuss multilinearity of the range (to-set) vs. multilinearity of the map.
+    discussion on p 101: "Tensor products...in L^2(R^2;R) do not
+    consitute a vector space" ... "sits naturally inside, and spans
+    L(X_1,...,X_n;R)"
+
+    [PHM] error in my reading. the to-set here is a vector space (not
+    multilinear)
+** [2020-10-25 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+
+*** Sec IV.3
+     [BKT] Lemma 3.14: go over proof by Gardner/D&P
+           Ex. 5 & 7: walk-thru the basis construction, orthogonality of A
+*** Sec IV.3
+    finished discusssion of problems
+*** Sec IV.4
+    discussed Ex IV.4.1
+    remaining problems not so hard.
+** [2020-09-20 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** Sec III.1.07, p.61
+     [BKT] "Evidently I_X* = (I_X)*, ..." how did they arrive at this
+     equation?
+     equation reads as "Identity on the dual space is the dual of the
+     identity."
+     see defn of dual bottom of pg 57
+*** Sec IV.1 & IV.3
+     [BKT] Why doesn't standard inner product on R follow summation convention?
+     When does the convention apply? (pg 67 IV.1.03)
+*** Sec IV.2.08
+   - [BKT] On p. 81, the Commutative Diagram is a bit confusing. How to understand it?
+     Also, the dot product drops away in derivation, for a reason I don't understand.
+   - What is the significance of adjoint and self-adjoint operators?
+*** Sec IV.3
+**** Ex IV.3.5 Lorentz metric
+
+[RJP] What exactly is the operation of F_downarrow?
+** [2020-08-30 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** Sec IV.1
+**** Ex IV.1.7a a norm is a partial norm
+     [PHM] discussed in email
+
+**** Ex IV.1.7b inner product is a norm
+
+**** Ex IV.1.7c indefinite metrics have partial norms
+     For Ni, an indefinite metric G(x,x) is neither positive nor
+     negative definite.  This does not force G(x,x) = 0 for some x !=
+     0, but G(x,x) **could** be zero for some nonzero x.
+
+     QUESTION: Does G(x,x) have to be continuous?+
+
+
+**** Ex IV.1.7d polarization identity
+
+**** Ex IV.1.8 F* properties wrt F properties
+
+*** Sec IV.2
+
+**** Ex IV.2.1a orthogonal complement
+**** Ex IV.2.1b basis
+**** Ex IV.2.1c dimensions
+**** Ex IV.2.1d projection in affine space
+**** Ex IV.2.2a det of A^T
+**** Ex IV.2.2b orthogonal ==> det = +-1
+**** Ex IV.2.2c an isometry is an isomorphism
+**** Ex IV.2.2d isom into is injective and surjective
+**** Ex IV.2.3 isometries in H^2
+**** Ex IV.2.4 preserving dot squares ==> orthogonality
+     Find a good counterexample where ||x|| is preserved, but
+     polarization identity doesn't work out.
+** [2020-08-09 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** Sec IV.1
+
+**** Ex IV.1.1
+     [PHM] geometric vs. algebraic solutions
+
+**** Ex IV.1.2 implications of bilinear properties
+     |     | i  | ii | iii      | iv | v  | vi  |
+     |-----+----+----+----------+----+----+-----|
+     | i   | -  | no | no       | no | no | no  |
+     | ii  | no | -  | no       | X  | X  | =>  |
+     | iii | no | no | -        | no | no | no  |
+     | iv  | no | X  | =>       | -  | X  | X   |
+     | v   | no | X  | =>       | X  | -  | X   |
+     | vi  | no | no | no       | X  | X  | -   |
+     |-----+----+----+----------+----+----+-----|
+     - no = no implication
+     - X  = contradiction
+     - => = implied
+
+     - i.   symmetric
+     - ii.  antisymmetric
+     - iii. nondegenerate examples of nondegenerate and degenerate
+     - iv.  positive definite
+     - v.   negative definite
+     - vi.  indefinite
+
+**** Ex IV.1.3 Dot product is an inner product
+
+**** Ex IV.1.4 Bilinear forms are a vector space
+     [PHM] do these relations follow from anything?
+
+**** Ex IV.1.5 Properties that apply to subspace
+     [PHM] all but indefinite?
+     [JV] nondegeneracy does not work either
+
+Follow-up to our discussion today on IV.1.5: Consider the bilinear
+form on R^2 defined by F((x1, x2), (y1, y2)) = x2y1 - x1y2.
+
+This is nondegenerate: for any (x1, x2) not equal to zero, we can find
+a (y1, y2) such that F((x1, x2), (y1, y2)) is not zero.  (If x1 is not
+zero, let y1 be zero and y2 nonzero.  If x2 is not zero, let y2 be
+zero and y1 nonzero.)
+
+However, restricted to the 1-dimensional subspace spanned by (1, 0), F
+is identically zero and therefore degenerate.
+
+Hence, it is possible for a bilinear form to be non-degenerate on a
+vector space X but not on every subspace of X.
+
+**** Ex IV.1.6 null vectors of an indefinite metric do not form a subspace
+     [PHM] 1. is there a geometric solution?
+     [PHM] 2. I needed an additional condition (details for discussion)
+** [2020-07-19 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** Sec II.3
+**** Ex II.3.4b
+     see notes from RJP
+**** Ex II.3.9a
+     see proposed solutions by PHM and NBA
+*** Chap III - dual space
+    see notes by JV
+    see notes by NBA (duality_daily)
+
+** [2020-06-28 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** sec III.1
+    - sec 1.02: linear functionals
+      [PHM] do there always "look like" dot products?
+    - sec 1.03: dual map A*
+      [PHM] note that this is a map from Y* to X*
+    - sec 1.04: dimensionality of dual space
+    - sec 1.05: avoid this
+    - sec 1.06: "dual basis" (matrix representation of dual map)
+    - sec 1.07: change of basis
+      [PHM] essentially the same message as 1.06
+    - sec 1.08: notation
+    - sec 1.09: double duals (see Spivak vol 1 p. 107 and Axler 3F for
+      comparison)
+      [PHM] apparently, there is no unique (or it well-defined) map $X \rightarrow X*$
+    - Ex 1a [PHM] See Ex. 34 in Axler's Linear Algebra, sec 3F.
+    - Ex 1b
+    - Ex 2
+** [2020-06-07 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** Chapter 2 in a nutshell [PHM]
+    - points (coeff 1) and vectors (coeff 0)
+      vectors are defined as differences of points, hence the zero-coefficient.
+    - affine combinations (sum of coeffs == 1)
+    - affine transformations (A)
+      for L in Reals; x,y in affine space X
+      DEFINITION:: A( (1-L)x + Ly ) = (1-L)Ax + LAy
+      every affine transformation consists of a "linear part" (in practice, a
+      matrix or linear operator) and a "constant" part (vector in T).
+    - Connection to Stillwell section 4.6
+    - [AHL] another reference on affine spaces:
+      https://www.cis.upenn.edu/~cis610/geombchap2.pdf
+*** Sec II.1
+    - Ex 1: [PHM] note that (x,y) on p 44 is not a coordinate pair.  it is a
+                  pair of points.  (x,y) + (x,z) has no meaning outside of RHS of
+                  equation on p 44 (Sec II.1.02)
+    - Ex 2a: [PHM] consider vector space from 1-D affine space. this
+                   is an example of d_x not being bijective.
+    - Ex 2b: [PHM] proof part 1
+    - Ex 2c: [PHM] proof part 2 (vec ss + translate => affine)
+    - Ex 2d: [PHM] this should precede (b) and (c)
+    - Ex 2e: [PHM] this should precede (b) and (c)
+*** Sec II.2
+    - Ex 1a: [PHM] repeated affine combination for 3 points
+    - Ex 1b: [BKT] what does the inductive set-up look like?
+             [PHM] I used \Sum(\lamba_i.x_i) == repeated combination
+                   eqn, so it is independent of permutation.  On the
+                   whole, not a very useful equation.
+    - Ex 2a: Affine hull H(S)
+    - Ex 2b: S if affine iff H(S) = S.
+    - Ex 3:  Simplex: k+1 linearly independent points are needed to span a
+             k-dimensional affine space.
+*** Sec II.3
+    - Ex 1a: [BKT] is subtracting points allowed?
+             [PHM] to the extent that d(x,x)=0 and d(x,y)=y-x
+    - Ex 1b:
+    - Ex 2:
+    - Ex 3: Use definition of affine map (3.01) to prove...
+    - Ex 3a:
+    - Ex 3b:
+    - Ex 3c: [BKT] what is the picture used to prove this?
+             [PHM] use 3.01.
+    - Ex 4a: [AHL] why is the empty set a flat?
+             [PHM] formally, it satisfies the axioms of an affine space/subspace.
+    - Ex 4b: [RJP] AX{y}=single pt {y}; begs question of inverse of A:Rn->Rq, q<n
+             [PHM] probably cheating, but I leaned on group theory for this one
+	     [RJP] confusion due to wording of problem resolved: image of affine map is a single point => all vectors in domain live in null space
+    - Ex 4c:
+    - Ex 5a:
+    - Ex 5b:
+    - Ex 6: [BKT] want to use Lemma I.2.03, but why must B be linear?
+    - Ex 7:
+    - Ex 8: [PHM] Seems to me that they need to restrict the definition of the map M more,
+                  I can't really see what they're driving at here.
+    - Ex 9a:
+    - Ex 9b: [PHM] Is this an example of Ex 9a where H(P) < X?
+** [2020-05-16 Sat]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** [AHL]
+    - p. 48 Ex II.1.2d typo? Does that affect p. 46 1.05 proof part 2)?
+    - p. 48 Ex II.1.2a should d_x^<-(X' x X') be d_x({x} x X') or d(X' x X')?
+*** Sec II.3
+    - [PHM] I excerpeted chapter 2 of Bergers Problems book, which has
+      a nice exposition on affine spaces.
+** [2020-04-19 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** Sec I.2
+    - Ex 1.2.6b: look at, talk about people's solutions
+    - tangential topic: given a square matrix with random values, what
+      is the probability that it has a rotational "factor"?  For 2x2
+      matrices, the characteristic equation is x^2 - Tr*x + Det = 0,
+      so the condition for having a rotation "factor" is Tr^2 - 4*Det
+      < 0.  For 3x3 (or any odd x odd for that matter) there is always
+      one real root, so it's never purely rotational (Hamilton?).
+
+      See three png's filed under chapter 1.  I will elaborate if
+      there is interest.
+*** Sec I.3
+    - Ex I.3.2d: discuss strategies for arriving at detC
+    - Ex I.3.2e: [NBA] see notes "vol_det.pdf"fs
+    - Ex I.3.7: [PHM] The algebra is easy, as is the conclusion, but
+      the logical thread is tricky and may bear discussion.
+*** Sec II.1
+    - the many typos of this section.
+** [2020-03-31 Tue]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
+*** General discussion
+    - shall we move to weekly 1 hr or 40 minute meetings? (deal with
+      after meeting.)
+*** Sec I.1
+    - Ex I.1.3: Intersection of 2 subspaces is a subspace this comes
+      over directly from group theory (Alekseev problems 63 and 103),
+      but if that's too glib, we can discuss further.  Essentially, the
+      only thing you have to do is to demonstrate closure.
+*** Sec I.2
+    - Ex I.2.6(b,c): The interpretation in this problem is a good to
+      have in one's head.
+*** Sec I.3
+    - Ex I.3.1a: See also, Alekseev problems 174-176.  The braid method
+      that I [PHM] mentioned at our January meeting is a nice visual
+      way to "prove" this one.  Reference: page 7 of "Office Hours with
+      a Geometric Group Theorist" by Matt Clay & Dan Margalit (eds),
+      Princeton Univ. Press (2017).

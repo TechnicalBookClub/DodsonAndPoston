@@ -1,0 +1,43 @@
+; -*-Org-*-
+
+* Chapter 0
+  - p  6: In defn. of g, we wish they would use Z instead of N for the integers
+  - p  9: references to line C in fig 2.2a
+  - p 14: T_1 = \frac{2[c]L}{c^2 - v^2}
+* Chapter I
+  - p 19: p. [4],
+  - p 26: bottom: x = b_j x^j (book has "a" in place of "x")
+  - p 29: In ma[n]y physics books
+  - p 30: In Ex I.2.2, the "i" subscript in the "a" term of matrix BA
+    would be clearer as "j".
+  - p 32: beautiful Russian spies should be denoted Natasha, not Olga 
+    (cf. “Boris darlink, we get moose and squirrel?”)
+  - p 34: Equation D3, 2nd term should start with a^1_1, not a^2_1
+  - p 41: Ex 2a. "m^{-1}" deviates from their notation of "m^{\leftarrow}"
+  - p 41: Ex 2a. equation is missing sgn(m)
+  - p 42: Ex 7.  2nd line, "x_i b_1" --> "x_i b_i"
+  - p 42: Ex 7.  3rd line, in expression for x_2, denominator "b" --> "b_2"
+  - p 42: Ex 7.  4th line, "a_2" --> "b_2"
+* Chapter II
+  - p 46: part 2 of proof to Lemma 1.05 has 2 errors
+          (t - d(x',y')) should be (t + d(x',y'))
+          t - (t - d(x',y')) should be (t + d(x',y')) - t
+  - p 48: last equation, index "i" should not be primed.
+  - p 48: Ex 1.  T_x is undefined notation.  "If T_x X has the vector space structure..."?
+  - p 48: Ex 2b. Prior to part b, should the difference function be in
+    the forward direction? (X' = x + d_x(X'))
+  - p 49: 3rd eqn, "y = 1/2 d(y,x)" --> "y + 1/2 d(y,x)"
+  - p 51: 2nd eqn, in the innermost ()'s, "n - 1" --> "\lambda_{n - 1}"
+  - p 52: Ex 1a: missing \lambda in frong of (1-u) in last term.
+  - p 53: Ex 2b: (cf. Exercise I.1.3c)
+  - p 55: Sec 3.05, vector of a^i's should run to m, not n.
+  - p 55: Ex 1: d(x,y) should be d(x,y').
+  - p 55: Ex 3a: A is a mapping T -> S (not S->T)
+  - p 55: Ex 3a: "Axioms F i, F ii on p. 6" (page number missing)
+* Chapter III
+  - 
+* Chapter VI
+  - p 147: Ex 3b, Definition 1.03 (not 1.05)
+* Chapter VII
+  - p 159: Ex 5b, df/dg should be df/dt
+

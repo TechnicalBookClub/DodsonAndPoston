@@ -1,0 +1,1834 @@
+#+STARTUP: overview entitiespretty latexpreview
+#+COLUMNS: %25ITEM %NOTER_PAGE %NUM_COLUMNS
+#+TITLE: Notes from D&P and related books
+https://github.com/TechnicalBookClub/DodsonAndPoston
+* Dodson&Poston
+  :PROPERTIES:
+  :NOTER_DOCUMENT: DodsonCTJ+PostonT_TensorGeometry.pdf
+  :NOTER_AUTO_SAVE_LAST_LOCATION: t
+  :NOTER_PAGE: 244
+  :END:
+** Contents
+   :PROPERTIES:
+   :NOTER_PAGE: 9
+   :END:
+** 0.2. Functions
+   :PROPERTIES:
+   :NOTER_PAGE: 22
+   :END:
+*** typo: In definition of $g$,
+    :PROPERTIES:
+    :NOTER_PAGE: (22 . 0.677536231884058)
+    :END:
+    $\mathbb{N}$ should be $\mathbb{Z}$
+** II. Affine Spaces
+   :PROPERTIES:
+   :NOTER_PAGE: 59
+   :END:
+*** 1.01. Definition: /affine space/
+    :PROPERTIES:
+    :NOTER_PAGE: (59 0.6905797101449276 . 0.12637362637362637)
+    :END:
+    with vector space T is a non-empty set of points and a /difference function/
+    $d\colon X \times X \rightarrow T$
+*** 1.02. Tangent spaces, freeing and binding maps.
+    :PROPERTIES:
+    :NOTER_PAGE: (60 0.5869565217391305 . 0.12417582417582418)
+    :END:
+    the difference function of 1.01 is related to the bijection
+    $d_x \colon {x} \times X \rightarrow T$ which is called a /freeing map/.
+
+    Its inverse, $d^\leftarrow$ is called a /binding map/.
+** V.1.10. Notation.
+   :PROPERTIES:
+   :NOTER_PAGE: (121 0.33768115942028987 . 0.12307692307692308)
+   :END:
+#+BEGIN_QUOTE
+Vectors in X^k_h are called tensors on X, covariant of degree h and contravariant
+of degree k, or of type (k h)^T.
+...
+By convention $X^0_0 = \mathbb{R}$.
+#+END_QUOTE
+** VI. Topological Vector Spaces
+   :PROPERTIES:
+   :NOTER_PAGE: 130
+   :END:
+*** 1. Continuity
+    :PROPERTIES:
+    :NOTER_PAGE: 130
+    :END:
+**** VI.1.01
+     :PROPERTIES:
+     :NOTER_PAGE: (131 . 0.2753623188405797)
+     :END:
+     $\epsilon - \delta$ continuity
+**** 1.06 continuity
+     :PROPERTIES:
+     :NOTER_PAGE: (136 . 0.641)
+     :END:
+     - a cubic is a nice function to demonstate that open $\rightarrow$
+       open is not necessarily true for continuous functions.
+     - If your open set in the domain starts and ends between the local
+       extrema AND includes them, then the range is the closed interval
+       bound by the local extrema.
+**** Hausdorff topology
+     :PROPERTIES:
+     :NOTER_PAGE: (137 . 0.26)
+     :END:
+     This one is important.
+     - Finite intersections of open sets, any unions of open sets
+     - Finite unions of closed sets, any intersections of closed sets.
+*** 4. Compactness and Completeness
+    :PROPERTIES:
+    :NOTER_PAGE: 152
+    :END:
+**** 4.02 Bolzano-Weirstrauss
+     :PROPERTIES:
+     :NOTER_PAGE: (154 . 0.165)
+     :END:
+     See Stillwell NLT, Ex 8.4.1, 8.4.2
+**** See Stillwell NLT
+     :PROPERTIES:
+     :NOTER_PAGE: (154 . 0.85)
+     :END:
+     excercises 8.4.3, 8.4.4
+**** 4.10 theorem f(C) is compact
+     :PROPERTIES:
+     :NOTER_PAGE: (159 . 0.69)
+     :END:
+     extents.  I needed a reminder that functions are not continuous at
+     infinity.  see [[VI.1.01][$\epsilon-\delta$ continuity]]
+** VII. Differentiation and Manifolds
+   :PROPERTIES:
+   :NOTER_PAGE: 165
+   :END:
+** <<VII.1.04>> Theorem (Inverse Function Theorem).
+   :PROPERTIES:
+   :NOTER_PAGE: 172
+   :END:
+   $D_{x}f$ is an isomorphism iff $\exists$ neighborhoods of $x$ and $f(x)$ where a local inverse
+   $f^\leftarrow$ exists.
+** VII.3.02. Language: Df, df (the other d)
+   :PROPERTIES:
+   :NOTER_PAGE: (190 0.37681159420289856 . 0.10417582417582417)
+   :END:
+
+   if $f$ is a real-valued function, then
+   $df \colon TM \rightarrow \mathbb{R}$ is the "collection" of all $d_{f(q)} \circ D_qf$ where
+   $D_qf \colon T_qM \rightarrow T_{f(q)}\mathbb{R}$ and
+   $d_{f(q)} \colon T_{f(q)} \rightarrow \mathbb{R}$
+
+   this is NOT the same as $Df\colon TM \rightarrow T\mathbb{R}$.
+** VII.3.03 Tangent bundle on a manifold, abbreviations
+   :PROPERTIES:
+   :NOTER_PAGE: (191 0.7760869565217392 . 0.11758241758241758)
+   :END:
+   (T^*_x M) = (T_x M)^*
+** A tensor field of type (0 0)^T is just a function,
+   :PROPERTIES:
+   :NOTER_PAGE: (194 0.636231884057971 . 0.1956043956043956)
+   :END:
+** VII.4.01. Covariant Vectors.
+   :PROPERTIES:
+   :NOTER_PAGE: (200 0.4101449275362319 . 0.12197802197802197)
+   :END:
+   See Lee Prop 11.18
+** VII.4.02. Contravariant Vectors
+   :PROPERTIES:
+   :NOTER_PAGE: (201 0.11594202898550725 . 0.10197802197802197)
+   :END:
+   "we can idenfify $\vec{t}$ with the linear map:"
+   $\partial_{\vec{t}} \colon f \mapsto df(\vec{t})$
+
+   so for any vector field $\vec{v}$ and function $f$, we have
+   $(\vec{v}f)(x) = df(\vec{v_x})$
+** VII.6 Vector fields and flows
+   :PROPERTIES:
+   :NOTER_PAGE: (211 0.8456521739130435 . 0.10087912087912088)
+   :END:
+*** 6.02. Definition. A solution curve or integral curve
+    :PROPERTIES:
+    :NOTER_PAGE: (213 0.1927536231884058 . 0.10307692307692308)
+    :END:
+    of vector field $v$ on manifold $M$ is a curve $c \colon J \rightarrow M$
+    such that $c'(t) =
+    v(c(t)) \forall t \in J$
+*** <<6.03>>. Definition. A $C^k$ local flow...
+    :PROPERTIES:
+    :NOTER_PAGE: (213 0.5051282051282051 . 0.10305699481865285)
+    :END:
+    - $\phi(U,t) \sub M$ where
+      $U \subset M$, open and $t$ is a parameter in an open interval
+    - KEY POINT: by condition (ii), local flows are made up of solution curves.
+*** <<6.05>>. Corollary $\phi_{t+s} = \phi_t \circ \phi_s$
+    :PROPERTIES:
+    :NOTER_PAGE: (214 0.22028985507246376 . 0.10087912087912088)
+    :END:
+    by definition,
+    $\phi_t \colon U \rightarrow M \colon x \mapsto \phi(x,t)$, which returns the
+    displacement from $x$ along the flow $\phi$.
+*** 6.07. Lemma. Let M be a manifold on an affine space X
+    :PROPERTIES:
+    :NOTER_PAGE: (214 0.8037238169123352 . 0.12235294117647058)
+    :END:
+
+** VII.7 Lie Brackets
+   :PROPERTIES:
+   :NOTER_PAGE: (216 0.4205128205128205 . 0.09528497409326425)
+   :END:
+   - typo: should be $\phi((x,y), t)$, not $\phi((x+y),t)$
+   - typo: $\psi_1 \phi_1 (0,0) = (0,1)$
+   - typo: $\phi_1 \psi_1 (0,0) = (1,1)$
+   - $\phi$ and $\psi$ are local flows (see VII.6.03 p 197)
+
+   - There are many objects in the preface to this section:
+     1. $(x,y)$: points on a manifold (or coordinates by abuse of language)
+     2. $(s,t)$: parameters
+     3. $(\phi, \psi)$: flows
+     4. $(v, w)$: vector fields (related to the flows)
+     5. $f$: any function on the manifold
+
+   - claim (for this example only): $[\phi\circ\psi - \psi\circ\phi](x,y) = (1,0)$
+*** 7.01. Definition. The Lie bracket or commutator
+    :PROPERTIES:
+    :NOTER_PAGE: (216 0.7461538461538462 . 0.10176165803108808)
+    :END:
+    - act on vector fields, not flows.
+    - typo: (bottom of 200) v(w(fg)) - w(v(fg))
+
+    - $= g[v,w](f) - f[v,w](g)$
+    ``...so we have a new derivation'' (namely, $[v,w]$)
+*** 7.02. Theorem.
+    :PROPERTIES:
+    :NOTER_PAGE: (217 0.31196581196581197 . 0.10305699481865285)
+    :END:
+    iff fields commute then composition of flows also commute.
+*** Fig. 7.1 is not referenced anywhere!
+    :PROPERTIES:
+    :NOTER_PAGE: (218 0.28043478260869564 . 0.4459340659340659)
+    :END:
+*** 7.04. Theorem. ("the Chart theorem")
+    :PROPERTIES:
+    :NOTER_PAGE: (218 0.797 . 0.099)
+    :END:
+    If we have a linearly independent and commuting set of vector functions that
+    span a manifold, then they can be "realized" as the basis vectors (\partial_i's) of
+    some chart.
+
+    These flows have constant velocity in the neighborhood of x. (see example in
+    preface to this section.)
+**** On Randy's discomfort with this notation
+     :PROPERTIES:
+     :NOTER_PAGE: (218 0.9102753623188406 . 0.2846153846153846)
+     :END:
+     We want to justify the relationship
+     $\phi^i_t(x^1, \ldots, x^n) = (x^1, \ldots, x^i+t, \ldots, x^n)$.
+
+     Note that $M \ni \vec{x} = (x^1, \ldots, x^n) = \theta(0, \ldots, 0)$, so the LHS can be rewritten
+     $\phi^i_t(\theta(0, \ldots, 0)) = \phi^i_t \circ \theta(0, \ldots, 0)$
+
+     Using [[6.05]] (and going through the proof backwards), this becomes
+     $\theta(0,\ldots,t,\ldots,0)$ with the $t$ in the $i$ slot, which is the same
+     as $\vec{x} + t\vec{e}_i = (x^1, \ldots, x^i+t, \ldots, x^n)$
+
+     In the proof, this appears with parameter $s$ instead of $t$.
+
+**** \theta(t^{1}...t^n) \in M
+     :PROPERTIES:
+     :NOTER_PAGE: (219 0.14782608695652175 . 0.29978021978021974)
+     :END:
+     \theta(t^{1}...t^n) is a point in M.  By varying one of the t's, it describes a curve
+     on M.
+     \theta(0,0,0....0) = x \in M.
+     As a map, \theta: R^n \rightarrow M, so it *might* be the inverse of a chart function.
+**** ...by the smoothness of the \phi^1
+     :PROPERTIES:
+     :NOTER_PAGE: (219 0.2036231884057971 . 0.4767032967032967)
+     :END:
+     why only \phi^1?  Each \phi^i_t(x) moves the point along its flow line, so the
+     composition of all these \phi's is a point in M.  The fact that \phi^1 is smooth
+     means that through arbitrary points in M, \phi^1 defines a smooth flow, so \theta is
+     also smooth through arbitrary points in M.
+**** D\theta takes the vector e_{1}(t^{1}...t^n)...
+     :PROPERTIES:
+     :NOTER_PAGE: (219 0.22173913043478263 . 0.24703296703296704)
+     :END:
+     This should be e_i, not e_1.  otherwise, how does c(s) become a parameterized
+     curve through \theta(t^{1}...t^n) along the i direction?
+**** typo: 6.05
+     :PROPERTIES:
+     :NOTER_PAGE: (219 0.2782608695652174 . 0.725054945054945)
+     :END:
+     ``6.50'' should be [[6.05]]
+**** typo: should be \theta
+     :PROPERTIES:
+     :NOTER_PAGE: (219 0.30256012412723043 . 0.4517647058823529)
+     :END:
+
+     so we can rewrite this as \phi^i_s(p) for p \in M
+**** How does this "so c is a solution curve" come about?
+     :PROPERTIES:
+     :NOTER_PAGE: (219 0.33260869565217394 . 0.09758241758241758)
+     :END:
+     See [[6.03]]: a local flow is a solution curve by definition and c == \phi^i_s.  so
+     yes it is.
+**** typo: remove \theta
+     :PROPERTIES:
+     :NOTER_PAGE: (219 0.3572463768115942 . 0.08)
+     :END:
+     should be c^*(0) = v_i(c(0))
+**** D\theta takes the standard basis...
+     :PROPERTIES:
+     :NOTER_PAGE: (219 0.3739130434782609 . 0.29208791208791207)
+     :END:
+     D\theta\colon T_{(0,...,0)}R^n \rightarrow T_{x}M \colon e_j \rightarrow (v_j)_x
+**** What are they saying????
+     :PROPERTIES:
+     :NOTER_PAGE: (219 0.3948797517455392 . 0.3105882352941176)
+     :END:
+#+BEGIN_QUOTE
+That is a linearly independent subset of the n-dimensional space T_x M, by
+assumption, so D\theta(v_1, ... ,v_n) is an isomorphism.
+#+END_QUOTE
+What is "that"?  "That" is $\{(v_1)_x,...,(v_n)_x\}$
+
+if we're in Bachman, then $\langle e_1,..., e_n \rangle$ is a general-ish vector in
+T_{0}..) R^n
+
+
+*** Exercises VII.7
+    :PROPERTIES:
+    :NOTER_PAGE: (219 0.5818840579710145 . 0.10197802197802197)
+    :END:
+
+**** Ex VII.7.2
+     :PROPERTIES:
+     :NOTER_PAGE: (220 0.1572463768115942 . 0.13296703296703297)
+     :END:
+     parts a and c are covered by [[Lee prop 8.26]]
+
+**** Ex VII.7.4: Typos abound!  THIS IS THE LIE DERIVATIVE!!
+     yes, very important.  See Lee.
+     :PROPERTIES:
+     :NOTER_PAGE: (220 0.42246376811594205 . 0.13516483516483516)
+     :END:
+
+     The subscript to the first $v$ should be  $\phi_h(x)$:
+     $[u,v]_x = \lim_{h\rightarrow 0} \frac{(D_x \phi_h)^{\leftarrow} v_{\phi_h(x)} - v_x}{h}$
+
+
+     $v_x$, and $[u,v]_x$ are both tangent vectors in $T_x M$
+     $v_{\phi_h(x)}$ is a tangent vector in $T_{\phi_h(x)}M$
+
+     $\phi_h \colon M \rightarrow M$, so
+
+     $D_x \phi_h \colon T_x M \rightarrow T_{\phi_h(x)}M \colon v_x \mapsto \lim_{h\to0}\frac{v_{\phi_h(x)} - v_x}{h}$
+
+**** Typo in <<Ex.VII.7.5>>
+     :PROPERTIES:
+     :NOTER_PAGE: (220 0.576666666666667 . 0.5813186813186813)
+     :END:
+     missing $f$, should be at least:
+     $[\vec{u}, f\vec{v}] = \vec{u}(f)\vec{v} + f[\vec{u},\vec{v}]$
+
+     Note: this agrees with [[Prop 8.28d][Lee p 188]] because $\vec{v}(1) = d(1)\vec{v} = 0$
+
+** VIII. Connections and Covariant Differentiation
+   :PROPERTIES:
+   :NOTER_PAGE: 221
+   :END:
+
+** VIII.2. Rolling Without Turning
+   :PROPERTIES:
+   :NOTER_PAGE: (223 0.47898550724637684 . 0.12637362637362637)
+   :END:
+   This section is their attempt to lay the groundwork for the Levi-Civita
+   connection, aka the intrinsic or covariant derivative.  The exposition is
+   terrible.  Better to look at Needham, chapters 21-23.
+
+   By not "turning," I assume that they mean parallel transport of the basis
+   vectors of the tangent space, which is formally introduced in VIII.4.
+   
+** VIII.3. Differentiating Sections
+   :PROPERTIES:
+   :NOTER_PAGE: (228 0.5108695652173914 . 0.12197802197802197)
+   :END:
+   We can think of T(TM) as the vector space of changes of vectors in TM, the
+   manifold of tangent spaces.
+*** "directional derivative"
+    :PROPERTIES:
+    :NOTER_PAGE: (231 0.6036231884057971 . 0.310989010989011)
+    :END:
+    In D&P-speak, "vertical" is vertical in their picture of TM, meaning that
+    the vector lies in T_{p}M for some p \in M.
+
+*** "we are free to decide what properties would be nice to have"
+    :PROPERTIES:
+    :NOTER_PAGE: (231 0.8007246376811594 . 0.11758241758241758)
+    :END:
+    See Tu(DG) Sec 6, p 30.  Without saying so, D&P appear to be leading us to
+    the *Riemannian* or *Levi-Civita* connection.  Tu says this is the unique,
+    torsion-free affine connection on a Riemannian manifold.
+*** Typo! first f should be t
+    :PROPERTIES:
+    :NOTER_PAGE: (232 0.6231884057971014 . 0.32967032967032966)
+    :END:
+
+*** Need to understand the first term on the right
+    :PROPERTIES:
+    :NOTER_PAGE: (232 0.6666666666666666 . 0.3274725274725275)
+    :END:
+    See Tu(DG) Prop 4.9.ii p. 27
+*** 3.01. Definition. A connection (\nabla)
+    :PROPERTIES:
+    :NOTER_PAGE: (232 0.8913043478260869 . 0.12417582417582418)
+    :END:
+    Koszul connection (general affine connection)
+    Levi-Civita/intrinsic/Reimannian/covariant has the additional property of
+    being torsion-free (See Tu, Sec 6)
+    (tangent vector, vector field) \to (tangent vector)
+
+    Ci:   linear in the input tangent vector space
+    Cii:  linear in the vector field space
+    Ciii: scaling t is the same as scaling w
+    Civ:  Liebniz property
+    Cv:   continuous vector fields have continous connections
+*** 3.02. Coordinates -- Christoffel symbols
+    :PROPERTIES:
+    :NOTER_PAGE: (233 0.44130434782608696 . 0.12197802197802197)
+    :END:
+    Tu treats this topic in Section 13.3 of DG.
+#+BEGIN_QUOTE
+First, let us see what a connection looks like in coordinates, as some proofs
+will be easiest that way.
+#+END_QUOTE
+**** Typo? shold be "by Ciii"
+     :PROPERTIES:
+     :NOTER_PAGE: (233 0.5659420289855073 . 0.8120879120879121)
+     :END:
+     ``by Ci)'' is wrong... maybe
+*** 3.03. Transformation Formula.
+    :PROPERTIES:
+    :NOTER_PAGE: (234 0.19855072463768117 . 0.11978021978021978)
+    :END:
+    Despite the suggestive index notation, Christoffel symbols are *not* tensors.
+*** 3.04. Definition: vector field *along* c
+    :PROPERTIES:
+    :NOTER_PAGE: (234 0.8166666666666667 . 0.12857142857142856)
+    :END:
+    a vector field *along* curve c assigns a vector tangent to M at each point
+    of c(t) for t \in [a,b].
+
+    From the examples given, this appears to be in concordance with Tu's usage
+    of *along*, in that the vectors do not necessarily have to be tangent to the
+    curve, which we intepret as a submanifold of M when we read Tu.
+
+    \Pi here is the projection TM \rightarrow M taking a vector to its point of attachment.
+*** 3.05. Differentiating, Along Curves, Fields Along Curves.
+    :PROPERTIES:
+    :NOTER_PAGE: (235 0.3072463768115942 . 0.12087912087912088)
+    :END:
+    D&P's funny \nabla is DV/dt in Tu -- the "covariant derivative"?
+    In IX.1.01, they call Dc^*/dt the acceleration.
+
+    In Needham, it is the /intrinsic derivative/ (23.2).
+
+    Note -- I'm using ~ over \nabla instead of | through \nabla.
+    #+BEGIN_QUOTE
+    We denote the resulting linear map, taking vector fields along c (not
+    vector fields on M) to vector fields along c, by $\tilde{\nabla}_{c*}$. not $\nabla_{c*}$.
+    #+END_QUOTE
+*** 3.06. Definition: "vertical"
+    :PROPERTIES:
+    :NOTER_PAGE: (235 0.577536231884058 . 0.12747252747252746)
+    :END:
+    a vector $\vec{v}$ in the space of derivatives of tangent vectors is
+    /vertical/ if its projection into the tangent space is zero.
+
+    I find this definition confusing and hard to keep in my head.  The picture
+    in Fig 3.6 is likely the key (but the value is still questionable -- can
+    \~{c} be double-valued as it is under (b)?)
+#+DOWNLOADED: screenshot @ 2023-05-13 16:52:37
+[[file:.figs/Dodson&Poston/2023-05-13_16-52-37_screenshot.png]]
+
+*** 3.07. Definition: "vertical" and "horizontal" parts of a vector
+    :PROPERTIES:
+    :NOTER_PAGE: (236 0.21159420289855072 . 0.12197802197802197)
+    :END:
+    The vertical part of a vector $\vec{v}$ in the space of derivatives of
+    tangent vectors is the part normal to the tangent space, while the
+    horizontal part of the vector is the part in the tangent space.
+
+    The projection $P_w$ defined in this section is the projection to the
+    "vertical." It corresponds to $\langle\vec{v}, \hat{n}\rangle\hat{n}$ in Tu Sec 6.4,
+    Prop 6.8, p 47.
+*** 3.08. Language
+    :PROPERTIES:
+    :NOTER_PAGE: (236 0.5173913043478261 . 0.12307692307692308)
+    :END:
+    Koszul connection - section 3.01
+    Ehresmann connection - split T_w(TM) into horizontal and vertical parts
+*** Exercises 3 & 4
+    :PROPERTIES:
+    :NOTER_PAGE: 237
+    :END:
+    \nabla and the funny \nabla...
+** VIII.4. Parallel Transport
+   :PROPERTIES:
+   :NOTER_PAGE: (238 0.5369565217391304 . 0.13186813186813187)
+   :END:
+*** 4.01. Definition: parallel vector field
+    :PROPERTIES:
+    :NOTER_PAGE: (238 0.5797101449275363 . 0.13406593406593406)
+    :END:
+    A vector field v along c \in M is /parallel/ if the horizontal component of
+    its derivative along c^* is zero.  In other words, at each point along the
+    curve, the corresponding vector from the field must maintain the same angle
+    with respect to the tangent to the curve.
+
+    This corresponds to Tu (DG) Sec 14.5 Defn 14.13 p 110.  DV/dt == 0.
+*** what does this even mean?
+    :PROPERTIES:
+    :NOTER_PAGE: (238 0.6608695652173913 . 0.2838461538461539)
+    :END:
+    ``v, considered as a curve in TM, has c*(t) horizontal for all t''
+
+    Just like the "rolling" business in this book, I'm not sure the
+    "vertical"/"horizontal" distinction is pedegogically useful.  In order to
+    picture nontrivial parallel transport, we need at minimum, a 2D surface
+    embedded in 3D.  M is 2D, so v \in TM is also 2D, but c*(t) \in T(TM) is 4D --
+    hard to picture.  Are there 2 horizontal dimensions and 2 vertical
+    dimensions?  This is *much* easier to follow in Needham.
+
+    See the discusion around Eqn (23.5), p 244 in Needham.
+*** 4.02. Theorem: uniqueness of the parallel vector field along c
+    :PROPERTIES:
+    :NOTER_PAGE: (239 0.41449275362318844 . 0.12527472527472527)
+    :END:
+    for any v and c, the parallel vector field is unique.
+*** 4.03. Definition: /parallel transport/ \tau
+    :PROPERTIES:
+    :NOTER_PAGE: (241 0.1673913043478261 . 0.12197802197802197)
+    :END:
+    See Needham 23.2, p 243.
+*** 4.04. Lemma. parallel transport is independent of reparameterization
+    :PROPERTIES:
+    :NOTER_PAGE: (241 0.5282608695652175 . 0.12527472527472527)
+    :END:
+    The statement of this lemma seems too obvious to prove.
+*** 4.05. Theorem.
+    :PROPERTIES:
+    :NOTER_PAGE: (242 0.16086956521739132 . 0.12307692307692308)
+    :END:
+**** typo: should be \~c
+     :PROPERTIES:
+     :NOTER_PAGE: (242 0.22681159420289856 . 0.42637362637362636)
+     :END:
+     $\Pi \circ \~c$
+*** 4.06. Corollary. (connection)
+    :PROPERTIES:
+    :NOTER_PAGE: (242 0.7521739130434782 . 0.12197802197802197)
+    :END:
+    $\nabla_{\vec{t}}\vec{w} = \lim_{h\rightarrow0} \frac{\tau^\leftarrow_h \vec{w}_{f(h)}-\vec{w}_p}{h}$
+*** 4.07. Corollary. (intrinsic derivative)
+    :PROPERTIES:
+    :NOTER_PAGE: (243 0.39057971014492754 . 0.12307692307692308)
+    :END:
+    $~{\nabla}_{c*}\vec{w}(t) = \lim_{h\rightarrow0} \frac{\tau^\leftarrow_h \vec{w}_{c(t+h)}-\vec{w}_{c(t)}}{h}$
+** Bibliography
+   :PROPERTIES:
+   :NOTER_PAGE: (434 . 0.000213)
+   :END:
+** Index of Notations
+   :PROPERTIES:
+   :NOTER_PAGE: 437
+   :END:
+* NeedhamT VDGF
+  :PROPERTIES:
+  :NOTER_DOCUMENT: NeedhamT_VDGF.pdf
+  :NOTER_AUTO_SAVE_LAST_LOCATION: t
+  :NOTER_PAGE: 522
+  :END:
+
+#+DOWNLOADED: screenshot @ 2023-04-22 18:19:35
+[[file:.figs/NeedhamT_VDGF/2023-04-22_18-19-35_screenshot.png]]
+
+** Contents
+   :PROPERTIES:
+   :NOTER_PAGE: (8 0.12301013024602026 . 0.14173228346456693)
+   :END:
+
+** 1.3 Angular excess of a spherical triangle
+:PROPERTIES:
+:NOTER_PAGE: 37
+:END:
+excess = (sum of angles) - \pi
+       = A/R^2
+** 1.5 Constructing geodesics with tape
+:PROPERTIES:
+:NOTER_PAGE: 41
+:END:
+** 2.1 Gaussian curvature in terms of excess angle
+:PROPERTIES:
+:NOTER_PAGE: (47 . 0.7257597684515195)
+:END:
+** 2.2 Circ/Area of a circle -- reread this!
+:PROPERTIES:
+:NOTER_PAGE: (48 . 0.5658465991316932)
+:END:
+** 2.3 Local Gauss-Bonnet Theorem
+:PROPERTIES:
+:NOTER_PAGE: (52 . 0.18451519536903038)
+:END:
+angular excess is the total (area integrated) curvature.
+** Chapter 4 The Metric
+:PROPERTIES:
+:NOTER_PAGE: 60
+:END:
+*** 4.3 Metric of a general surface
+    :PROPERTIES:
+    :NOTER_PAGE: (63 . 0.6642547033285093)
+    :END:
+*** Gauss EFG coefficients of the first fundamental form
+    :PROPERTIES:
+    :NOTER_PAGE: (66 0.2460202604920405 . 0.14960629921259844)
+    :END:
+    E == A^2
+    F == ABcos\omega
+    G == B^2
+*** 4.4 Metric Curvature Formula
+    :PROPERTIES:
+    :NOTER_PAGE: (66 . 0.6888567293777135)
+    :END:
+*** 4.5 Conformal Maps
+    :PROPERTIES:
+    :NOTER_PAGE: 68
+    :END:
+** Chapter 5 Pseudosphere and the Hyperbolic plane
+:PROPERTIES:
+:NOTER_PAGE: 80
+:END:
+*** 5.2 Tractrix and the Psuedosphere
+    :PROPERTIES:
+    :NOTER_PAGE: 81
+    :END:
+    Tractrix: object dragged along Y axis by a chord of length R.
+    \sigma = distance along path of object.
+*** 5.3 Conformal map of the pseudosphere
+    :PROPERTIES:
+    :NOTER_PAGE: (83 . 0.35672937771345875)
+    :END:
+    (x,\sigma) \rightarrow (x,y) = x + iy = z
+    where x is an angle [0,2\pi) of the revolution
+    and y \ge 1 (see 5.4)
+** 8.3 Newton's curvature formula
+   :PROPERTIES:
+   :NOTER_PAGE: (129 0.35540069686411146 . 0.3791469194312796)
+   :END:
+** Eqn 8.6, curvature
+   :PROPERTIES:
+   :NOTER_PAGE: (132 0.7831010452961672 . 0.2890995260663507)
+   :END:
+   The area of the shaded sector in fig 8.6 explains the numerator of \kappa, but it
+   doesn't really explain why the numerator should be that area.  Kepler's law?
+
+   \kappa = (area of swept velocity vector)/|v|^3
+
+   In Kepler's law, the position vector sweeps out equal areas in equal time.
+** Chapter 9 Curves in 3-Space
+   :PROPERTIES:
+   :NOTER_PAGE: 135
+   :END:
+*** definition: Torsion
+    :PROPERTIES:
+    :NOTER_PAGE: (135 0.33212735166425467 . 0.13385826771653545)
+    :END:
+``rate of rotation of the osculating plane is called the torsion, denoted \tau.''
+*** definition: binormal of a curve
+    :PROPERTIES:
+    :NOTER_PAGE: (136 0.4428364688856729 . 0.13385826771653545)
+    :END:
+    normal vector to the osculating plane
+** Chapter 10 The Principal Curvatures of a Surface
+   :PROPERTIES:
+   :NOTER_PAGE: (138 0.13024602026049203 . 0.28051181102362205)
+   :END:
+*** (10.1) Euler’s Curvature Formula:
+    :PROPERTIES:
+    :NOTER_PAGE: (139 0.12373371924746743 . 0.30708661417322836)
+    :END:
+    $\kappa(\theta) = \kappa_1 \cos^2 \theta + \kappa_2 \sin^2 \theta$
+*** Dupin's indicatrix
+    :PROPERTIES:
+    :NOTER_PAGE: (140 0.31982633863965265 . 0.13385826771653545)
+    :END:
+    nearby slices parallel to the tangent plane are, to first order, conic
+    sections.
+** Chapter 11 Geodesics and Geodesic Curvature
+   :PROPERTIES:
+   :NOTER_PAGE: 144
+   :END:
+
+*** Fig [11.2] K = K_g + K_n
+    :PROPERTIES:
+    :NOTER_PAGE: (145 0.3813314037626628 . 0.12598425196850394)
+    :END:
+    K_g is "geodesic curvature" IN the surface
+    K_n is "normal curvature" OF the surface
+
+** Chapter 12 The Extrinsic Curvature of a Surface
+   :PROPERTIES:
+   :NOTER_PAGE: 159
+   :END:
+*** Figure 12.5: normal vectors on principal and general curves
+    :PROPERTIES:
+    :NOTER_PAGE: (162 0.3936324167872648 . 0.13385826771653545)
+    :END:
+
+ #+DOWNLOADED: screenshot @ 2023-04-26 20:14:20
+ [[file:.figs/NeedhamT_VDGF/2023-04-26_20-14-20_screenshot.png]]
+
+** Chapter 15 The Shape Operator, S, and \nabla_v
+   :PROPERTIES:
+   :NOTER_PAGE: 178
+   :END:
+*** 15.1 Directional Derivatives (\nabla_v)
+    :PROPERTIES:
+    :NOTER_PAGE: (178 0.2568740955137482 . 0.140748031496063)
+    :END:
+
+*** 15.2 The Shape Operator S
+    :PROPERTIES:
+    :NOTER_PAGE: (180 0.7337192474674384 . 0.140748031496063)
+    :END:
+    ``is simply defined to be the negative of the directional derivative of n
+    along v''
+    $S(v) = -\nabla_{v}n$
+
+*** 15.3 Geometric effect of S
+    :PROPERTIES:
+    :NOTER_PAGE: (181 0.8791606367583212 . 0.2155511811023622)
+    :END:
+#+BEGIN_QUOTE
+The principal directions are the eigenvectors of the Shape Operator S, and the
+principal curvatures are the corresponding eigenvalues:
+S(e_i) = \kappa_i e_i .
+#+END_QUOTE
+
+*** (15.18) \kappa(v) = v \cdot S(v)
+    :PROPERTIES:
+    :NOTER_PAGE: (188 0.5904486251808972 . 0.16535433070866143)
+    :END:
+    where v is a unit tangent vector.
+*** (15.7) sum of curvatures in perpendicular directions
+    :PROPERTIES:
+    :NOTER_PAGE: (191 0.34804630969609257 . 0.2234251968503937)
+    :END:
+#+BEGIN_QUOTE
+The sum of the curvatures in any two perpendicular directions is equal to the sum
+of the principal curvatures.
+#+END_QUOTE
+This is a surprising result, given that the curvatures are represented in
+earlier parts of this book by ellipses.
+*** (15.26) curvature and torsion
+    :PROPERTIES:
+    :NOTER_PAGE: (193 0.33212735166425467 . 0.1889763779527559)
+    :END:
+    $\mathcal{K}_{ext} = |[S]| = -\tau^2
+*** 15.9 Classical Terminology and Notation: The Three Fundamental Forms
+    :PROPERTIES:
+    :NOTER_PAGE: (193 0.48118668596237335 . 0.14271653543307086)
+    :END:
+    Note that the fundamental forms are not proper forms (see Act V, Chapter 32
+    and on.)
+    - $I(u,v)   =   u  \cdot   v$
+    - $II(u,v)  = S(u) \cdot   v$
+    - $III(u,v) = S(u) \cdot S(v)$
+*** 19.8 The Road Ahead
+    :PROPERTIES:
+    :NOTER_PAGE: 247
+    :END:
+    In the 3 chapters before this, Needham gives proofs of th
+** Chapter 21 An Historical Puzzle
+   :PROPERTIES:
+   :NOTER_PAGE: 260
+   :END:
+*** GR and parallel transport
+    :PROPERTIES:
+    :NOTER_PAGE: (261 0.20644599303135888 . 0.13744075829383887)
+    :END:
+ #+BEGIN_QUOTE
+ Einstein’s success was all the more remark- able, and remains all the more
+ puzzling, because he achieved it before Levi-Civita— pictured in
+ [21.1]—discovered the concept of parallel transport, which did not occur until
+ 1917!
+ #+END_QUOTE
+** Chapter 22 Extrinsic Constructions
+   :PROPERTIES:
+   :NOTER_PAGE: 262
+   :END:
+*** Projection (not rotation) of w into T_q
+    :PROPERTIES:
+    :NOTER_PAGE: (263 0.2756874095513748 . 0.40551181102362205)
+    :END:
+    w_{||} = P[w] = w − (w \cdot n)n
+*** Rotation of w into T_q
+    :PROPERTIES:
+    :NOTER_PAGE: (263 0.41172214182344424 . 0.5167322834645669)
+    :END:
+    $\tilde{w}$.  But in the limit as \epsilon\rightarrow\infty, rotation and projection are the same.
+** Chapter 23 Intrinsic (covariant) Constructions
+   :PROPERTIES:
+   :NOTER_PAGE: 269
+   :END:
+
+*** 23.2 The Intrinsic (aka, “Covariant”) Derivative
+    :PROPERTIES:
+    :NOTER_PAGE: (270 0.2973950795947901 . 0.14271653543307086)
+    :END:
+    aka Levi-Civita connection (Koszul connection?)
+
+*** (Eqn 22.1) Instrinsic derivative, (D_v, the convariant derivative)
+    :PROPERTIES:
+    :NOTER_PAGE: (270 0.813314037626628 . 0.38976377952755903)
+    :END:
+    \epsilon D_v w = w(q) - w_{||}(p \rightarrow q)
+    both w's on the RHS are in T_q
+
+*** Fig 23.3
+    :PROPERTIES:
+    :NOTER_PAGE: (271 0.15991316931982633 . 0.15748031496062992)
+    :END:
+``here w is growing in length and rotating counterclockwise as it moves along
+G.''
+*** D_v is also called the Levi-Civita Connection.
+    :PROPERTIES:
+    :NOTER_PAGE: (271 0.5687409551374819 . 0.13877952755905512)
+    :END:
+*** intrinsic derivative D_{v}w
+    :PROPERTIES:
+    :NOTER_PAGE: (271 0.8364688856729378 . 0.3228346456692913)
+    :END:
+    vs the definition on the previous page, here w(q) is parallel transported
+    back to p [w_{||}(q \rightarrow p)] and then w(p) is subtracted. (then lim \epsilon\rightarrow\infty)
+*** Here is an extrinsic way of looking at the intrinsic derivative.
+    :PROPERTIES:
+    :NOTER_PAGE: (272 0.2525325615050651 . 0.17421259842519685)
+    :END:
+*** Eqn 23.3 D_{v}w
+    :PROPERTIES:
+    :NOTER_PAGE: (272 0.33212735166425467 . 0.3228346456692913)
+    :END:
+    same as Eqn 22.1, with \nabla_{v}w dropped in for w
+
+#+BEGIN_QUOTE
+In other words, to obtain D_{v}w we take the full rate of change ∇_{v}w in R^3 , then
+subtract out the part that is not tangent to the surface, thereby leaving behind
+the part that is intrinsic to the surface.
+#+END_QUOTE
+*** Compare these with Ci-Cv in D&P p 217
+    :PROPERTIES:
+    :NOTER_PAGE: (272 0.5781476121562952 . 0.18110236220472442)
+    :END:
+#+BEGIN_QUOTE
+it is much simpler to think of *flattening onto the tabletop* the strip
+surrounding [curve] K, together with the vector fields x, y, z, for then D_v
+simply is ∇_v.
+#+END_QUOTE
+** 1-forms used to be called covariant vectors or covectors
+   :PROPERTIES:
+   :NOTER_PAGE: (495 0.3813314037626628 . 0.1968503937007874)
+   :END:
+** Further Reading
+   :PROPERTIES:
+   :NOTER_PAGE: (504 0.12373371924746743 . 0.14862204724409447)
+   :END:
+*** Intuitive Topology, by V. V. Prasolov.
+    :PROPERTIES:
+    :NOTER_PAGE: (506 0.23227206946454412 . 0.17913385826771652)
+    :END:
+*** Three-Dimensional Geometry and Topology, by William P. Thurston.
+    :PROPERTIES:
+    :NOTER_PAGE: (506 0.6924746743849493 . 0.1732283464566929)
+    :END:
+
+*** Differential Geometry: A Geometric Introduction, by David W. Henderson.
+    :PROPERTIES:
+    :NOTER_PAGE: (508 0.7575976845151953 . 0.17519685039370078)
+    :END:
+*** Gauge Fields, Knots and Gravity, by John Baez and Javier P. Muniain.
+    :PROPERTIES:
+    :NOTER_PAGE: (512 0.8762662807525325 . 0.17618110236220472)
+    :END:
+
+* TuLW DifferentialGeometry
+  :PROPERTIES:
+  :NOTER_DOCUMENT: TuLW_DifferentialGeometry.pdf
+  :NOTER_PAGE: 115
+  :END:
+#+DOWNLOADED: screenshot @ 2023-04-22 18:20:16
+[[file:.figs/TuLW_DifferentialGeometry/2023-04-22_18-20-16_screenshot.png]]
+
+** §1 Riemannian Manifolds
+   :PROPERTIES:
+   :NOTER_PAGE: (19 0.3652173913043478 . 0.12417582417582418)
+   :END:
+*** 1.3 Riemannian Metrics
+    :PROPERTIES:
+    :NOTER_PAGE: (21 0.6923438233912635 . 0.12321937321937322)
+    :END:
+    A Riemannian metric maps a continuous vector field onto a continuous function.
+*** Example 1.11: Torus
+    :PROPERTIES:
+    :NOTER_PAGE: (22 0.7623297322686707 . 0.12393162393162394)
+    :END:
+    On a torus in R^3 vs a torus as ``the quotient space of a square with the
+ opposite edges identified''
+ #+BEGIN_QUOTE
+ We will show later that there is no isometry between these two Riemannian
+ manifolds with the same underlying torus.
+ #+END_QUOTE
+*** partition of unity
+    :PROPERTIES:
+    :NOTER_PAGE: (23 0.6528985507246378 . 0.1087912087912088)
+    :END:
+    What is this?  The definition is unhelpful in describing the meaning of this term.
+*** Theorem 1.12. On every manifold M there is a Riemannian metric.
+    :PROPERTIES:
+    :NOTER_PAGE: (23 0.8139971817754815 . 0.1267806267806268)
+    :END:
+** §2 Curves
+   :PROPERTIES:
+   :NOTER_PAGE: (26 0.12173913043478261 . 0.11978021978021978)
+   :END:
+*** 2.3 Signed Curvature of a Plane Curve
+    :PROPERTIES:
+    :NOTER_PAGE: (28 0.3818840579710145 . 0.12637362637362637)
+    :END:
+    $T' = \gamma''(s) = \kappa\vec{n}$, so
+    $\kappa = \langle T', \vec{n} \rangle = \langle \gamma'', \vec{n} \rangle$
+*** Curvature formulae
+    :PROPERTIES:
+    :NOTER_PAGE: (31 0.4065217391304348 . 0.11758241758241758)
+    :END:
+    see Needham,
+** §4 Directional Derivatives in *Euclidean Space*
+   :PROPERTIES:
+   :NOTER_PAGE: (39 0.12753623188405797 . 0.12967032967032968)
+   :END:
+*** Torsion of the directional derivative D
+    :PROPERTIES:
+    :NOTER_PAGE: (41 0.2956521739130435 . 0.11758241758241758)
+    :END:
+    If $D_X Y - D_Y X = [X,Y]$, then
+    the torsion $T(X,Y) = D_X Y - D_Y X - [X,Y]$ is 0.
+
+    This only applies to $\mathbb{R}^n$.
+
+*** Curvature of the directional derivative
+    :PROPERTIES:
+    :NOTER_PAGE: (41 0.7021739130434783 . 0.11758241758241758)
+    :END:
+*** Definition 4.8. "On" vs "Along" a submanifold
+    :PROPERTIES:
+    :NOTER_PAGE: (43 0.6557971014492754 . 0.12087912087912088)
+    :END:
+    Along includes On, where On is tangent to the submanifold.
+*** Notation X(M) and \Gamma(TM|_N)
+    :PROPERTIES:
+    :NOTER_PAGE: (43 0.8500000000000001 . 0.11758241758241758)
+    :END:
+    - $\mathfrak{X}(M)$ is the set of all C^\infty vector fields *on* manifold M
+    - $\Gamma(TM|_N)$ is the set of all C^\infty vector fields *along* a submanifold N in
+      a manifold M.
+    - $\mathcal{F} = C^\infty(M)$ is the ring of C^\infty functions on M
+*** In a submanifold of R^n, torsion "no longer makes sense"
+    :PROPERTIES:
+    :NOTER_PAGE: (44 0.4311594202898551 . 0.12637362637362637)
+    :END:
+    because:
+    X is a vector field *on* M
+    Y is a vector field *along* M
+** §5 The Shape Operator
+   :PROPERTIES:
+   :NOTER_PAGE: (46 0.13623188405797101 . 0.11868131868131868)
+   :END:
+   See Needham Chapter 15.
+*** Defn: regular point -- need a picture
+    :PROPERTIES:
+    :NOTER_PAGE: (46 0.341304347826087 . 0.3967032967032967)
+    :END:
+*** 5.2 The Shape Operator
+    :PROPERTIES:
+    :NOTER_PAGE: (47 0.2311594202898551 . 0.12747252747252746)
+    :END:
+    $L_p(X_p) = -D_{X_p}N$, which is in the tangent plane T_{p}M and points
+    opposite the direction in which N changes wrt X_p.
+*** Is the usage of "on" here the same as before?
+    :PROPERTIES:
+    :NOTER_PAGE: (47 0.27246376811594203 . 0.505)
+    :END:
+    ``let N be a C^\infty unit normal vector field on M (Figure 5.1).''
+*** Proposition 5.3. The shape operator is self-adjoint:
+    :PROPERTIES:
+    :NOTER_PAGE: (48 0.41594202898550725 . 0.12417582417582418)
+    :END:
+*** Proposition 5.5: Curvature is given by the second fundamental form
+    :PROPERTIES:
+    :NOTER_PAGE: (50 0.08840579710144927 . 0.12417582417582418)
+    :END:
+    $\kappa(X_p) = \langle L(X_p), X_p \rangle = II(X_p, X_p)$
+*** Proposition 5.6: Principal directions and curvatures
+    :PROPERTIES:
+    :NOTER_PAGE: (50 0.41159420289855075 . 0.12307692307692308)
+    :END:
+    - Principal directions: eigenvectors of L
+    - Principal curvatures: eigenvalues of L
+*** 5.4 The First and Second Fundamental Forms
+    :PROPERTIES:
+    :NOTER_PAGE: (52 0.2702898550724638 . 0.12637362637362637)
+    :END:
+    Defined for smooth surfaces in $\mathbb{R}^3$.
+    - first fundamental form: inner product $\langle X,Y \rangle$
+      E := \langle e_1, e_1 \rangle
+      F := \langle e_1, e_2 \rangle
+      G := \langle e_2, e_2 \rangle
+    - second fundatmental form: $II(X_p, Y_p) =  \langle L(X_p), Y_p \rangle$
+      e := II(e_1, e_1)
+      f := II(e_1, e_2)
+      g := II(e_2, e_2)
+** §6 Affine Connections
+   :PROPERTIES:
+   :NOTER_PAGE: (60 0.11594202898550725 . 0.12307692307692308)
+   :END:
+#+BEGIN_QUOTE
+We will see in a later section that there are infinitely many affine connections
+on any manifold. On a Riemannian manifold, however, there is a unique
+torsion-free affine connection compatible with the metric, called the
+*Riemannian* or *Levi-Civita* connection.
+#+END_QUOTE
+*** No canonical basis for T_{p}M not embedded in a Euclidean space
+    :PROPERTIES:
+    :NOTER_PAGE: (60 0.6159420289855073 . 0.11758241758241758)
+    :END:
+    Formula 4.2 here is the directional derivative.
+*** Definition 6.1. An affine connection
+    :PROPERTIES:
+    :NOTER_PAGE: (60 0.7050724637681159 . 0.12857142857142856)
+    :END:
+
+*** 6.2 Torsion and Curvature
+    :PROPERTIES:
+    :NOTER_PAGE: (61 0.09130434782608696 . 0.12087912087912088)
+    :END:
+    ``There does not seem to be a good reason for calling T(X,Y) the torsion''
+    Is this not the same torsion that appears in Needham Chapter 9?
+*** Definition 6.4: Riemannian or Levi-Civita connection
+    :PROPERTIES:
+    :NOTER_PAGE: (62 0.5688405797101449 . 0.12087912087912088)
+    :END:
+    ``...is and affine connection that is torsion-free and compatible with the
+    metric.''
+
+*** Theorem 6.6. On a Riemannian manifold there is a unique Riemannian connection.
+    :PROPERTIES:
+    :NOTER_PAGE: (62 0.8876811594202899 . 0.12197802197802197)
+    :END:
+
+*** 6.4 Orthogonal Projection on a Surface in R3
+    :PROPERTIES:
+    :NOTER_PAGE: (63 0.7710144927536232 . 0.11868131868131868)
+    :END:
+    pr_p is the projection from T_p R^3 to the tangent space of M at p.
+
+** §7 Vector Bundles
+   :PROPERTIES:
+   :NOTER_PAGE: (66 0.12246376811594203 . 0.12307692307692308)
+   :END:
+   ``Thus the set X(M) has two module structures, over R and over F.''
+
+   ``We will try to understand F-linear maps from the point of view of vector
+   bundles.  The main result (Theorem 7.26) asserts the existence of a
+   one-to-one correspondence between F-linear maps α : Γ(E) → Γ(F) of sections
+   of vector bundles and bundle maps ϕ : E → F.''
+
+*** 7.1 Definition of a Vector Bundle
+    :PROPERTIES:
+    :NOTER_PAGE: (66 0.5297101449275362 . 0.12087912087912088)
+    :END:
+    ``A vector bundle, intuitively speaking, is a family of vector spaces that
+    locally “looks” like U × R^r .''
+
+    We need a picture of the terms defined here.
+
+** 13.1 Theorem
+   :PROPERTIES:
+   :NOTER_PAGE: (113 0.18695652173913044 . 0.15494505494505495)
+   :END:
+#+BEGIN_QUOTE
+We call DV /dt the covariant derivative (associated to ∇) of the vector field V
+along the curve c(t) in M.
+#+END_QUOTE
+
+** 13.3 Christoffel Symbols
+   :PROPERTIES:
+   :NOTER_PAGE: (115 0.8043478260869565 . 0.11648351648351649)
+   :END:
+
+** 14.5 Parallel Translation
+   :PROPERTIES:
+   :NOTER_PAGE: (126 0.7057971014492753 . 0.12857142857142856)
+   :END:
+** Index
+   :PROPERTIES:
+   :NOTER_PAGE: 348
+   :END:
+
+* Littlejohn Manifolds
+  :PROPERTIES:
+  :NOTER_DOCUMENT: Chapter_07/Littlejohn_Manifolds.pdf
+  :END:
+** Notes for page 3
+   :PROPERTIES:
+   :NOTER_PAGE: 3
+   :END:
+
+** <<Eqn 4>> (typo)
+   :PROPERTIES:
+   :NOTER_PAGE: (3 0.815 . 0.35)
+   :END:
+   should be: $x'^\mu = \psi_{ij}(x^\nu)$
+** <<Eqn 5>> (typo)
+   :PROPERTIES:
+   :NOTER_PAGE: (3 0.87 . 0.35)
+   :END:
+   should be: $x^\nu = \psi_{ij}^\leftarrow(x'^\mu)$
+** 8. Tangent Vectors
+   :PROPERTIES:
+   :NOTER_PAGE: (7 . 0.6893555394641564)
+   :END:
+*** Eqn 11
+    :PROPERTIES:
+    :NOTER_PAGE: (9 0.27081824764663287 . 0.28880974695407685)
+    :END:
+
+** 9. Equivalence Classes of Curves
+   :PROPERTIES:
+   :NOTER_PAGE: (9 0.4250543084721216 . 0.0962136832239925)
+   :END:
+
+** 10. Tangent Vectors in Coordinates
+   :PROPERTIES:
+   :NOTER_PAGE: (10 0.3569876900796524 . 0.1018369259606373)
+   :END:
+   "convective derivative" (see [[Eqn 11]])
+   "scalar" == "scalar field" in this context?
+
+*** Eqn 16
+    :PROPERTIES:
+    :NOTER_PAGE: (10 0.6401158580738595 . 0.3637863167760075)
+    :END:
+
+
+*** <<Eqn 17>> tangent vector at p
+    :PROPERTIES:
+    :NOTER_PAGE: (10 0.7139753801593048 . 0.3637863167760075)
+    :END:
+    Tangent vector as a ==first order, linear, partial differential operator==
+
+    $\vec{X} = \Sigma_i X^i \frac{\partial}{\partial x^i}|_p$
+** 12. Covectors
+   :PROPERTIES:
+   :NOTER_PAGE: (12 0.7081824764663287 . 0.09996251171508903)
+   :END:
+
+*** Eqn 21 df|_p
+    :PROPERTIES:
+    :NOTER_PAGE: (13 0.22157856625633598 . 0.13495782567947517)
+    :END:
+    $df|_p \colon T_p M \rightarrow \mathbb{R} \colon X \mapsto Xf$
+    where $Xf$ is defined in [[Eqn 16]]
+
+*** df|_p is an operator on vectors -- it is not small or "infinitesimal"
+    :PROPERTIES:
+    :NOTER_PAGE: (13 0.2831281679942071 . 0.10136832239925023)
+    :END:
+    "The most confusing thing for novices about this definition is that there is
+    nothing small or “infinitesimal” about df|_p . In traditional theoretical
+    physics the notation df usually denotes a small increment in the function f."
+
+*** 13. Differential of Coordinates
+    :PROPERTIES:
+    :NOTER_PAGE: (13 0.664735698769008 . 0.06487347703842547)
+    :END:
+* BachmanD: A Geometric Approach to Differential Forms
+  :PROPERTIES:
+  :NOTER_DOCUMENT: Bachman - A geometric approach to differential forms.pdf
+  :END:
+** 1.2 Generalizing the integral
+   :PROPERTIES:
+   :NOTER_PAGE: 19
+   :END:
+** 1.3 differential form in a nutshell
+   :PROPERTIES:
+   :NOTER_PAGE: (22 . 0.39420289855072466)
+   :END:
+   "A differential form is precisely a linear function which eats vectors, spits
+   out numbers and is used in integration."
+** 3 Forms
+   :PROPERTIES:
+   :NOTER_PAGE: 42
+   :END:
+*** 3.1 Coordinates for vectors
+    :PROPERTIES:
+    :NOTER_PAGE: (42 0.35144927536231885 . 0.10307692307692308)
+    :END:
+``The key to understanding the difference between $L$ and $T_p L$ is their co-
+ordinate systems.''
+**** notation <.,.>
+     :PROPERTIES:
+     :NOTER_PAGE: (43 0.47753623188405797 . 0.28329670329670326)
+     :END:
+ #+BEGIN_QUOTE
+ We have switched to the notation “<·, ·>” to indicate that dt we are not
+ talking about points of P anymore, but rather vectors in T_p P .
+ #+END_QUOTE
+*** 3.2 1-Forms
+    :PROPERTIES:
+    :NOTER_PAGE: (44 0.5427536231884058 . 0.09868131868131867)
+    :END:
+#+BEGIN_QUOTE
+Evaluating a 1-form on a vector is the same as projecting onto some line and
+then multiplying by some constant.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Evaluating a 1-form on a vector is the same as projecting onto each coordinate
+axis, scaling each by some constant and adding the results.
+#+END_QUOTE
+*** 3.3 Multiplying 1-forms
+    :PROPERTIES:
+    :NOTER_PAGE: (46 0.5536231884057972 . 0.10087912087912088)
+    :END:
+    The wedge product is a product operation on 1-forms that is closed, ie,
+    produces another 1-form.
+
+    ``we will use the symbol “∧” (pronounced “wedge”) to denote multiplication''
+**** Notation (),<>,[]
+     :PROPERTIES:
+     :NOTER_PAGE: (47 0.12318840579710146 . 0.0712087912087912)
+     :END:
+     (): x,y plane
+     <>: dx,dy plane
+     []: \omega,\nu plane
+**** wedge product justification or reasoning
+     :PROPERTIES:
+     :NOTER_PAGE: (47 0.2217391304347826 . 0.6437362637362637)
+     :HIGHLIGHT: #s(pdf-highlight 47 ((0.6637362637362637 0.2217391304347826 0.8318681318681319 0.27898550724637683)))
+     :END:
+#+BEGIN_QUOTE
+Do we know of a way to take these vectors and get a number? Actually, we know
+several, but the most useful one turns out to be the area of the parallelogram
+that the vectors span. This is precisely what we deﬁne to be the value of ω ∧
+ν(V1 , V2 )
+#+END_QUOTE
+Still -- why the skew-symmetric product vs any other one?  What is special about
+a/the skew-symmetric operator?
+**** 1-form in a nutshell
+     :PROPERTIES:
+     :NOTER_PAGE: (49 0.7652173913043478 . 0.11626373626373625)
+     :END:
+#+BEGIN_QUOTE
+Evaluating ω ∧ ν on the pair of vectors (V1 , V2 ) gives the area
+of parallelogram spanned by V1 and V2 projected onto the plane
+containing the vectors \langle ω\rangle and \langle ν\rangle, and multiplied by the area of
+the parallelogram spanned by \langle ω\rangle and \langle ν\rangle.
+#+END_QUOTE
+**** 2-form in a nutshell
+     :PROPERTIES:
+     :NOTER_PAGE: (50 0.41884057971014493 . 0.11296703296703296)
+     :END:
+#+BEGIN_QUOTE
+Every 2-form projects the parallelogram spanned by V1 and V2
+onto each of the (2-dimensional) coordinate planes, computes
+the resulting (signed) areas, multiplies each by some constant,
+and adds the results.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Henceforth, we will deﬁne a 2-form to be a bilinear, skew-symmetric, real-
+valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
+#+END_QUOTE
+*** 3.4 2-Forms on $T_p \mathbb{R}^3$
+    :PROPERTIES:
+    :NOTER_PAGE: (51 0.31666666666666665 . 0.09868131868131867)
+    :END:
+*** 3.5 2-Forms and 3-forms on $T_p \mathbb{R}^4$
+    :PROPERTIES:
+    :NOTER_PAGE: (53 0.45362318840579713 . 0.10197802197802197)
+    :END:
+*** 3.6 n-Forms
+    :PROPERTIES:
+    :NOTER_PAGE: (54 0.6007246376811595 . 0.09868131868131867)
+    :END:
+    length, area and volume are all signed quantities?
+*** 3.7 Algebraic computation of products
+    :PROPERTIES:
+    :NOTER_PAGE: (57 0.26594202898550723 . 0.09978021978021978)
+    :END:
+** 4 Differential Forms
+   :PROPERTIES:
+   :NOTER_PAGE: 58
+   :END:
+
+* LeeJM _SmoothManifolds (+18)
+  :PROPERTIES:
+  :NOTER_DOCUMENT: LeeJM_SmoothManifolds.pdf
+  :END:
+** Contents
+   :PROPERTIES:
+   :NOTER_PAGE: 13
+   :END:
+
+** Proposition 2.25 (Existence of Smooth Bump Functions).
+   :PROPERTIES:
+   :NOTER_PAGE: (62 0.8485507246376812 . 0.10197802197802197)
+   :END:
+   These are mentioned in Tu.  Maybe the exposition here is useful (but I
+   haven't read it yet.)
+** Chapter 3 Tangent Vectors
+   :PROPERTIES:
+   :NOTER_PAGE: 68
+   :END:
+** Chapter 8 Vector Fields
+   :PROPERTIES:
+   :NOTER_PAGE: 192
+   :END:
+#+BEGIN_QUOTE
+In the [third] section we introduce the Lie bracket operation, which is a way of
+combining two smooth vector fields to obtain another. Then we describe the most
+important application of Lie brackets: the set of all smooth vector fields on a Lie
+group that are invariant under left multiplication is closed under Lie brackets, and
+thus forms an algebraic object naturally associated with the group, called the Lie
+algebra of the Lie group.
+#+END_QUOTE
+*** Vector Fields on Manifolds
+    :PROPERTIES:
+    :NOTER_PAGE: (192 0.7007246376811594 . 0.10527472527472527)
+    :END:
+*** Example 8.12. cylindrical orthonormal frame on $\mathbb{R}^2\{0\}$
+    :PROPERTIES:
+    :NOTER_PAGE: (197 0.09057971014492754 . 0.12417582417582418)
+    :END:
+
+*** Vector Fields and Smooth Maps
+    :PROPERTIES:
+    :NOTER_PAGE: (199 0.7753623188405797 . 0.10527472527472527)
+    :END:
+    first mention of "-related".
+#+BEGIN_QUOTE
+Suppose F \colon M \rightarrow N is smooth and X is a vector field on M; and suppose there
+happens to be a vector field Y on N with the property that for each p \in M; dF_p
+(X_p) = Y_{F(p)} . In this case, we say the vector fields X and Y are *F-related*
+(see Fig. 8.3). The next proposition shows how F-related vector fields act on
+smooth functions.
+#+END_QUOTE
+*** Lie Brackets
+    :PROPERTIES:
+    :NOTER_PAGE: (203 0.722463768115942 . 0.10307692307692308)
+    :END:
+*** Lemma 8.25. Lie bracket of smooth vector fields...
+    :PROPERTIES:
+    :NOTER_PAGE: (204 0.2927536231884058 . 0.10307692307692308)
+    :END:
+    ``Lemma 8.25. The Lie bracket of any pair of smooth vector fields is a
+    smooth vector field.''
+
+    Geometric interpretation comes in Chapter 9
+
+    ``of limited usefulness for computations'':
+    $[X,Y]_p f = X_p (Yf) - Y_p (Xf)$
+
+*** Proposition 8.26 (Coordinate Formula for the Lie Bracket).<<Lee prop 8.26>>
+    :PROPERTIES:
+    :NOTER_PAGE: (204 0.7681159420289855 . 0.10417582417582417)
+    :END:
+    ``an extremely useful coordinate formula for the Lie bracket'':
+    $[X,Y] = \left( X^i \frac{\partial Y^j}{\partial x^i} - Y^i \frac{\partial X^j}{\partial x^i} \right)\frac{\partial}{\partial x^j}$
+    or more concisely,
+    $[X,Y] = ( X Y^j - Y X^j )\frac{\partial}{\partial x^j}$
+
+*** Example 8.27
+    :PROPERTIES:
+    :NOTER_PAGE: (205 0.586231884057971 . 0.12087912087912088)
+    :END:
+    Decent concrete example.
+*** <<Prop 8.28d>> see D&P [[Ex.VII.7.5]]
+    :PROPERTIES:
+    :NOTER_PAGE: (206 0.3007246376811594 . 0.28329670329670326)
+    :END:
+    $[fX, gY] = fg[X,Y] + (fXg)Y - (gYf)X$
+
+    fXgY - gYfX = fXg Y + fg XY - gYf X - gfYX
+                = (fXg)Y - (gYf)X + (fg XY - gf YX)
+** Chapter 9 Integral Curves and Flows
+   :PROPERTIES:
+   :NOTER_PAGE: 223
+   :END:
+*** Flowouts
+    :PROPERTIES:
+    :NOTER_PAGE: (235 0.48043478260869565 . 0.12197802197802197)
+    :END:
+
+**** Theorem 9.22 (Canonical Form Near a Regular Point).
+     :PROPERTIES:
+     :NOTER_PAGE: (238 0.44659300184162065 . 0.11871508379888268)
+     :END:
+     Randy, read this.
+*** Lie Derivatives
+    :PROPERTIES:
+    :NOTER_PAGE: (245 0.5355072463768116 . 0.12417582417582418)
+    :END:
+**** Fig. 9.13 The Lie derivative of a vector field
+     :PROPERTIES:
+     :NOTER_PAGE: (247 0.281505728314239 . 0.3176178660049628)
+     :END:
+**** Theorem 9.38 Lie derivative == Lie bracket
+     :PROPERTIES:
+     :NOTER_PAGE: (247 0.7297101449275363 . 0.12307692307692308)
+     :END:
+
+*** Commuting Vector Fields
+    :PROPERTIES:
+    :NOTER_PAGE: (249 0.6855072463768116 . 0.11758241758241758)
+    :END:
+**** Theorem 9.42. Equivalent statements on vector fields
+     :PROPERTIES:
+     :NOTER_PAGE: (249 0.8398550724637681 . 0.12197802197802197)
+     :END:
+#+BEGIN_QUOTE
+For smooth vector fields V and W on a smooth manifold M; the
+following are equivalent:
+(a) V and W commute.
+(b) W is invariant under the flow of V .
+(c) V is invariant under the flow of W .
+#+END_QUOTE
+
+#+begin_quote
+Consider
+\rho =  x/r i  +  y/r j  # radial vec field "E1" p179
+\theta = -y/r i  +  x/r j  # unit rotation    "E2" p179
+\phi =   -y i  +    x j  # disc rotation    "W" p207
+
+[E1, E2] = -E2
+[E1,  W] = 0
+
+  1. follow E1 out in r
+     for E2, the vector at positions in the flow of E1 are constant
+     Q: Is E2 invariant under the flow of E1 ?? [A: no]
+
+     for W,  the vector at positions in the flow of E1 are increasing in magnitude.
+     Q: Is W invariant under the flow of E1 ?? [A: yes]
+
+  2. follow a streamline in E2 or W
+     The change in \rho is tangential to the flow.  In W, d\rho is constant, but in E2,
+     d\rho is smaller at larger radial positions.
+
+
+
+  - useful derivatives
+    i (x/r) = y^2/r^3
+    i (y/r) = -xy/r^3 = j (x/r)
+    j (y/r) = x^2/r^3
+
+[E1,W] = (x/r i  +  y/r j)( -y i  + x j) - ( -y i  + x j) (x/r i  +  y/r j)
+       = (x/r) i(x) j - (y/r) j(y) i - [-y i(x/r) i - y i(y/r) j + xj(x/r) i + xj(y/r) j]
+       = [(x/r) j - (y/r) i]  - [-(y/r)^3 - x^2y/r^3]i - [ xy^2/r^3 + (x/r)^3]j
+       = [(x/r) j - (y/r) i]  - (y/r)[-(y/r)^2 - x^2/r^2]i - (x/r)[ y^2/r^2 + (x/r)^2]j
+       = [(x/r) j - (y/r) i]  - [(x/r) j + (y/r) i]
+       = E2 - E2
+
+[E1,E2] = 0 - [-y/r i + x/r j][ x/r i  +  y/r j]
+        = 0 - [(-y/r) i(x/r) + (x/r) j(x/r)]i -[(-y/r) i(y/r) + (x/r) j(y/r)]j
+        = 0 - [(-y/r)y^2/r^3 i  - (x/r)xy/r^3 i  + xy^2/r^4 j + x^3/r^4 j ]
+        = 0 - [-y^3/r^3 i - x^2y/r^3 i  + xy^2/r^3 j + x^3/r^3 j ]/r
+        = 0 - [-y/r i +  x/r j]/r
+        = - E2/r
+#+end_quote
+
+**** Theorem 9.44. Smooth vector fields commute if and only if their flows commute.
+     :PROPERTIES:
+     :NOTER_PAGE: (251 0.18985507246376812 . 0.12307692307692308)
+     :END:
+     D&P VII.7.02
+**** Example 9.45 (Commuting and Noncommuting Frames).
+     :PROPERTIES:
+     :NOTER_PAGE: (252 0.09130434782608696 . 0.12307692307692308)
+     :END:
+
+#+DOWNLOADED: screenshot @ 2023-02-08 18:59:50
+[[file:.figs/LeeJM__SmoothManifolds/2023-02-08_18-59-50_screenshot.png]]
+
+**** Theorem 9.46 (Canonical Form for Commuting Vector Fields).
+     :PROPERTIES:
+     :NOTER_PAGE: (252 0.4108695652173913 . 0.12197802197802197)
+     :END:
+     D&P Thm VII.7.04
+
+** Chapter 11 The Cotangent Bundle
+   :PROPERTIES:
+   :NOTER_PAGE: 290
+   :END:
+#+BEGIN_QUOTE
+we define the differential of a real- valued function as a covector field (a
+smooth section of the cotangent bundle); it is a coordinate-independent analogue
+of the gradient.
+#+END_QUOTE
+
+*** Prop 11.8 $V \cong V^{**}$
+    :PROPERTIES:
+    :NOTER_PAGE: (292 0.65 . 0.48)
+    :END:
+``there is no canonical isomorphism $V \cong V^*$.''
+*** Tangent Covectors on Manifolds
+    :PROPERTIES:
+    :NOTER_PAGE: (293 0.2210144927536232 . 0.12527472527472527)
+    :END:
+#+BEGIN_QUOTE
+Thus it became customary to call tangent covectors *covariant vectors* because
+their components transform in the same way as (“vary with”) the coordinate
+partial derivatives, the Jacobian matrix multiplying the objects associated with
+the “new” coordinates to obtain those associated with the “old” coordinates.
+Analogously, tangent vectors were called *contravariant vectors*, because their
+components transform in the opposite way.
+#+END_QUOTE
+
+*** contravariant transformation
+    :PROPERTIES:
+    :NOTER_PAGE: (294 0.12318840579710146 . 0.3989010989010989)
+    :END:
+
+*** covariant transformation
+    :PROPERTIES:
+    :NOTER_PAGE: (294 0.20942028985507247 . 0.3989010989010989)
+    :END:
+
+*** Prop 11.18 (coordinate covectors are dx^j's)
+    :PROPERTIES:
+    :NOTER_PAGE: (299 0.7536231884057971 . 0.12197802197802197)
+    :END:
+#+BEGIN_QUOTE
+In other words, the coordinate covector field \lambda^j is none other than the
+differential dx^j.
+#+END_QUOTE
+See D&P VII.4.01
+*** Proposition 11.23 (Derivative of a Function Along a Curve).
+    :PROPERTIES:
+    :NOTER_PAGE: (301 0.5391304347826087 . 0.12527472527472527)
+    :END:
+
+** Chapter 12 Tensors
+   :PROPERTIES:
+   :NOTER_PAGE: 322
+   :END:
+#+BEGIN_QUOTE
+We deal primarily with covariant tensors, but we also give a brief introduction
+to contravariant tensors and tensors of mixed variance.
+#+END_QUOTE
+* TuLW Introduction to Manifolds
+  :PROPERTIES:
+  :NOTER_DOCUMENT: TuLW_Introduction_to_Manifolds.pdf
+  :END:
+** 2.1 Directional derivative
+   :PROPERTIES:
+   :NOTER_PAGE: (30 0.410289855072466 . 0.23957636566332)
+   :END:
+   In D&P, this is denoted D_pf(v) for the directional derivative in direction v
+   at point p of function f.
+** Defn: germ
+   :PROPERTIES:
+   :NOTER_PAGE: (31 0.23405797101449277 . 0.06945373467112598)
+   :END:
+   Equivalence class of functions on an neighborhood
+   C^{\inf}_p is the set of all germs of C^{\inf} functions on R^n at p.
+** Defn: derivation
+   :PROPERTIES:
+   :NOTER_PAGE: (32 0.25869565217391305 . 0.06729096989966554)
+   :END:
+   Linear map C^{\inf}_p \rightarrow \mathbb{R} satisfying the Leibniz rule is a
+   derivation
+** 2.4 Vector fields
+   :PROPERTIES:
+   :NOTER_PAGE: (33 0.5695652173913044 . 0.07469342251950947)
+   :END:
+   See D&P VII.4.02 Contravariant vectors.  The 2nd paragraph above encapsulates
+   the corresponding section in D&P in a nutshell.
+** 3.3 k-covectors
+   :PROPERTIES:
+   :NOTER_PAGE: (42 0.6652173913043479 . 0.0)
+   :END:
+   "A 1-covector is simply a covector".
+   A k-covector appears to be a tensor of covariant degree k
+** Lemma 3.11 \tau(\sigma f) = (\tau\sigma)f
+   :PROPERTIES:
+   :NOTER_PAGE: (43 0.07391304347826087 . 0.05351170568561873)
+   :END:
+   (\sigma f)(v_1 ,..., v_k) = f(v_{\sigma(1)},...,v_{\sigma(k)})
+   if \sigma = (1,m,n), then \sigma(1) = m, \sigma(m) = n, \sigma(n) = 1
+
+   - concretely, if \sigma=(1,3,2)(4,5) and \tau=(1,5,3,2)
+     then (\sigma f)(v1,v2,v3,v4,v5) = f(v3,v1,v2,v5,v4)
+
+     and \tau(\sigma f)(v1,v2,v3,v4,v5) = (\sigma f)(v5,v1,v2,v4,v3)
+                                = f(v2,v5,v1,v3,v4)
+
+     \tau \sigma = (1,5,3,2) (1,3,2) (4,5)
+         = (1,2,5,4,3)
+
+     so this checks out.
+** 3.7 Wedge product
+   :PROPERTIES:
+   :NOTER_PAGE: 45
+   :END:
+   Tu motivates the definition of the wedge product by wanting to have a product
+   that preserves the property of being alternating on alternating functions (on
+   a vector space).  Does this make the wedge product the group multiplication
+   on alternating functions?  No -- the identity is not alternating, so the
+   wedge can't get you there.
+** Defn: graded algebra over field K
+   :PROPERTIES:
+   :NOTER_PAGE: (49 0.44347826086956527 . 0.08312151616499443)
+   :END:
+   The algebra "can be written as a direct sum  of vector spaces over K such
+   that A^k \times A^l \mapsto A^{k+l}.
+
+** 4 Differential forms on R^n
+   :PROPERTIES:
+   :NOTER_PAGE: 53
+   :END:
+** 4.6 Applications to Vector Calculus
+   :PROPERTIES:
+   :NOTER_PAGE: 60
+   :END:
+   related to exact sequences
+
+   grad: scalar \rightarrow vector
+   curl: vector \rightarrow vector
+   div : vector \rightarrow scalar
+** 4.7 Convention on Subscripts and Superscripts
+   :PROPERTIES:
+   :NOTER_PAGE: 63
+   :END:
+
+
+   | vector fields: subscripts                | e_1 ,..., e_n       | contravariant |
+   | differential forms: superscripts         | \omega^1 ,..., \omega^n       | covariant     |
+   | coordinate functions (0-forms):          | x^1 ,..., x^n       | covariant     |
+   | differentials of coord functs (1-forms): | dx^1 ,..., dx^n     | covariant     |
+   | coordinate vector fields                 | d/dx^1 ,..., d/dx^n | contravariant |
+   | coordinate vector fields (alt form)      | \delta_1 ,..., \delta_n       | contravariant |
+
+   - coefficient functions
+     | of a vector field      | a^i |
+     | of a differential form | b_j |
+** Sec 5: Manifolds
+   :PROPERTIES:
+   :NOTER_PAGE: 67
+   :END:
+   smooth manifolds are the focus of this book
+
+   "maximal C^\infty atlas" make a topological manifold into a smooth manifold.
+** 5.1 Topological Manifolds
+   :PROPERTIES:
+   :NOTER_PAGE: (67 0.505072463768116 . 0.36043956043956044)
+   :END:
+   defn: =second countable= A topological space with a countable basis.
+** 5.3 Smooth Manifolds - maximal atlas defn
+   :PROPERTIES:
+   :NOTER_PAGE: (71 0.8746376811594203 . 0.07420289855072464)
+   :END:
+   A maximal atlas on a locally Euclidean space is not conatined in any larger
+   atlas.
+
+** Definition 5.9 smooth manifold
+   :PROPERTIES:
+   :NOTER_PAGE: (72 0.08623188405797103 . 0.06153846153846154)
+   :END:
+   A smooth manifold is a topological manifold with a maximal atlas.
+   A  maximal atlas is also called a =differentiable structure=
+   "In practice, to check that a topological manifold M is a smooth manifold, it is
+   not necessary to exhibit a maximal atlas. The existence of any atlas on M will do"
+** Smooth manifold conditions
+   :PROPERTIES:
+   :NOTER_PAGE: (72 0.591304347826087 . 0.07420289855072464)
+   :END:
+   to show that a topological space M is a C∞ manifold, it suffices to check that:
+   1. M is Hausdorff and =second countable=,
+   2. M has a C∞ atlas (not necessarily maximal).
+
+** 5.4 Examples of Smooth Manifolds
+   :PROPERTIES:
+   :NOTER_PAGE: (72 0.8253623188405798 . 0.1)
+   :END:
+   - Euclidean space
+   - Open subset of a manifold
+   - Manifolds of dimension zero
+   - Graph of a smooth function
+   - General linear groups (nonzero determinant matrices)
+   - Unit circle in the (x,y) plane
+   - Product manifold
+
+** §6 Smooth Maps on a Manifold
+   :PROPERTIES:
+   :NOTER_PAGE: (78 0.11014492753623188 . 0.07587513935340022)
+   :END:
+
+** 6.3 Diffeomorphisms
+   :PROPERTIES:
+   :NOTER_PAGE: (82 0.08623188405797103 . 0.06153846153846154)
+   :END:
+** 6.6 Partial Derivatives
+   :PROPERTIES:
+   :NOTER_PAGE: (86 0.25869565217391305 . 0.068461538461538)
+   :END:
+** 6.7 The Inverse Function Theorem
+   :PROPERTIES:
+   :NOTER_PAGE: (87 0.46811594202898554 . 0.06406593406593404)
+   :END:
+   A function on an affine space or manifold is invertible at p iff the Jacobian
+   determinant at p is nonzero
+** Chapter 3: The tangent space
+   :PROPERTIES:
+   :NOTER_PAGE: 104
+   :END:
+** bump functions?
+   :PROPERTIES:
+   :NOTER_PAGE: (105 0.1847826086956522 . 0.06528428093645484)
+   :END:
+   These are covered in section 13, p 140
+** Theorem 20.4.
+   :PROPERTIES:
+   :NOTER_PAGE: (244 0.4492753623188406 . 0.10367892976588629)
+   :END:
+#+BEGIN_QUOTE
+If X and Y are C∞ vector fields on a manifold M, then the Lie deriva-
+tive LX Y coincides with the Lie bracket [X ,Y ].
+#+END_QUOTE
+** A.4 First and Second Countability
+   :PROPERTIES:
+   :NOTER_PAGE: 342
+   :END:
+*** Lemma A.10. Every open set in \mathbb{R}^n contains a rational point.
+    :PROPERTIES:
+    :NOTER_PAGE: (342 0.23405797101449277 . 0.06703296703296702)
+    :END:
+*** Prop A.11 collection of open balls w/ rational centers/radii is a basis for R^n
+    :PROPERTIES:
+    :NOTER_PAGE: (342 0.3572463768115942 . 0.0649450549450549)
+    :END:
+*** Defn A.12 second countable <== countable basis
+    :PROPERTIES:
+    :NOTER_PAGE: (343 0.14782608695652175 . 0.0654945054945055)
+    :END:
+*** Defn A.15 basis of neighborhoods, first countable
+    :PROPERTIES:
+    :NOTER_PAGE: (343 0.3572463768115942 . 0.0649450549450549)
+    :END:
+    - A =basis of neighborhoods at p= is a collection of of neighborhoods of p
+      such that p \in B_\alpha \sub U
+    - Topological space S is =first countable= if it has a countable basis of
+      neighborhoods at every point p \in S.
+    - Every second countable space is first countable.
+** List of Notations
+   :PROPERTIES:
+   :NOTER_PAGE: 406
+   :END:
+* Carroll - An Introduction to General Relativity
+  :PROPERTIES:
+  :NOTER_DOCUMENT: Carroll - An Introduction to General Relativity.pdf
+  :NOTER_PAGE: 481
+  :END:
+** 1. SR and flat Spacetime
+   :PROPERTIES:
+   :NOTER_PAGE: 14
+   :END:
+** 2. Manifolds
+   :PROPERTIES:
+   :NOTER_PAGE: 61
+   :END:
+** 3. Curvature
+   :PROPERTIES:
+   :NOTER_PAGE: 106
+   :END:
+** 4. Gravitation
+   :PROPERTIES:
+   :NOTER_PAGE: 164
+   :END:
+** 5. Schwarzschild's solution
+   :PROPERTIES:
+   :NOTER_PAGE: 206
+   :END:
+** 6. More general black holes
+   :PROPERTIES:
+   :NOTER_PAGE: 251
+   :END:
+** 7. Perturbation theory & Gravitational radiation
+   :PROPERTIES:
+   :NOTER_PAGE: 287
+   :END:
+** 8. Cosmology
+   :PROPERTIES:
+   :NOTER_PAGE: 336
+   :END:
+** 9. QFT in curved spacetime
+   :PROPERTIES:
+   :NOTER_PAGE: 389
+   :END:
+** A. Maps between manifolds
+   :PROPERTIES:
+   :NOTER_PAGE: 436
+   :END:
+** B. Diffeomorphisms and Lie derivatives
+   :PROPERTIES:
+   :NOTER_PAGE: 442
+   :END:
+** C. Submanifolds
+   :PROPERTIES:
+   :NOTER_PAGE: 452
+   :END:
+** D. Hypersurfaces
+   :PROPERTIES:
+   :NOTER_PAGE: 456
+   :END:
+** E. Stokes's Theorem
+   :PROPERTIES:
+   :NOTER_PAGE: 466
+   :END:
+** F. Geodesic congruences
+   :PROPERTIES:
+   :NOTER_PAGE: 472
+   :END:
+** G. Conformal transformations
+   :PROPERTIES:
+   :NOTER_PAGE: 480
+   :END:
+** H. Conformal diagrams
+   :PROPERTIES:
+   :NOTER_PAGE: 484
+   :END:
+** I. The parallel propagator
+   :PROPERTIES:
+   :NOTER_PAGE: 492
+   :END:
+** J. Noncoordinate bases
+   :PROPERTIES:
+   :NOTER_PAGE: 496
+   :END:
+** Bibliography
+   :PROPERTIES:
+   :NOTER_PAGE: 508
+   :END:
+** Index
+   :PROPERTIES:
+   :NOTER_PAGE: 514
+   :END:

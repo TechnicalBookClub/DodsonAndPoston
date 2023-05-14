@@ -1,0 +1,3 @@
+#+TITLE: Technical book club notes on Dodson & Poston and related texts
+
+Please do not put any copyrighted materials in this repo.
