@@ -6,7 +6,7 @@ https://github.com/TechnicalBookClub/DodsonAndPoston
   :PROPERTIES:
   :NOTER_DOCUMENT: DodsonCTJ+PostonT_TensorGeometry.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 244
+  :NOTER_PAGE: 242
   :END:
 ** Contents
    :PROPERTIES:
@@ -344,10 +344,10 @@ T_{0}..) R^n
    :END:
    This section is their attempt to lay the groundwork for the Levi-Civita
    connection, aka the intrinsic or covariant derivative.  The exposition is
-   terrible.  Better to look at Needham, chapters 21-23.
+   terrible.  Better to look at [[id:97b4be84-2212-4921-acb1-653daf317b65][Needham, chapters 21-23.]]
 
    By not "turning," I assume that they mean parallel transport of the basis
-   vectors of the tangent space, which is formally introduced in VIII.4.
+   vectors of the tangent space, which is formally introduced in [[id:6d29b4ae-0211-4fa5-9bde-f953c0ff6895][VIII.4.]]
    
 ** VIII.3. Differentiating Sections
    :PROPERTIES:
@@ -366,7 +366,7 @@ T_{0}..) R^n
     :PROPERTIES:
     :NOTER_PAGE: (231 0.8007246376811594 . 0.11758241758241758)
     :END:
-    See Tu(DG) Sec 6, p 30.  Without saying so, D&P appear to be leading us to
+    See [[id:5febc205-65ff-4635-9424-9d2b42966a30][Tu(DG) Sec 6, p 43]].  Without saying so, D&P appear to be leading us to
     the *Riemannian* or *Levi-Civita* connection.  Tu says this is the unique,
     torsion-free affine connection on a Riemannian manifold.
 *** Typo! first f should be t
@@ -378,14 +378,14 @@ T_{0}..) R^n
     :PROPERTIES:
     :NOTER_PAGE: (232 0.6666666666666666 . 0.3274725274725275)
     :END:
-    See Tu(DG) Prop 4.9.ii p. 27
+    See [[id:272e4b73-34f1-4fd0-a632-02bc267c1c39][Tu(DG) Prop 4.9.ii p. 27]]
 *** 3.01. Definition. A connection (\nabla)
     :PROPERTIES:
     :NOTER_PAGE: (232 0.8913043478260869 . 0.12417582417582418)
     :END:
     Koszul connection (general affine connection)
     Levi-Civita/intrinsic/Reimannian/covariant has the additional property of
-    being torsion-free (See Tu, Sec 6)
+    being torsion-free (See [[id:5febc205-65ff-4635-9424-9d2b42966a30][Tu, Sec 6]])
     (tangent vector, vector field) \to (tangent vector)
 
     Ci:   linear in the input tangent vector space
@@ -397,7 +397,7 @@ T_{0}..) R^n
     :PROPERTIES:
     :NOTER_PAGE: (233 0.44130434782608696 . 0.12197802197802197)
     :END:
-    Tu treats this topic in Section 13.3 of DG.
+    Tu treats this topic in [[id:29c2f283-9cbc-4a43-be30-f925876d3c53][Section 13.3 of DG]].
 #+BEGIN_QUOTE
 First, let us see what a connection looks like in coordinates, as some proofs
 will be easiest that way.
@@ -419,7 +419,7 @@ will be easiest that way.
     a vector field *along* curve c assigns a vector tangent to M at each point
     of c(t) for t \in [a,b].
 
-    From the examples given, this appears to be in concordance with Tu's usage
+    From the examples given, this appears to be in concordance with [[id:8cdd16b8-dfd9-41a4-9676-b794c08bec04][Tu's usage]]
     of *along*, in that the vectors do not necessarily have to be tangent to the
     curve, which we intepret as a submanifold of M when we read Tu.
 
@@ -428,10 +428,10 @@ will be easiest that way.
     :PROPERTIES:
     :NOTER_PAGE: (235 0.3072463768115942 . 0.12087912087912088)
     :END:
-    D&P's funny \nabla is DV/dt in Tu -- the "covariant derivative"?
+    D&P's funny \nabla is [[id:5c22eaeb-5237-483d-93e1-b037b35d1ed0][DV/dt in Tu -- the "covariant derivative"]]?
     In IX.1.01, they call Dc^*/dt the acceleration.
 
-    In Needham, it is the /intrinsic derivative/ (23.2).
+    In Needham, it is the [[id:88480c77-45e1-48b1-93a5-e64e8d30332a][/intrinsic derivative/ (23.2)]].
 
     Note -- I'm using ~ over \nabla instead of | through \nabla.
     #+BEGIN_QUOTE
@@ -456,12 +456,12 @@ will be easiest that way.
     :NOTER_PAGE: (236 0.21159420289855072 . 0.12197802197802197)
     :END:
     The vertical part of a vector $\vec{v}$ in the space of derivatives of
-    tangent vectors is the part normal to the tangent space, while the
-    horizontal part of the vector is the part in the tangent space.
+    tangent vectors is the part *in* the tangent space, while the horizontal
+    part of the vector is the part *normal to* the tangent space.
 
     The projection $P_w$ defined in this section is the projection to the
-    "vertical." It corresponds to $\langle\vec{v}, \hat{n}\rangle\hat{n}$ in Tu Sec 6.4,
-    Prop 6.8, p 47.
+    "vertical," ie, the projection into the tangent space.  The "horizontal"
+    part corresponds to $\langle\vec{v}, \hat{n}\rangle\hat{n}$ in [[id:b2294d3b-a41f-4b39-b986-b90a7e6c6dfc][Tu Sec 6.4, Prop 6.8, p 47.]]
 *** 3.08. Language
     :PROPERTIES:
     :NOTER_PAGE: (236 0.5173913043478261 . 0.12307692307692308)
@@ -476,6 +476,7 @@ will be easiest that way.
 ** VIII.4. Parallel Transport
    :PROPERTIES:
    :NOTER_PAGE: (238 0.5369565217391304 . 0.13186813186813187)
+   :ID:       6d29b4ae-0211-4fa5-9bde-f953c0ff6895
    :END:
 *** 4.01. Definition: parallel vector field
     :PROPERTIES:
@@ -486,7 +487,7 @@ will be easiest that way.
     curve, the corresponding vector from the field must maintain the same angle
     with respect to the tangent to the curve.
 
-    This corresponds to Tu (DG) Sec 14.5 Defn 14.13 p 110.  DV/dt == 0.
+    This corresponds to [[id:49a14fae-5296-41a3-bd2e-c324ef30f23c][Tu (DG) Sec 14.5 Defn 14.13 p 110.  DV/dt == 0]].
 *** what does this even mean?
     :PROPERTIES:
     :NOTER_PAGE: (238 0.6608695652173913 . 0.2838461538461539)
@@ -500,7 +501,7 @@ will be easiest that way.
     hard to picture.  Are there 2 horizontal dimensions and 2 vertical
     dimensions?  This is *much* easier to follow in Needham.
 
-    See the discusion around Eqn (23.5), p 244 in Needham.
+    See the discusion around [[id:73444375-3150-4d4d-95e3-7983fdd1b9f8][Eqn (23.5), p 244 in Needham]].
 *** 4.02. Theorem: uniqueness of the parallel vector field along c
     :PROPERTIES:
     :NOTER_PAGE: (239 0.41449275362318844 . 0.12527472527472527)
@@ -510,7 +511,7 @@ will be easiest that way.
     :PROPERTIES:
     :NOTER_PAGE: (241 0.1673913043478261 . 0.12197802197802197)
     :END:
-    See Needham 23.2, p 243.
+    See [[id:ade54283-c817-4d4d-bdc8-fdb1d8df37c8][Needham 23.2, p 243.]]
 *** 4.04. Lemma. parallel transport is independent of reparameterization
     :PROPERTIES:
     :NOTER_PAGE: (241 0.5282608695652175 . 0.12527472527472527)
@@ -547,7 +548,7 @@ will be easiest that way.
   :PROPERTIES:
   :NOTER_DOCUMENT: NeedhamT_VDGF.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 522
+  :NOTER_PAGE: 272
   :END:
 
 #+DOWNLOADED: screenshot @ 2023-04-22 18:19:35
@@ -752,6 +753,7 @@ earlier parts of this book by ellipses.
 ** Chapter 21 An Historical Puzzle
    :PROPERTIES:
    :NOTER_PAGE: 260
+   :ID:       97b4be84-2212-4921-acb1-653daf317b65
    :END:
 *** GR and parallel transport
     :PROPERTIES:
@@ -785,6 +787,7 @@ earlier parts of this book by ellipses.
 *** 23.2 The Intrinsic (aka, “Covariant”) Derivative
     :PROPERTIES:
     :NOTER_PAGE: (270 0.2973950795947901 . 0.14271653543307086)
+    :ID:       88480c77-45e1-48b1-93a5-e64e8d30332a
     :END:
     aka Levi-Civita connection (Koszul connection?)
 
@@ -811,6 +814,12 @@ G.''
     :END:
     vs the definition on the previous page, here w(q) is parallel transported
     back to p [w_{||}(q \rightarrow p)] and then w(p) is subtracted. (then lim \epsilon\rightarrow\infty)
+*** condition for parallel transport
+    :PROPERTIES:
+    :NOTER_PAGE: (272 0.20911722141823444 . 0.2047244094488189)
+    :ID:       ade54283-c817-4d4d-bdc8-fdb1d8df37c8
+    :END:
+
 *** Here is an extrinsic way of looking at the intrinsic derivative.
     :PROPERTIES:
     :NOTER_PAGE: (272 0.2525325615050651 . 0.17421259842519685)
@@ -835,6 +844,12 @@ it is much simpler to think of *flattening onto the tabletop* the strip
 surrounding [curve] K, together with the vector fields x, y, z, for then D_v
 simply is ∇_v.
 #+END_QUOTE
+*** geodesic equation
+    :PROPERTIES:
+    :NOTER_PAGE: (273 0.35166425470332846 . 0.16929133858267717)
+    :ID:       73444375-3150-4d4d-95e3-7983fdd1b9f8
+    :END:
+
 ** 1-forms used to be called covariant vectors or covectors
    :PROPERTIES:
    :NOTER_PAGE: (495 0.3813314037626628 . 0.1968503937007874)
@@ -864,7 +879,7 @@ simply is ∇_v.
 * TuLW DifferentialGeometry
   :PROPERTIES:
   :NOTER_DOCUMENT: TuLW_DifferentialGeometry.pdf
-  :NOTER_PAGE: 115
+  :NOTER_PAGE: 126
   :END:
 #+DOWNLOADED: screenshot @ 2023-04-22 18:20:16
 [[file:.figs/TuLW_DifferentialGeometry/2023-04-22_18-20-16_screenshot.png]]
@@ -932,6 +947,7 @@ simply is ∇_v.
 *** Definition 4.8. "On" vs "Along" a submanifold
     :PROPERTIES:
     :NOTER_PAGE: (43 0.6557971014492754 . 0.12087912087912088)
+    :ID:       8cdd16b8-dfd9-41a4-9676-b794c08bec04
     :END:
     Along includes On, where On is tangent to the submanifold.
 *** Notation X(M) and \Gamma(TM|_N)
@@ -949,6 +965,12 @@ simply is ∇_v.
     because:
     X is a vector field *on* M
     Y is a vector field *along* M
+*** Proposition 4.9.
+    :PROPERTIES:
+    :NOTER_PAGE: (44 0.48768115942028983 . 0.12307692307692308)
+    :ID:       272e4b73-34f1-4fd0-a632-02bc267c1c39
+    :END:
+
 ** §5 The Shape Operator
    :PROPERTIES:
    :NOTER_PAGE: (46 0.13623188405797101 . 0.11868131868131868)
@@ -1000,6 +1022,7 @@ simply is ∇_v.
 ** §6 Affine Connections
    :PROPERTIES:
    :NOTER_PAGE: (60 0.11594202898550725 . 0.12307692307692308)
+   :ID:       5febc205-65ff-4635-9424-9d2b42966a30
    :END:
 #+BEGIN_QUOTE
 We will see in a later section that there are infinitely many affine connections
@@ -1041,6 +1064,12 @@ torsion-free affine connection compatible with the metric, called the
     :END:
     pr_p is the projection from T_p R^3 to the tangent space of M at p.
 
+*** Proposition 6.8.
+    :PROPERTIES:
+    :NOTER_PAGE: (64 0.17028985507246377 . 0.12417582417582418)
+    :ID:       b2294d3b-a41f-4b39-b986-b90a7e6c6dfc
+    :END:
+
 ** §7 Vector Bundles
    :PROPERTIES:
    :NOTER_PAGE: (66 0.12246376811594203 . 0.12307692307692308)
@@ -1064,6 +1093,7 @@ torsion-free affine connection compatible with the metric, called the
 ** 13.1 Theorem
    :PROPERTIES:
    :NOTER_PAGE: (113 0.18695652173913044 . 0.15494505494505495)
+   :ID:       5c22eaeb-5237-483d-93e1-b037b35d1ed0
    :END:
 #+BEGIN_QUOTE
 We call DV /dt the covariant derivative (associated to ∇) of the vector field V
@@ -1073,11 +1103,13 @@ along the curve c(t) in M.
 ** 13.3 Christoffel Symbols
    :PROPERTIES:
    :NOTER_PAGE: (115 0.8043478260869565 . 0.11648351648351649)
+   :ID:       29c2f283-9cbc-4a43-be30-f925876d3c53
    :END:
 
 ** 14.5 Parallel Translation
    :PROPERTIES:
    :NOTER_PAGE: (126 0.7057971014492753 . 0.12857142857142856)
+   :ID:       49a14fae-5296-41a3-bd2e-c324ef30f23c
    :END:
 ** Index
    :PROPERTIES:
