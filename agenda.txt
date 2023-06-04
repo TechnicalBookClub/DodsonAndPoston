@@ -83,13 +83,13 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
   :PROPERTIES:
   :COLUMNS: %20ITEM %VISIBILITY %TAGS
   :END:
-** [2023-06-04 Sun]
+** [2023-06-03 Sat]
 *** index D&P with references to Tu (DG), Needham, and whatever else we come across.
 *** for Craig -- see
 #+begin_src elisp
   (setq org-image-actual-width nil)
 #+end_src
-#+ATTR_ORG: :width 500    
+#+ATTR_ORG: :width 500
     [[file:Chapter_07/LieBracket_rho_theta.png]] [[file:Chapter_07/LieBracket_rho_phi.png]]
 ** [2023-05-07 Sun]
    - Tu, Differential Geometry

@@ -6,7 +6,7 @@ https://github.com/TechnicalBookClub/DodsonAndPoston
   :PROPERTIES:
   :NOTER_DOCUMENT: DodsonCTJ+PostonT_TensorGeometry.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 242
+  :NOTER_PAGE: 230
   :END:
 ** Contents
    :PROPERTIES:
@@ -348,13 +348,55 @@ T_{0}..) R^n
 
    By not "turning," I assume that they mean parallel transport of the basis
    vectors of the tangent space, which is formally introduced in [[id:6d29b4ae-0211-4fa5-9bde-f953c0ff6895][VIII.4.]]
-   
+
 ** VIII.3. Differentiating Sections
    :PROPERTIES:
    :NOTER_PAGE: (228 0.5108695652173914 . 0.12197802197802197)
    :END:
    We can think of T(TM) as the vector space of changes of vectors in TM, the
    manifold of tangent spaces.
+
+*** w vs t
+    :PROPERTIES:
+    :NOTER_PAGE: (229 0.5058032987171656 . 0.125)
+    :END:
+    - w(M) is an arbitrary vector field along (the curve on) M.
+    - t is a vector in vector field that defines the curve. to make your life
+    easy, define t as a unit vector pointing to the right (a basis vector)
+
+    In this example, w(p) and t are parallel or antiparallel, but not
+    necessarily equal.
+
+    Here, we are in 1D, so the curve has no wiggle room in the manifold.
+#+BEGIN_QUOTE
+the embedded picture to represent the tangent spaces at p and 1O(p) to M
+and TM. For a vector t tangent to Mat
+#+END_QUOTE
+
+*** \Pi, the projection map and following equation
+    :PROPERTIES:
+    :NOTER_PAGE: (229 0.6371411117898595 . 0.788888888888889)
+    :END:
+w     : M     \rightarrow TM
+D_{p}w   : TM    \rightarrow  T(TM)
+\Pi     : TM    \rightarrow  M
+D_{w(p)}\Pi : T(TM) \rightarrow TM
+
+- t is the velocity on M (t \in T_{p}M) (so in TM it is "vertical", but in M it
+  points to the right.)
+- D_{p}w(t) describes the change of w(p) at velocity t.  In TM, the horizontal
+component of this vector is |t| and its tail is at w(p).
+- \Pi is a projection that takes points in TM and maps them to M. All points in
+  T_{p}M map to p, and likewise for other fibers in TM.
+- D_{w(p)}\Pi maps vectors in T(TM) into vectors in TM. A vector between points w(p)
+  and q in TM is in the tangent space T_{w(p)}(TM) and maps to a vector in M from p
+  to \Pi(q).
+
+  The difficulty for me here is that there are two "represenatations" of T_{p}M in
+  Figure 3.1 - the horizontal one at the bottom of the figure, and the fiber in
+  TM. \Pi projects points down into M, and D_{x}\Pi projects vectors down into the
+  "horizontal representation" of T_{x}M, not the "vertical representation."
+
 *** "directional derivative"
     :PROPERTIES:
     :NOTER_PAGE: (231 0.6036231884057971 . 0.310989010989011)
