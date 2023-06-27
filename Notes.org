@@ -6,7 +6,7 @@ https://github.com/TechnicalBookClub/DodsonAndPoston
   :PROPERTIES:
   :NOTER_DOCUMENT: DodsonCTJ+PostonT_TensorGeometry.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 230
+  :NOTER_PAGE: 248
   :END:
 ** Contents
    :PROPERTIES:
@@ -590,7 +590,7 @@ will be easiest that way.
   :PROPERTIES:
   :NOTER_DOCUMENT: NeedhamT_VDGF.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 272
+  :NOTER_PAGE: 263
   :END:
 
 #+DOWNLOADED: screenshot @ 2023-04-22 18:19:35
@@ -921,7 +921,7 @@ simply is ∇_v.
 * TuLW DifferentialGeometry
   :PROPERTIES:
   :NOTER_DOCUMENT: TuLW_DifferentialGeometry.pdf
-  :NOTER_PAGE: 126
+  :NOTER_PAGE: 6
   :END:
 #+DOWNLOADED: screenshot @ 2023-04-22 18:20:16
 [[file:.figs/TuLW_DifferentialGeometry/2023-04-22_18-20-16_screenshot.png]]
@@ -1358,6 +1358,7 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
 * LeeJM _SmoothManifolds (+18)
   :PROPERTIES:
   :NOTER_DOCUMENT: LeeJM_SmoothManifolds.pdf
+  :NOTER_PAGE: 9
   :END:
 ** Contents
    :PROPERTIES:
@@ -1612,6 +1613,7 @@ to contravariant tensors and tensors of mixed variance.
 * TuLW Introduction to Manifolds
   :PROPERTIES:
   :NOTER_DOCUMENT: TuLW_Introduction_to_Manifolds.pdf
+  :NOTER_PAGE: 181
   :END:
 ** 2.1 Directional derivative
    :PROPERTIES:
@@ -1906,3 +1908,8 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
    :PROPERTIES:
    :NOTER_PAGE: 514
    :END:
+* Lee Riemmanian Manifolds
+  :PROPERTIES:
+  :NOTER_DOCUMENT: Lee Riemmanian Manifolds.pdf
+  :NOTER_PAGE: 34
+  :END:
