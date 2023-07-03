@@ -6,7 +6,7 @@ https://github.com/TechnicalBookClub/DodsonAndPoston
   :PROPERTIES:
   :NOTER_DOCUMENT: DodsonCTJ+PostonT_TensorGeometry.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 248
+  :NOTER_PAGE: 254
   :END:
 ** Contents
    :PROPERTIES:
@@ -604,7 +604,7 @@ will be easiest that way.
   :PROPERTIES:
   :NOTER_DOCUMENT: NeedhamT_VDGF.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 263
+  :NOTER_PAGE: 298
   :END:
 
 #+DOWNLOADED: screenshot @ 2023-04-22 18:19:35
@@ -940,443 +940,6 @@ simply is ∇_v.
     :NOTER_PAGE: (512 0.8762662807525325 . 0.17618110236220472)
     :END:
 
-* TuLW DifferentialGeometry
-  :PROPERTIES:
-  :NOTER_DOCUMENT: TuLW_DifferentialGeometry.pdf
-  :NOTER_PAGE: 6
-  :END:
-#+DOWNLOADED: screenshot @ 2023-04-22 18:20:16
-[[file:.figs/TuLW_DifferentialGeometry/2023-04-22_18-20-16_screenshot.png]]
-
-** §1 Riemannian Manifolds
-   :PROPERTIES:
-   :NOTER_PAGE: (19 0.3652173913043478 . 0.12417582417582418)
-   :END:
-*** 1.3 Riemannian Metrics
-    :PROPERTIES:
-    :NOTER_PAGE: (21 0.6923438233912635 . 0.12321937321937322)
-    :END:
-    A Riemannian metric maps a continuous vector field onto a continuous function.
-*** Example 1.11: Torus
-    :PROPERTIES:
-    :NOTER_PAGE: (22 0.7623297322686707 . 0.12393162393162394)
-    :END:
-    On a torus in R^3 vs a torus as ``the quotient space of a square with the
- opposite edges identified''
- #+BEGIN_QUOTE
- We will show later that there is no isometry between these two Riemannian
- manifolds with the same underlying torus.
- #+END_QUOTE
-*** partition of unity
-    :PROPERTIES:
-    :NOTER_PAGE: (23 0.6528985507246378 . 0.1087912087912088)
-    :END:
-    What is this?  The definition is unhelpful in describing the meaning of this term.
-*** Theorem 1.12. On every manifold M there is a Riemannian metric.
-    :PROPERTIES:
-    :NOTER_PAGE: (23 0.8139971817754815 . 0.1267806267806268)
-    :END:
-** §2 Curves
-   :PROPERTIES:
-   :NOTER_PAGE: (26 0.12173913043478261 . 0.11978021978021978)
-   :END:
-*** 2.3 Signed Curvature of a Plane Curve
-    :PROPERTIES:
-    :NOTER_PAGE: (28 0.3818840579710145 . 0.12637362637362637)
-    :END:
-    $T' = \gamma''(s) = \kappa\vec{n}$, so
-    $\kappa = \langle T', \vec{n} \rangle = \langle \gamma'', \vec{n} \rangle$
-*** Curvature formulae
-    :PROPERTIES:
-    :NOTER_PAGE: (31 0.4065217391304348 . 0.11758241758241758)
-    :END:
-    see Needham,
-** §4 Directional Derivatives in *Euclidean Space*
-   :PROPERTIES:
-   :NOTER_PAGE: (39 0.12753623188405797 . 0.12967032967032968)
-   :END:
-*** Torsion of the directional derivative D
-    :PROPERTIES:
-    :NOTER_PAGE: (41 0.2956521739130435 . 0.11758241758241758)
-    :END:
-    If $D_X Y - D_Y X = [X,Y]$, then
-    the torsion $T(X,Y) = D_X Y - D_Y X - [X,Y]$ is 0.
-
-    This only applies to $\mathbb{R}^n$.
-
-*** Curvature of the directional derivative
-    :PROPERTIES:
-    :NOTER_PAGE: (41 0.7021739130434783 . 0.11758241758241758)
-    :END:
-*** Definition 4.8. "On" vs "Along" a submanifold
-    :PROPERTIES:
-    :NOTER_PAGE: (43 0.6557971014492754 . 0.12087912087912088)
-    :ID:       8cdd16b8-dfd9-41a4-9676-b794c08bec04
-    :END:
-    Along includes On, where On is tangent to the submanifold.
-*** Notation X(M) and \Gamma(TM|_N)
-    :PROPERTIES:
-    :NOTER_PAGE: (43 0.8500000000000001 . 0.11758241758241758)
-    :END:
-    - $\mathfrak{X}(M)$ is the set of all C^\infty vector fields *on* manifold M
-    - $\Gamma(TM|_N)$ is the set of all C^\infty vector fields *along* a submanifold N in
-      a manifold M.
-    - $\mathcal{F} = C^\infty(M)$ is the ring of C^\infty functions on M
-*** In a submanifold of R^n, torsion "no longer makes sense"
-    :PROPERTIES:
-    :NOTER_PAGE: (44 0.4311594202898551 . 0.12637362637362637)
-    :END:
-    because:
-    X is a vector field *on* M
-    Y is a vector field *along* M
-*** Proposition 4.9.
-    :PROPERTIES:
-    :NOTER_PAGE: (44 0.48768115942028983 . 0.12307692307692308)
-    :ID:       272e4b73-34f1-4fd0-a632-02bc267c1c39
-    :END:
-
-** §5 The Shape Operator
-   :PROPERTIES:
-   :NOTER_PAGE: (46 0.13623188405797101 . 0.11868131868131868)
-   :END:
-   See Needham Chapter 15.
-*** Defn: regular point -- need a picture
-    :PROPERTIES:
-    :NOTER_PAGE: (46 0.341304347826087 . 0.3967032967032967)
-    :END:
-*** 5.2 The Shape Operator
-    :PROPERTIES:
-    :NOTER_PAGE: (47 0.2311594202898551 . 0.12747252747252746)
-    :END:
-    $L_p(X_p) = -D_{X_p}N$, which is in the tangent plane T_{p}M and points
-    opposite the direction in which N changes wrt X_p.
-*** Is the usage of "on" here the same as before?
-    :PROPERTIES:
-    :NOTER_PAGE: (47 0.27246376811594203 . 0.505)
-    :END:
-    ``let N be a C^\infty unit normal vector field on M (Figure 5.1).''
-*** Proposition 5.3. The shape operator is self-adjoint:
-    :PROPERTIES:
-    :NOTER_PAGE: (48 0.41594202898550725 . 0.12417582417582418)
-    :END:
-*** Proposition 5.5: Curvature is given by the second fundamental form
-    :PROPERTIES:
-    :NOTER_PAGE: (50 0.08840579710144927 . 0.12417582417582418)
-    :END:
-    $\kappa(X_p) = \langle L(X_p), X_p \rangle = II(X_p, X_p)$
-*** Proposition 5.6: Principal directions and curvatures
-    :PROPERTIES:
-    :NOTER_PAGE: (50 0.41159420289855075 . 0.12307692307692308)
-    :END:
-    - Principal directions: eigenvectors of L
-    - Principal curvatures: eigenvalues of L
-*** 5.4 The First and Second Fundamental Forms
-    :PROPERTIES:
-    :NOTER_PAGE: (52 0.2702898550724638 . 0.12637362637362637)
-    :END:
-    Defined for smooth surfaces in $\mathbb{R}^3$.
-    - first fundamental form: inner product $\langle X,Y \rangle$
-      E := \langle e_1, e_1 \rangle
-      F := \langle e_1, e_2 \rangle
-      G := \langle e_2, e_2 \rangle
-    - second fundatmental form: $II(X_p, Y_p) =  \langle L(X_p), Y_p \rangle$
-      e := II(e_1, e_1)
-      f := II(e_1, e_2)
-      g := II(e_2, e_2)
-** §6 Affine Connections
-   :PROPERTIES:
-   :NOTER_PAGE: (60 0.11594202898550725 . 0.12307692307692308)
-   :ID:       5febc205-65ff-4635-9424-9d2b42966a30
-   :END:
-#+BEGIN_QUOTE
-We will see in a later section that there are infinitely many affine connections
-on any manifold. On a Riemannian manifold, however, there is a unique
-torsion-free affine connection compatible with the metric, called the
-*Riemannian* or *Levi-Civita* connection.
-#+END_QUOTE
-*** No canonical basis for T_{p}M not embedded in a Euclidean space
-    :PROPERTIES:
-    :NOTER_PAGE: (60 0.6159420289855073 . 0.11758241758241758)
-    :END:
-    Formula 4.2 here is the directional derivative.
-*** Definition 6.1. An affine connection
-    :PROPERTIES:
-    :NOTER_PAGE: (60 0.7050724637681159 . 0.12857142857142856)
-    :END:
-
-*** 6.2 Torsion and Curvature
-    :PROPERTIES:
-    :NOTER_PAGE: (61 0.09130434782608696 . 0.12087912087912088)
-    :END:
-    ``There does not seem to be a good reason for calling T(X,Y) the torsion''
-    Is this not the same torsion that appears in Needham Chapter 9?
-*** Definition 6.4: Riemannian or Levi-Civita connection
-    :PROPERTIES:
-    :NOTER_PAGE: (62 0.5688405797101449 . 0.12087912087912088)
-    :END:
-    ``...is and affine connection that is torsion-free and compatible with the
-    metric.''
-
-*** Theorem 6.6. On a Riemannian manifold there is a unique Riemannian connection.
-    :PROPERTIES:
-    :NOTER_PAGE: (62 0.8876811594202899 . 0.12197802197802197)
-    :END:
-
-*** 6.4 Orthogonal Projection on a Surface in R3
-    :PROPERTIES:
-    :NOTER_PAGE: (63 0.7710144927536232 . 0.11868131868131868)
-    :END:
-    pr_p is the projection from T_p R^3 to the tangent space of M at p.
-
-*** Proposition 6.8.
-    :PROPERTIES:
-    :NOTER_PAGE: (64 0.17028985507246377 . 0.12417582417582418)
-    :ID:       b2294d3b-a41f-4b39-b986-b90a7e6c6dfc
-    :END:
-
-** §7 Vector Bundles
-   :PROPERTIES:
-   :NOTER_PAGE: (66 0.12246376811594203 . 0.12307692307692308)
-   :END:
-   ``Thus the set X(M) has two module structures, over R and over F.''
-
-   ``We will try to understand F-linear maps from the point of view of vector
-   bundles.  The main result (Theorem 7.26) asserts the existence of a
-   one-to-one correspondence between F-linear maps α : Γ(E) → Γ(F) of sections
-   of vector bundles and bundle maps ϕ : E → F.''
-
-*** 7.1 Definition of a Vector Bundle
-    :PROPERTIES:
-    :NOTER_PAGE: (66 0.5297101449275362 . 0.12087912087912088)
-    :END:
-    ``A vector bundle, intuitively speaking, is a family of vector spaces that
-    locally “looks” like U × R^r .''
-
-    We need a picture of the terms defined here.
-
-** 13.1 Theorem
-   :PROPERTIES:
-   :NOTER_PAGE: (113 0.18695652173913044 . 0.15494505494505495)
-   :ID:       5c22eaeb-5237-483d-93e1-b037b35d1ed0
-   :END:
-#+BEGIN_QUOTE
-We call DV /dt the covariant derivative (associated to ∇) of the vector field V
-along the curve c(t) in M.
-#+END_QUOTE
-
-** 13.3 Christoffel Symbols
-   :PROPERTIES:
-   :NOTER_PAGE: (115 0.8043478260869565 . 0.11648351648351649)
-   :ID:       29c2f283-9cbc-4a43-be30-f925876d3c53
-   :END:
-
-** 14.5 Parallel Translation
-   :PROPERTIES:
-   :NOTER_PAGE: (126 0.7057971014492753 . 0.12857142857142856)
-   :ID:       49a14fae-5296-41a3-bd2e-c324ef30f23c
-   :END:
-** Index
-   :PROPERTIES:
-   :NOTER_PAGE: 348
-   :END:
-
-* Littlejohn Manifolds
-  :PROPERTIES:
-  :NOTER_DOCUMENT: Chapter_07/Littlejohn_Manifolds.pdf
-  :END:
-** Notes for page 3
-   :PROPERTIES:
-   :NOTER_PAGE: 3
-   :END:
-
-** <<Eqn 4>> (typo)
-   :PROPERTIES:
-   :NOTER_PAGE: (3 0.815 . 0.35)
-   :END:
-   should be: $x'^\mu = \psi_{ij}(x^\nu)$
-** <<Eqn 5>> (typo)
-   :PROPERTIES:
-   :NOTER_PAGE: (3 0.87 . 0.35)
-   :END:
-   should be: $x^\nu = \psi_{ij}^\leftarrow(x'^\mu)$
-** 8. Tangent Vectors
-   :PROPERTIES:
-   :NOTER_PAGE: (7 . 0.6893555394641564)
-   :END:
-*** Eqn 11
-    :PROPERTIES:
-    :NOTER_PAGE: (9 0.27081824764663287 . 0.28880974695407685)
-    :END:
-
-** 9. Equivalence Classes of Curves
-   :PROPERTIES:
-   :NOTER_PAGE: (9 0.4250543084721216 . 0.0962136832239925)
-   :END:
-
-** 10. Tangent Vectors in Coordinates
-   :PROPERTIES:
-   :NOTER_PAGE: (10 0.3569876900796524 . 0.1018369259606373)
-   :END:
-   "convective derivative" (see [[Eqn 11]])
-   "scalar" == "scalar field" in this context?
-
-*** Eqn 16
-    :PROPERTIES:
-    :NOTER_PAGE: (10 0.6401158580738595 . 0.3637863167760075)
-    :END:
-
-
-*** <<Eqn 17>> tangent vector at p
-    :PROPERTIES:
-    :NOTER_PAGE: (10 0.7139753801593048 . 0.3637863167760075)
-    :END:
-    Tangent vector as a ==first order, linear, partial differential operator==
-
-    $\vec{X} = \Sigma_i X^i \frac{\partial}{\partial x^i}|_p$
-** 12. Covectors
-   :PROPERTIES:
-   :NOTER_PAGE: (12 0.7081824764663287 . 0.09996251171508903)
-   :END:
-
-*** Eqn 21 df|_p
-    :PROPERTIES:
-    :NOTER_PAGE: (13 0.22157856625633598 . 0.13495782567947517)
-    :END:
-    $df|_p \colon T_p M \rightarrow \mathbb{R} \colon X \mapsto Xf$
-    where $Xf$ is defined in [[Eqn 16]]
-
-*** df|_p is an operator on vectors -- it is not small or "infinitesimal"
-    :PROPERTIES:
-    :NOTER_PAGE: (13 0.2831281679942071 . 0.10136832239925023)
-    :END:
-    "The most confusing thing for novices about this definition is that there is
-    nothing small or “infinitesimal” about df|_p . In traditional theoretical
-    physics the notation df usually denotes a small increment in the function f."
-
-*** 13. Differential of Coordinates
-    :PROPERTIES:
-    :NOTER_PAGE: (13 0.664735698769008 . 0.06487347703842547)
-    :END:
-* BachmanD: A Geometric Approach to Differential Forms
-  :PROPERTIES:
-  :NOTER_DOCUMENT: Bachman - A geometric approach to differential forms.pdf
-  :END:
-** 1.2 Generalizing the integral
-   :PROPERTIES:
-   :NOTER_PAGE: 19
-   :END:
-** 1.3 differential form in a nutshell
-   :PROPERTIES:
-   :NOTER_PAGE: (22 . 0.39420289855072466)
-   :END:
-   "A differential form is precisely a linear function which eats vectors, spits
-   out numbers and is used in integration."
-** 3 Forms
-   :PROPERTIES:
-   :NOTER_PAGE: 42
-   :END:
-*** 3.1 Coordinates for vectors
-    :PROPERTIES:
-    :NOTER_PAGE: (42 0.35144927536231885 . 0.10307692307692308)
-    :END:
-``The key to understanding the difference between $L$ and $T_p L$ is their co-
-ordinate systems.''
-**** notation <.,.>
-     :PROPERTIES:
-     :NOTER_PAGE: (43 0.47753623188405797 . 0.28329670329670326)
-     :END:
- #+BEGIN_QUOTE
- We have switched to the notation “<·, ·>” to indicate that dt we are not
- talking about points of P anymore, but rather vectors in T_p P .
- #+END_QUOTE
-*** 3.2 1-Forms
-    :PROPERTIES:
-    :NOTER_PAGE: (44 0.5427536231884058 . 0.09868131868131867)
-    :END:
-#+BEGIN_QUOTE
-Evaluating a 1-form on a vector is the same as projecting onto some line and
-then multiplying by some constant.
-#+END_QUOTE
-
-#+BEGIN_QUOTE
-Evaluating a 1-form on a vector is the same as projecting onto each coordinate
-axis, scaling each by some constant and adding the results.
-#+END_QUOTE
-*** 3.3 Multiplying 1-forms
-    :PROPERTIES:
-    :NOTER_PAGE: (46 0.5536231884057972 . 0.10087912087912088)
-    :END:
-    The wedge product is a product operation on 1-forms that is closed, ie,
-    produces another 1-form.
-
-    ``we will use the symbol “∧” (pronounced “wedge”) to denote multiplication''
-**** Notation (),<>,[]
-     :PROPERTIES:
-     :NOTER_PAGE: (47 0.12318840579710146 . 0.0712087912087912)
-     :END:
-     (): x,y plane
-     <>: dx,dy plane
-     []: \omega,\nu plane
-**** wedge product justification or reasoning
-     :PROPERTIES:
-     :NOTER_PAGE: (47 0.2217391304347826 . 0.6437362637362637)
-     :HIGHLIGHT: #s(pdf-highlight 47 ((0.6637362637362637 0.2217391304347826 0.8318681318681319 0.27898550724637683)))
-     :END:
-#+BEGIN_QUOTE
-Do we know of a way to take these vectors and get a number? Actually, we know
-several, but the most useful one turns out to be the area of the parallelogram
-that the vectors span. This is precisely what we deﬁne to be the value of ω ∧
-ν(V1 , V2 )
-#+END_QUOTE
-Still -- why the skew-symmetric product vs any other one?  What is special about
-a/the skew-symmetric operator?
-**** 1-form in a nutshell
-     :PROPERTIES:
-     :NOTER_PAGE: (49 0.7652173913043478 . 0.11626373626373625)
-     :END:
-#+BEGIN_QUOTE
-Evaluating ω ∧ ν on the pair of vectors (V1 , V2 ) gives the area
-of parallelogram spanned by V1 and V2 projected onto the plane
-containing the vectors \langle ω\rangle and \langle ν\rangle, and multiplied by the area of
-the parallelogram spanned by \langle ω\rangle and \langle ν\rangle.
-#+END_QUOTE
-**** 2-form in a nutshell
-     :PROPERTIES:
-     :NOTER_PAGE: (50 0.41884057971014493 . 0.11296703296703296)
-     :END:
-#+BEGIN_QUOTE
-Every 2-form projects the parallelogram spanned by V1 and V2
-onto each of the (2-dimensional) coordinate planes, computes
-the resulting (signed) areas, multiplies each by some constant,
-and adds the results.
-#+END_QUOTE
-
-#+BEGIN_QUOTE
-Henceforth, we will deﬁne a 2-form to be a bilinear, skew-symmetric, real-
-valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
-#+END_QUOTE
-*** 3.4 2-Forms on $T_p \mathbb{R}^3$
-    :PROPERTIES:
-    :NOTER_PAGE: (51 0.31666666666666665 . 0.09868131868131867)
-    :END:
-*** 3.5 2-Forms and 3-forms on $T_p \mathbb{R}^4$
-    :PROPERTIES:
-    :NOTER_PAGE: (53 0.45362318840579713 . 0.10197802197802197)
-    :END:
-*** 3.6 n-Forms
-    :PROPERTIES:
-    :NOTER_PAGE: (54 0.6007246376811595 . 0.09868131868131867)
-    :END:
-    length, area and volume are all signed quantities?
-*** 3.7 Algebraic computation of products
-    :PROPERTIES:
-    :NOTER_PAGE: (57 0.26594202898550723 . 0.09978021978021978)
-    :END:
-** 4 Differential Forms
-   :PROPERTIES:
-   :NOTER_PAGE: 58
-   :END:
-
 * LeeJM _SmoothManifolds (+18)
   :PROPERTIES:
   :NOTER_DOCUMENT: LeeJM_SmoothManifolds.pdf
@@ -1644,7 +1207,7 @@ to contravariant tensors and tensors of mixed variance.
 * TuLW Introduction to Manifolds
   :PROPERTIES:
   :NOTER_DOCUMENT: TuLW_Introduction_to_Manifolds.pdf
-  :NOTER_PAGE: 181
+  :NOTER_PAGE: 84
   :END:
 ** 2.1 Directional derivative
    :PROPERTIES:
@@ -1855,6 +1418,251 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
    :PROPERTIES:
    :NOTER_PAGE: 406
    :END:
+* Lee Riemmanian Manifolds
+  :PROPERTIES:
+  :NOTER_DOCUMENT: Lee Riemmanian Manifolds.pdf
+  :NOTER_PAGE: 34
+  :END:
+* TuLW DifferentialGeometry
+  :PROPERTIES:
+  :NOTER_DOCUMENT: TuLW_DifferentialGeometry.pdf
+  :NOTER_PAGE: 6
+  :END:
+#+DOWNLOADED: screenshot @ 2023-04-22 18:20:16
+[[file:.figs/TuLW_DifferentialGeometry/2023-04-22_18-20-16_screenshot.png]]
+
+** §1 Riemannian Manifolds
+   :PROPERTIES:
+   :NOTER_PAGE: (19 0.3652173913043478 . 0.12417582417582418)
+   :END:
+*** 1.3 Riemannian Metrics
+    :PROPERTIES:
+    :NOTER_PAGE: (21 0.6923438233912635 . 0.12321937321937322)
+    :END:
+    A Riemannian metric maps a continuous vector field onto a continuous function.
+*** Example 1.11: Torus
+    :PROPERTIES:
+    :NOTER_PAGE: (22 0.7623297322686707 . 0.12393162393162394)
+    :END:
+    On a torus in R^3 vs a torus as ``the quotient space of a square with the
+ opposite edges identified''
+ #+BEGIN_QUOTE
+ We will show later that there is no isometry between these two Riemannian
+ manifolds with the same underlying torus.
+ #+END_QUOTE
+*** partition of unity
+    :PROPERTIES:
+    :NOTER_PAGE: (23 0.6528985507246378 . 0.1087912087912088)
+    :END:
+    What is this?  The definition is unhelpful in describing the meaning of this term.
+*** Theorem 1.12. On every manifold M there is a Riemannian metric.
+    :PROPERTIES:
+    :NOTER_PAGE: (23 0.8139971817754815 . 0.1267806267806268)
+    :END:
+** §2 Curves
+   :PROPERTIES:
+   :NOTER_PAGE: (26 0.12173913043478261 . 0.11978021978021978)
+   :END:
+*** 2.3 Signed Curvature of a Plane Curve
+    :PROPERTIES:
+    :NOTER_PAGE: (28 0.3818840579710145 . 0.12637362637362637)
+    :END:
+    $T' = \gamma''(s) = \kappa\vec{n}$, so
+    $\kappa = \langle T', \vec{n} \rangle = \langle \gamma'', \vec{n} \rangle$
+*** Curvature formulae
+    :PROPERTIES:
+    :NOTER_PAGE: (31 0.4065217391304348 . 0.11758241758241758)
+    :END:
+    see Needham,
+** §4 Directional Derivatives in *Euclidean Space*
+   :PROPERTIES:
+   :NOTER_PAGE: (39 0.12753623188405797 . 0.12967032967032968)
+   :END:
+*** Torsion of the directional derivative D
+    :PROPERTIES:
+    :NOTER_PAGE: (41 0.2956521739130435 . 0.11758241758241758)
+    :END:
+    If $D_X Y - D_Y X = [X,Y]$, then
+    the torsion $T(X,Y) = D_X Y - D_Y X - [X,Y]$ is 0.
+
+    This only applies to $\mathbb{R}^n$.
+
+*** Curvature of the directional derivative
+    :PROPERTIES:
+    :NOTER_PAGE: (41 0.7021739130434783 . 0.11758241758241758)
+    :END:
+*** Definition 4.8. "On" vs "Along" a submanifold
+    :PROPERTIES:
+    :NOTER_PAGE: (43 0.6557971014492754 . 0.12087912087912088)
+    :ID:       8cdd16b8-dfd9-41a4-9676-b794c08bec04
+    :END:
+    Along includes On, where On is tangent to the submanifold.
+*** Notation X(M) and \Gamma(TM|_N)
+    :PROPERTIES:
+    :NOTER_PAGE: (43 0.8500000000000001 . 0.11758241758241758)
+    :END:
+    - $\mathfrak{X}(M)$ is the set of all C^\infty vector fields *on* manifold M
+    - $\Gamma(TM|_N)$ is the set of all C^\infty vector fields *along* a submanifold N in
+      a manifold M.
+    - $\mathcal{F} = C^\infty(M)$ is the ring of C^\infty functions on M
+*** In a submanifold of R^n, torsion "no longer makes sense"
+    :PROPERTIES:
+    :NOTER_PAGE: (44 0.4311594202898551 . 0.12637362637362637)
+    :END:
+    because:
+    X is a vector field *on* M
+    Y is a vector field *along* M
+*** Proposition 4.9.
+    :PROPERTIES:
+    :NOTER_PAGE: (44 0.48768115942028983 . 0.12307692307692308)
+    :ID:       272e4b73-34f1-4fd0-a632-02bc267c1c39
+    :END:
+
+** §5 The Shape Operator
+   :PROPERTIES:
+   :NOTER_PAGE: (46 0.13623188405797101 . 0.11868131868131868)
+   :END:
+   See Needham Chapter 15.
+*** Defn: regular point -- need a picture
+    :PROPERTIES:
+    :NOTER_PAGE: (46 0.341304347826087 . 0.3967032967032967)
+    :END:
+*** 5.2 The Shape Operator
+    :PROPERTIES:
+    :NOTER_PAGE: (47 0.2311594202898551 . 0.12747252747252746)
+    :END:
+    $L_p(X_p) = -D_{X_p}N$, which is in the tangent plane T_{p}M and points
+    opposite the direction in which N changes wrt X_p.
+*** Is the usage of "on" here the same as before?
+    :PROPERTIES:
+    :NOTER_PAGE: (47 0.27246376811594203 . 0.505)
+    :END:
+    ``let N be a C^\infty unit normal vector field on M (Figure 5.1).''
+*** Proposition 5.3. The shape operator is self-adjoint:
+    :PROPERTIES:
+    :NOTER_PAGE: (48 0.41594202898550725 . 0.12417582417582418)
+    :END:
+*** Proposition 5.5: Curvature is given by the second fundamental form
+    :PROPERTIES:
+    :NOTER_PAGE: (50 0.08840579710144927 . 0.12417582417582418)
+    :END:
+    $\kappa(X_p) = \langle L(X_p), X_p \rangle = II(X_p, X_p)$
+*** Proposition 5.6: Principal directions and curvatures
+    :PROPERTIES:
+    :NOTER_PAGE: (50 0.41159420289855075 . 0.12307692307692308)
+    :END:
+    - Principal directions: eigenvectors of L
+    - Principal curvatures: eigenvalues of L
+*** 5.4 The First and Second Fundamental Forms
+    :PROPERTIES:
+    :NOTER_PAGE: (52 0.2702898550724638 . 0.12637362637362637)
+    :END:
+    Defined for smooth surfaces in $\mathbb{R}^3$.
+    - first fundamental form: inner product $\langle X,Y \rangle$
+      E := \langle e_1, e_1 \rangle
+      F := \langle e_1, e_2 \rangle
+      G := \langle e_2, e_2 \rangle
+    - second fundatmental form: $II(X_p, Y_p) =  \langle L(X_p), Y_p \rangle$
+      e := II(e_1, e_1)
+      f := II(e_1, e_2)
+      g := II(e_2, e_2)
+** §6 Affine Connections
+   :PROPERTIES:
+   :NOTER_PAGE: (60 0.11594202898550725 . 0.12307692307692308)
+   :ID:       5febc205-65ff-4635-9424-9d2b42966a30
+   :END:
+#+BEGIN_QUOTE
+We will see in a later section that there are infinitely many affine connections
+on any manifold. On a Riemannian manifold, however, there is a unique
+torsion-free affine connection compatible with the metric, called the
+*Riemannian* or *Levi-Civita* connection.
+#+END_QUOTE
+*** No canonical basis for T_{p}M not embedded in a Euclidean space
+    :PROPERTIES:
+    :NOTER_PAGE: (60 0.6159420289855073 . 0.11758241758241758)
+    :END:
+    Formula 4.2 here is the directional derivative.
+*** Definition 6.1. An affine connection
+    :PROPERTIES:
+    :NOTER_PAGE: (60 0.7050724637681159 . 0.12857142857142856)
+    :END:
+
+*** 6.2 Torsion and Curvature
+    :PROPERTIES:
+    :NOTER_PAGE: (61 0.09130434782608696 . 0.12087912087912088)
+    :END:
+    ``There does not seem to be a good reason for calling T(X,Y) the torsion''
+    Is this not the same torsion that appears in Needham Chapter 9?
+*** Definition 6.4: Riemannian or Levi-Civita connection
+    :PROPERTIES:
+    :NOTER_PAGE: (62 0.5688405797101449 . 0.12087912087912088)
+    :END:
+    ``...is and affine connection that is torsion-free and compatible with the
+    metric.''
+
+*** Theorem 6.6. On a Riemannian manifold there is a unique Riemannian connection.
+    :PROPERTIES:
+    :NOTER_PAGE: (62 0.8876811594202899 . 0.12197802197802197)
+    :END:
+
+*** 6.4 Orthogonal Projection on a Surface in R3
+    :PROPERTIES:
+    :NOTER_PAGE: (63 0.7710144927536232 . 0.11868131868131868)
+    :END:
+    pr_p is the projection from T_p R^3 to the tangent space of M at p.
+
+*** Proposition 6.8.
+    :PROPERTIES:
+    :NOTER_PAGE: (64 0.17028985507246377 . 0.12417582417582418)
+    :ID:       b2294d3b-a41f-4b39-b986-b90a7e6c6dfc
+    :END:
+
+** §7 Vector Bundles
+   :PROPERTIES:
+   :NOTER_PAGE: (66 0.12246376811594203 . 0.12307692307692308)
+   :END:
+   ``Thus the set X(M) has two module structures, over R and over F.''
+
+   ``We will try to understand F-linear maps from the point of view of vector
+   bundles.  The main result (Theorem 7.26) asserts the existence of a
+   one-to-one correspondence between F-linear maps α : Γ(E) → Γ(F) of sections
+   of vector bundles and bundle maps ϕ : E → F.''
+
+*** 7.1 Definition of a Vector Bundle
+    :PROPERTIES:
+    :NOTER_PAGE: (66 0.5297101449275362 . 0.12087912087912088)
+    :END:
+    ``A vector bundle, intuitively speaking, is a family of vector spaces that
+    locally “looks” like U × R^r .''
+
+    We need a picture of the terms defined here.
+
+** 13.1 Theorem
+   :PROPERTIES:
+   :NOTER_PAGE: (113 0.18695652173913044 . 0.15494505494505495)
+   :ID:       5c22eaeb-5237-483d-93e1-b037b35d1ed0
+   :END:
+#+BEGIN_QUOTE
+We call DV /dt the covariant derivative (associated to ∇) of the vector field V
+along the curve c(t) in M.
+#+END_QUOTE
+
+** 13.3 Christoffel Symbols
+   :PROPERTIES:
+   :NOTER_PAGE: (115 0.8043478260869565 . 0.11648351648351649)
+   :ID:       29c2f283-9cbc-4a43-be30-f925876d3c53
+   :END:
+
+** 14.5 Parallel Translation
+   :PROPERTIES:
+   :NOTER_PAGE: (126 0.7057971014492753 . 0.12857142857142856)
+   :ID:       49a14fae-5296-41a3-bd2e-c324ef30f23c
+   :END:
+** Index
+   :PROPERTIES:
+   :NOTER_PAGE: 348
+   :END:
+
 * Carroll - An Introduction to General Relativity
   :PROPERTIES:
   :NOTER_DOCUMENT: Carroll - An Introduction to General Relativity.pdf
@@ -1944,8 +1752,200 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
    :PROPERTIES:
    :NOTER_PAGE: 514
    :END:
-* Lee Riemmanian Manifolds
+* Littlejohn Manifolds
   :PROPERTIES:
-  :NOTER_DOCUMENT: Lee Riemmanian Manifolds.pdf
-  :NOTER_PAGE: 34
+  :NOTER_DOCUMENT: Chapter_07/Littlejohn_Manifolds.pdf
   :END:
+** Notes for page 3
+   :PROPERTIES:
+   :NOTER_PAGE: 3
+   :END:
+
+** <<Eqn 4>> (typo)
+   :PROPERTIES:
+   :NOTER_PAGE: (3 0.815 . 0.35)
+   :END:
+   should be: $x'^\mu = \psi_{ij}(x^\nu)$
+** <<Eqn 5>> (typo)
+   :PROPERTIES:
+   :NOTER_PAGE: (3 0.87 . 0.35)
+   :END:
+   should be: $x^\nu = \psi_{ij}^\leftarrow(x'^\mu)$
+** 8. Tangent Vectors
+   :PROPERTIES:
+   :NOTER_PAGE: (7 . 0.6893555394641564)
+   :END:
+*** Eqn 11
+    :PROPERTIES:
+    :NOTER_PAGE: (9 0.27081824764663287 . 0.28880974695407685)
+    :END:
+
+** 9. Equivalence Classes of Curves
+   :PROPERTIES:
+   :NOTER_PAGE: (9 0.4250543084721216 . 0.0962136832239925)
+   :END:
+
+** 10. Tangent Vectors in Coordinates
+   :PROPERTIES:
+   :NOTER_PAGE: (10 0.3569876900796524 . 0.1018369259606373)
+   :END:
+   "convective derivative" (see [[Eqn 11]])
+   "scalar" == "scalar field" in this context?
+
+*** Eqn 16
+    :PROPERTIES:
+    :NOTER_PAGE: (10 0.6401158580738595 . 0.3637863167760075)
+    :END:
+
+
+*** <<Eqn 17>> tangent vector at p
+    :PROPERTIES:
+    :NOTER_PAGE: (10 0.7139753801593048 . 0.3637863167760075)
+    :END:
+    Tangent vector as a ==first order, linear, partial differential operator==
+
+    $\vec{X} = \Sigma_i X^i \frac{\partial}{\partial x^i}|_p$
+** 12. Covectors
+   :PROPERTIES:
+   :NOTER_PAGE: (12 0.7081824764663287 . 0.09996251171508903)
+   :END:
+
+*** Eqn 21 df|_p
+    :PROPERTIES:
+    :NOTER_PAGE: (13 0.22157856625633598 . 0.13495782567947517)
+    :END:
+    $df|_p \colon T_p M \rightarrow \mathbb{R} \colon X \mapsto Xf$
+    where $Xf$ is defined in [[Eqn 16]]
+
+*** df|_p is an operator on vectors -- it is not small or "infinitesimal"
+    :PROPERTIES:
+    :NOTER_PAGE: (13 0.2831281679942071 . 0.10136832239925023)
+    :END:
+    "The most confusing thing for novices about this definition is that there is
+    nothing small or “infinitesimal” about df|_p . In traditional theoretical
+    physics the notation df usually denotes a small increment in the function f."
+
+*** 13. Differential of Coordinates
+    :PROPERTIES:
+    :NOTER_PAGE: (13 0.664735698769008 . 0.06487347703842547)
+    :END:
+* BachmanD: A Geometric Approach to Differential Forms
+  :PROPERTIES:
+  :NOTER_DOCUMENT: Bachman - A geometric approach to differential forms.pdf
+  :END:
+** 1.2 Generalizing the integral
+   :PROPERTIES:
+   :NOTER_PAGE: 19
+   :END:
+** 1.3 differential form in a nutshell
+   :PROPERTIES:
+   :NOTER_PAGE: (22 . 0.39420289855072466)
+   :END:
+   "A differential form is precisely a linear function which eats vectors, spits
+   out numbers and is used in integration."
+** 3 Forms
+   :PROPERTIES:
+   :NOTER_PAGE: 42
+   :END:
+*** 3.1 Coordinates for vectors
+    :PROPERTIES:
+    :NOTER_PAGE: (42 0.35144927536231885 . 0.10307692307692308)
+    :END:
+``The key to understanding the difference between $L$ and $T_p L$ is their co-
+ordinate systems.''
+**** notation <.,.>
+     :PROPERTIES:
+     :NOTER_PAGE: (43 0.47753623188405797 . 0.28329670329670326)
+     :END:
+ #+BEGIN_QUOTE
+ We have switched to the notation “<·, ·>” to indicate that dt we are not
+ talking about points of P anymore, but rather vectors in T_p P .
+ #+END_QUOTE
+*** 3.2 1-Forms
+    :PROPERTIES:
+    :NOTER_PAGE: (44 0.5427536231884058 . 0.09868131868131867)
+    :END:
+#+BEGIN_QUOTE
+Evaluating a 1-form on a vector is the same as projecting onto some line and
+then multiplying by some constant.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Evaluating a 1-form on a vector is the same as projecting onto each coordinate
+axis, scaling each by some constant and adding the results.
+#+END_QUOTE
+*** 3.3 Multiplying 1-forms
+    :PROPERTIES:
+    :NOTER_PAGE: (46 0.5536231884057972 . 0.10087912087912088)
+    :END:
+    The wedge product is a product operation on 1-forms that is closed, ie,
+    produces another 1-form.
+
+    ``we will use the symbol “∧” (pronounced “wedge”) to denote multiplication''
+**** Notation (),<>,[]
+     :PROPERTIES:
+     :NOTER_PAGE: (47 0.12318840579710146 . 0.0712087912087912)
+     :END:
+     (): x,y plane
+     <>: dx,dy plane
+     []: \omega,\nu plane
+**** wedge product justification or reasoning
+     :PROPERTIES:
+     :NOTER_PAGE: (47 0.2217391304347826 . 0.6437362637362637)
+     :HIGHLIGHT: #s(pdf-highlight 47 ((0.6637362637362637 0.2217391304347826 0.8318681318681319 0.27898550724637683)))
+     :END:
+#+BEGIN_QUOTE
+Do we know of a way to take these vectors and get a number? Actually, we know
+several, but the most useful one turns out to be the area of the parallelogram
+that the vectors span. This is precisely what we deﬁne to be the value of ω ∧
+ν(V1 , V2 )
+#+END_QUOTE
+Still -- why the skew-symmetric product vs any other one?  What is special about
+a/the skew-symmetric operator?
+**** 1-form in a nutshell
+     :PROPERTIES:
+     :NOTER_PAGE: (49 0.7652173913043478 . 0.11626373626373625)
+     :END:
+#+BEGIN_QUOTE
+Evaluating ω ∧ ν on the pair of vectors (V1 , V2 ) gives the area
+of parallelogram spanned by V1 and V2 projected onto the plane
+containing the vectors \langle ω\rangle and \langle ν\rangle, and multiplied by the area of
+the parallelogram spanned by \langle ω\rangle and \langle ν\rangle.
+#+END_QUOTE
+**** 2-form in a nutshell
+     :PROPERTIES:
+     :NOTER_PAGE: (50 0.41884057971014493 . 0.11296703296703296)
+     :END:
+#+BEGIN_QUOTE
+Every 2-form projects the parallelogram spanned by V1 and V2
+onto each of the (2-dimensional) coordinate planes, computes
+the resulting (signed) areas, multiplies each by some constant,
+and adds the results.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Henceforth, we will deﬁne a 2-form to be a bilinear, skew-symmetric, real-
+valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
+#+END_QUOTE
+*** 3.4 2-Forms on $T_p \mathbb{R}^3$
+    :PROPERTIES:
+    :NOTER_PAGE: (51 0.31666666666666665 . 0.09868131868131867)
+    :END:
+*** 3.5 2-Forms and 3-forms on $T_p \mathbb{R}^4$
+    :PROPERTIES:
+    :NOTER_PAGE: (53 0.45362318840579713 . 0.10197802197802197)
+    :END:
+*** 3.6 n-Forms
+    :PROPERTIES:
+    :NOTER_PAGE: (54 0.6007246376811595 . 0.09868131868131867)
+    :END:
+    length, area and volume are all signed quantities?
+*** 3.7 Algebraic computation of products
+    :PROPERTIES:
+    :NOTER_PAGE: (57 0.26594202898550723 . 0.09978021978021978)
+    :END:
+** 4 Differential Forms
+   :PROPERTIES:
+   :NOTER_PAGE: 58
+   :END:
+
