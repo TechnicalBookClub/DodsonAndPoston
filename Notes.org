@@ -1,5 +1,5 @@
 #+STARTUP: overview entitiespretty latexpreview
-#+COLUMNS: %25ITEM %NOTER_PAGE %NUM_COLUMNS
+#+COLUMNS: %25ITEM %NOTER_DOCUMENT %NUM_COLUMNS
 #+TITLE: Notes from D&P and related books
 https://github.com/TechnicalBookClub/DodsonAndPoston
 * Dodson&Poston
@@ -422,6 +422,8 @@ component of this vector is |t| and its tail is at w(p).
     :NOTER_PAGE: (232 0.6666666666666666 . 0.3274725274725275)
     :END:
     See [[id:272e4b73-34f1-4fd0-a632-02bc267c1c39][Tu(DG) Prop 4.9.ii p. 27]]
+    Randy: \nabla_t takes vector fields as an argument, but f is a scalar field, so
+    the correct thing to do is t(f).
 *** 3.01. Definition. A connection (\nabla)
     :PROPERTIES:
     :NOTER_PAGE: (232 0.8913043478260869 . 0.12417582417582418)
@@ -445,11 +447,11 @@ component of this vector is |t| and its tail is at w(p).
 First, let us see what a connection looks like in coordinates, as some proofs
 will be easiest that way.
 #+END_QUOTE
-**** Typo? shold be "by Ciii"
+**** Typo! shold be "by Ciii"
      :PROPERTIES:
      :NOTER_PAGE: (233 0.5659420289855073 . 0.8120879120879121)
      :END:
-     ``by Ci)'' is wrong... maybe
+     ``by Ci)'' is wrong.
 *** 3.03. Transformation Formula.
     :PROPERTIES:
     :NOTER_PAGE: (234 0.19855072463768117 . 0.11978021978021978)
@@ -584,6 +586,12 @@ will be easiest that way.
     :NOTER_PAGE: (243 0.39057971014492754 . 0.12307692307692308)
     :END:
     $~{\nabla}_{c*}\vec{w}(t) = \lim_{h\rightarrow0} \frac{\tau^\leftarrow_h \vec{w}_{c(t+h)}-\vec{w}_{c(t)}}{h}$
+*** 6.01. Definition: Compatible
+    :PROPERTIES:
+    :NOTER_PAGE: (248 0.3531615925058548 . 0.125)
+    :END:
+    A connection \nabla on a manifold M with a metric tensor G is /compatible/ if all
+    parallel transports \tau_t that it defines are isometries.
 ** Bibliography
    :PROPERTIES:
    :NOTER_PAGE: (434 . 0.000213)
@@ -897,11 +905,19 @@ simply is ∇_v.
     :NOTER_PAGE: (273 0.35166425470332846 . 0.16929133858267717)
     :ID:       73444375-3150-4d4d-95e3-7983fdd1b9f8
     :END:
-
-** 1-forms used to be called covariant vectors or covectors
+** Chapter 28 Curvature as a Force between Neighbouring Geodesics
    :PROPERTIES:
-   :NOTER_PAGE: (495 0.3813314037626628 . 0.1968503937007874)
+   :NOTER_PAGE: 298
    :END:
+** Chapter 39 Exercises for Act V
+   :PROPERTIES:
+   :NOTER_PAGE: 494
+   :END:
+
+*** 1-forms used to be called covariant vectors or covectors
+    :PROPERTIES:
+    :NOTER_PAGE: (495 0.3813314037626628 . 0.1968503937007874)
+    :END:
 ** Further Reading
    :PROPERTIES:
    :NOTER_PAGE: (504 0.12373371924746743 . 0.14862204724409447)
@@ -1366,6 +1382,15 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
   :NOTER_DOCUMENT: LeeJM_SmoothManifolds.pdf
   :NOTER_PAGE: 9
   :END:
+** Notes for page 9 V: 32% H: 81%
+   :PROPERTIES:
+   :NOTER_PAGE: (9 0.32463768115942027 . 0.810989010989011)
+   :END:
+#+BEGIN_QUOTE
+The old joke that “differential geometry is the study of properties that are
+invariant under change of notation” is funny primarily because it is alarmingly
+close to the truth.
+#+END_QUOTE
 ** Contents
    :PROPERTIES:
    :NOTER_PAGE: 13
@@ -1645,6 +1670,11 @@ to contravariant tensors and tensors of mixed variance.
    :END:
    See D&P VII.4.02 Contravariant vectors.  The 2nd paragraph above encapsulates
    the corresponding section in D&P in a nutshell.
+** 2.5 Vector Fields as Derivations
+   :PROPERTIES:
+   :NOTER_PAGE: (35 0.2608695652173913 . 0.10590858416945373)
+   :END:
+
 ** 3.3 k-covectors
    :PROPERTIES:
    :NOTER_PAGE: (42 0.6652173913043479 . 0.0)
