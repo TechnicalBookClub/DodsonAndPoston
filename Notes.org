@@ -376,6 +376,7 @@ and TM. For a vector t tangent to Mat
 *** \Pi, the projection map and following equation
     :PROPERTIES:
     :NOTER_PAGE: (229 0.6371411117898595 . 0.788888888888889)
+    :ID:       04dcc969-42bd-4906-9145-d4f044524ee4
     :END:
 w     : M     \rightarrow TM
 D_{p}w   : TM    \rightarrow  T(TM)
@@ -402,7 +403,7 @@ component of this vector is |t| and its tail is at w(p).
     :NOTER_PAGE: (231 0.6036231884057971 . 0.310989010989011)
     :END:
     In D&P-speak, "vertical" is vertical in their picture of TM, meaning that
-    the vector lies in T_{p}M for some p \in M.
+    the vector lies in T_{p}M for some p \in M. +Or maybe not+ -- see definition in [[id: 46c5be84-dafa-4be7-9b2a-1344687cf48b][3.06.]]
 
 *** "we are free to decide what properties would be nice to have"
     :PROPERTIES:
@@ -483,6 +484,7 @@ will be easiest that way.
 *** 3.06. Definition: "vertical"
     :PROPERTIES:
     :NOTER_PAGE: (235 0.577536231884058 . 0.12747252747252746)
+    :ID:       46c5be84-dafa-4be7-9b2a-1344687cf48b
     :END:
     a vector $\vec{v}$ in the space of derivatives of tangent vectors is
     /vertical/ if its projection into the tangent space is zero.
@@ -490,6 +492,10 @@ will be easiest that way.
     I find this definition confusing and hard to keep in my head.  The picture
     in Fig 3.6 is likely the key (but the value is still questionable -- can
     \~{c} be double-valued as it is under (b)?)
+
+    D_w(\Pi) definition seems incompatible with the statement in the next
+    paragraph about finding a "path ~c".  See [[id: 04dcc969-42bd-4906-9145-d4f044524ee4][\Pi discussion above]].  D_w(\Pi) must
+    have the "horizontal" T_{p}M as its range.
 #+DOWNLOADED: screenshot @ 2023-05-13 16:52:37
 [[file:.figs/Dodson&Poston/2023-05-13_16-52-37_screenshot.png]]
 
