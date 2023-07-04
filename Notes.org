@@ -6,7 +6,7 @@ https://github.com/TechnicalBookClub/DodsonAndPoston
   :PROPERTIES:
   :NOTER_DOCUMENT: DodsonCTJ+PostonT_TensorGeometry.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 254
+  :NOTER_PAGE: 445
   :END:
 ** Contents
    :PROPERTIES:
@@ -424,6 +424,19 @@ component of this vector is |t| and its tail is at w(p).
     See [[id:272e4b73-34f1-4fd0-a632-02bc267c1c39][Tu(DG) Prop 4.9.ii p. 27]]
     Randy: \nabla_t takes vector fields as an argument, but f is a scalar field, so
     the correct thing to do is t(f).
+
+*** directional derivative of a vector field
+    :PROPERTIES:
+    :NOTER_PAGE: (232 0.6695652173913044 . 0.31648351648351647)
+    :ID:       0f6f023f-b2b4-4769-922a-ef75170af998
+    :END:
+    This may be best explained in Barret Oneill "Differential Geometry."  The
+    differential \nabla turns an n form into an (n+1) form.  w and t here are vectors
+    (one forms?) and \nabla_t(fw), t(f)w(p), and f(p)\nabla_t(w) are all 2-forms.
+
+    I was confused because I was thinking of w, t, and \nabla_t(w) all as vectors, so
+    I could not identify what t(f)w(p) was, and it looked to be different from
+    the other terms in this equation.
 *** 3.01. Definition. A connection (\nabla)
     :PROPERTIES:
     :NOTER_PAGE: (232 0.8913043478260869 . 0.12417582417582418)
@@ -586,12 +599,23 @@ will be easiest that way.
     :NOTER_PAGE: (243 0.39057971014492754 . 0.12307692307692308)
     :END:
     $~{\nabla}_{c*}\vec{w}(t) = \lim_{h\rightarrow0} \frac{\tau^\leftarrow_h \vec{w}_{c(t+h)}-\vec{w}_{c(t)}}{h}$
+** VIII.6. Metric Tensors and Connections
+   :PROPERTIES:
+   :NOTER_PAGE: (248 0.3108695652173913 . 0.12527472527472527)
+   :END:
+
 *** 6.01. Definition: Compatible
     :PROPERTIES:
     :NOTER_PAGE: (248 0.3531615925058548 . 0.125)
     :END:
     A connection \nabla on a manifold M with a metric tensor G is /compatible/ if all
     parallel transports \tau_t that it defines are isometries.
+
+*** 6.03. Corollary: Compatibility criteria
+    :PROPERTIES:
+    :NOTER_PAGE: (250 0.11594202898550725 . 0.12087912087912088)
+    :END:
+See [[id: 781e5c4b-4a76-4e24-9f52-1888867e86fd][Tu, Differential Geometry]]
 ** Bibliography
    :PROPERTIES:
    :NOTER_PAGE: (434 . 0.000213)
@@ -604,7 +628,7 @@ will be easiest that way.
   :PROPERTIES:
   :NOTER_DOCUMENT: NeedhamT_VDGF.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 298
+  :NOTER_PAGE: 427
   :END:
 
 #+DOWNLOADED: screenshot @ 2023-04-22 18:19:35
@@ -909,6 +933,11 @@ simply is ∇_v.
    :PROPERTIES:
    :NOTER_PAGE: 298
    :END:
+** 36.3 Leibniz rule for forms
+   :PROPERTIES:
+   :NOTER_PAGE: (423 0.723589001447178 . 0.14271653543307086)
+   :END:
+
 ** Chapter 39 Exercises for Act V
    :PROPERTIES:
    :NOTER_PAGE: 494
@@ -940,10 +969,10 @@ simply is ∇_v.
     :NOTER_PAGE: (512 0.8762662807525325 . 0.17618110236220472)
     :END:
 
-* LeeJM _SmoothManifolds (+18)
+* LeeJM SmoothManifolds
   :PROPERTIES:
   :NOTER_DOCUMENT: LeeJM_SmoothManifolds.pdf
-  :NOTER_PAGE: 9
+  :NOTER_PAGE: 380
   :END:
 ** Notes for page 9 V: 32% H: 81%
    :PROPERTIES:
@@ -1204,10 +1233,16 @@ See D&P VII.4.01
 We deal primarily with covariant tensors, but we also give a brief introduction
 to contravariant tensors and tensors of mixed variance.
 #+END_QUOTE
+
+** Exterior Derivatives (14)
+   :PROPERTIES:
+   :NOTER_PAGE: (380 0.7036231884057971 . 0.12527472527472527)
+   :END:
+
 * TuLW Introduction to Manifolds
   :PROPERTIES:
   :NOTER_DOCUMENT: TuLW_Introduction_to_Manifolds.pdf
-  :NOTER_PAGE: 84
+  :NOTER_PAGE: 57
   :END:
 ** 2.1 Directional derivative
    :PROPERTIES:
@@ -1421,12 +1456,29 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
 * Lee Riemmanian Manifolds
   :PROPERTIES:
   :NOTER_DOCUMENT: Lee Riemmanian Manifolds.pdf
-  :NOTER_PAGE: 34
+  :NOTER_PAGE: 150
   :END:
+** Properties of Connections
+   :PROPERTIES:
+   :NOTER_PAGE: (66 0.6983321247280638 . 0.08095238095238096)
+   :ID:       99da8b4a-a448-4375-a962-4a0464a405a6
+   :END:
+   product rule (Liebniz) (Xf)Y see Oneill.
+** Lemma 5.1: The /tangential connection/
+   :PROPERTIES:
+   :NOTER_PAGE: (83 0.40681653372008697 . 0.06666666666666667)
+   :ID:       c18c29c3-deb1-4445-b484-bbfe5fe4f3ca
+   :END:
+   Same (Xf)Y term in the definition of this connection
+** Tangential and normal projections
+   :PROPERTIES:
+   :NOTER_PAGE: (150 0.6410442349528643 . 0.08571428571428572)
+   :END:
+   projections into TM or NM
 * TuLW DifferentialGeometry
   :PROPERTIES:
   :NOTER_DOCUMENT: TuLW_DifferentialGeometry.pdf
-  :NOTER_PAGE: 6
+  :NOTER_PAGE: 40
   :END:
 #+DOWNLOADED: screenshot @ 2023-04-22 18:20:16
 [[file:.figs/TuLW_DifferentialGeometry/2023-04-22_18-20-16_screenshot.png]]
@@ -1478,6 +1530,13 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
    :PROPERTIES:
    :NOTER_PAGE: (39 0.12753623188405797 . 0.12967032967032968)
    :END:
+*** Prop 4.2: directional derivative D_{X}Y
+    :PROPERTIES:
+    :NOTER_PAGE: (40 0.5666666666666667 . 0.12637362637362637)
+    :ID:       73b0620c-19e5-47bf-853d-23d94b004d9c
+    :END:
+    (ii) Leibniz rule:  What is (Xf)Y?  is this an implicit wedge product as in
+    Barret Oneill I.6?
 *** Torsion of the directional derivative D
     :PROPERTIES:
     :NOTER_PAGE: (41 0.2956521739130435 . 0.11758241758241758)
@@ -1593,6 +1652,16 @@ torsion-free affine connection compatible with the metric, called the
     :END:
     ``There does not seem to be a good reason for calling T(X,Y) the torsion''
     Is this not the same torsion that appears in Needham Chapter 9?
+
+*** A connection is compatible with the metric if...
+    :PROPERTIES:
+    :NOTER_PAGE: (62 0.41884057971014493 . 0.11758241758241758)
+    :ID:       781e5c4b-4a76-4e24-9f52-1888867e86fd
+    :END:
+\forall X,Y,Z \in X(M), Z \langle X,Y\rangle = \langle\nabla_{Z}X,Y\rangle + \langle X,\nabla{}_Z_{}Y\rangle
+This is the same as D&P VIII.6, with the same confusion for me (vector on the
+LHS, scalar on the RHS).
+
 *** Definition 6.4: Riemannian or Levi-Civita connection
     :PROPERTIES:
     :NOTER_PAGE: (62 0.5688405797101449 . 0.12087912087912088)
@@ -1948,4 +2017,3 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
    :PROPERTIES:
    :NOTER_PAGE: 58
    :END:
-
