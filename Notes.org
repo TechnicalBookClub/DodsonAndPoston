@@ -449,7 +449,7 @@ component of this vector is |t| and its tail is at w(p).
     Ci:   linear in the input tangent vector space
     Cii:  linear in the vector field space
     Ciii: scaling t is the same as scaling w
-    Civ:  Liebniz property
+    Civ:  Leibniz property
     Cv:   continuous vector fields have continous connections
 *** 3.02. Coordinates -- Christoffel symbols
     :PROPERTIES:
@@ -628,7 +628,7 @@ See [[id: 781e5c4b-4a76-4e24-9f52-1888867e86fd][Tu, Differential Geometry]]
   :PROPERTIES:
   :NOTER_DOCUMENT: NeedhamT_VDGF.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 427
+  :NOTER_PAGE: 421
   :END:
 
 #+DOWNLOADED: screenshot @ 2023-04-22 18:19:35
@@ -933,10 +933,118 @@ simply is ∇_v.
    :PROPERTIES:
    :NOTER_PAGE: 298
    :END:
-** 36.3 Leibniz rule for forms
+** Chapter 32 1-Forms
    :PROPERTIES:
-   :NOTER_PAGE: (423 0.723589001447178 . 0.14271653543307086)
+   :NOTER_PAGE: 374
    :END:
+   AKA covariant vectors or covectors.
+*** Contraction: \langle\omega, v\rangle
+    :PROPERTIES:
+    :NOTER_PAGE: (376 0.479739507959479 . 0.13385826771653545)
+    :END:
+    Needham uses v(\omega) or \omega(v) more than the angle bracket form of the
+    contraction.  Elsewhere, he also uses \cdot for the dot product of vectors (not
+    1-forms and vectors).
+*** 32.3.4 Row Vectors
+    :PROPERTIES:
+    :NOTER_PAGE: (381 0.19536903039073805 . 0.140748031496063)
+    :ID:       20230704T165532.851080
+    :END:
+    First mention?
+*** Typo: missing ~'s
+    :PROPERTIES:
+    :NOTER_PAGE: (382 0.2460202604920405 . 0.5196850393700787)
+    :END:
+    basis vectors in [b] should be $\~{e}_1, \~{e}_2$.  The poins is that when e_2
+    changes, \omega^1 is also affected.
+*** duality of sets, not elements -- important!
+    :PROPERTIES:
+    :NOTER_PAGE: (382 0.6172214182344428 . 0.1377952755905512)
+    :END:
+ #+BEGIN_QUOTE
+ {ω 1 , ω 2 } is dual to the set of basis vectors {e1 , e2 }, it is simply wrong to think that ω 1 is dual to e1 ,
+ and that ω 2 is dual to e2 .
+ #+END_QUOTE
+*** Typo: (32.5), not (32.6)
+    :PROPERTIES:
+    :NOTER_PAGE: (382 0.7329956584659912 . 0.515748031496063)
+    :END:
+*** Equivalent definitions of a basis {ω i }:
+    :PROPERTIES:
+    :NOTER_PAGE: (382 0.9153400868306801 . 0.20374015748031496)
+    :END:
+    I agree with Needham on this point.  His definition, while equivalent, is
+    more geometrically evocative.  The Kronecker delta formulation /seems to/
+    imply orthonormality which is not required.
+*** 32.6 (32.6) The Gradient as a 1-Form: df
+    :PROPERTIES:
+    :NOTER_PAGE: (383 0.6693198263386396 . 0.13877952755905512)
+    :END:
+    In this section, the distinction between gradient (\nabla f)and "exterior
+    derivative" 1-form (df) is made.
+*** 32.6.3 The Cartesian 1-Form Basis: {dxj }
+    :PROPERTIES:
+    :NOTER_PAGE: (385 0.3082489146164978 . 0.140748031496063)
+    :END:
+    beware of notational confusion:
+    - x is x^1
+    - y is x^2
+*** Typo: missing '[' before \partial_{y}f
+    :PROPERTIES:
+    :NOTER_PAGE: (386 0.5412445730824891 . 0.25196850393700787)
+    :END:
+    Where does Needham treat the 1-form as a row vector?
+    clearly, ${[\partial_{x}f]dx + [\partial_{y}f]dx} = [\partial_{x}f, \partial_{y}f]$
+** Chapter 33 Tensors
+   :PROPERTIES:
+   :NOTER_PAGE: 389
+   :END:
+*** Trace is the contraction of a linear operator
+    :PROPERTIES:
+    :NOTER_PAGE: (394 0.602026049204052 . 0.13582677165354332)
+    :END:
+ah -- this is brilliant!
+** Chapter 34 2-Forms
+   :PROPERTIES:
+   :NOTER_PAGE: 399
+   :END:
+p-forms are antisymmetric {^0_p} tensors. (swapping vector inputs reverses the sign).
+in R^4, \exists 6 basis 2-forms
+*** Only in 3D (basis of 2-forms = basis of vectors)
+    :PROPERTIES:
+    :NOTER_PAGE: (406 0.27062228654124454 . 0.11811023622047244)
+    :END:
+*** Hodge duality operator (p-form \rightarrow (n-p)-form)
+    :PROPERTIES:
+    :NOTER_PAGE: (406 0.7380607814761215 . 0.12598425196850394)
+    :END:
+*** Faraday 2-form
+    :PROPERTIES:
+    :NOTER_PAGE: (412 0.7872648335745296 . 0.14173228346456693)
+    :END:
+*** Maxwell 2-form
+    :PROPERTIES:
+    :NOTER_PAGE: (414 0.12301013024602026 . 0.14173228346456693)
+    :END:
+*** 35.7 Is Ψ ∧ Ψ ̸= 0 Possible?
+    :PROPERTIES:
+    :NOTER_PAGE: (420 0.40448625180897246 . 0.1437007874015748)
+    :END:
+\Psi = dt ^ dx + dy ^ dz
+
+\Psi ^ \Psi = (dt ^ dx + dy ^ dz) ^ (dt ^ dx + dy ^ dz)
+      = (dt ^ dx ^ dt ^ dx + dt ^ dx ^ dy ^ dz + dy ^ dz ^ dt ^ dx + dy ^ dz ^ dy ^ dz)
+      = (0 + dt ^ dx ^ dy ^ dz + (-1)^4 dt ^ dx ^ dy ^ dz + 0)
+      = 2dt ^ dx ^ dy ^ dz
+** Chapter 36 Differentiation
+   :PROPERTIES:
+   :NOTER_PAGE: 421
+   :END:
+
+*** 36.3 Leibniz rule for forms
+    :PROPERTIES:
+    :NOTER_PAGE: (423 0.723589001447178 . 0.14271653543307086)
+    :END:
 
 ** Chapter 39 Exercises for Act V
    :PROPERTIES:
@@ -1463,7 +1571,7 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
    :NOTER_PAGE: (66 0.6983321247280638 . 0.08095238095238096)
    :ID:       99da8b4a-a448-4375-a962-4a0464a405a6
    :END:
-   product rule (Liebniz) (Xf)Y see Oneill.
+   product rule (Leibniz) (Xf)Y see Oneill.
 ** Lemma 5.1: The /tangential connection/
    :PROPERTIES:
    :NOTER_PAGE: (83 0.40681653372008697 . 0.06666666666666667)
