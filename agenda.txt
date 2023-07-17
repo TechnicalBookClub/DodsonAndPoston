@@ -1,12 +1,13 @@
 ;-*- Org -*- (org-latex-export-to-pdf)
 #+STARTUP: showall entitiespretty
+#+OPTIONS: broken-links:mark
 
 * PLEASE ADD YOUR STATUS HERE
   (Don't worry about aligning these columns.  It only takes me [PHM] a
   keystroke to fix it.)
   | Name         | is working on                            | Notes |
   |--------------+------------------------------------------+-------|
-  | Peter [PHM]  | read VII.7                               |       |
+  | Peter [PHM]  | read Needham Act V in lieu of VIII       |       |
   | Joe V        | Read thru VI.2, problems thru VI.1.4a.   |       |
   | Randy [RJP]  | Reading Chap VII.5&6, selected exercises |       |
   | Eric         | IV.2.2c                                  |       |
@@ -81,9 +82,12 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
 \newpage
 * AGENDA (reverse chronological)
   :PROPERTIES:
-  :COLUMNS: %20ITEM %VISIBILITY %TAGS
+  :COLUMNS:  %20ITEM %VISIBILITY %TAGS
   :END:
-** NEXT MEETING
+** [2023-07-23 Sun]
+   :PROPERTIES:
+   :VISIBILITY:
+   :END:
    - [[id:0f6f023f-b2b4-4769-922a-ef75170af998][connections]] "This suggests...", pg 216.
      Where is (Xf)Y first mentioned in each of the texts?
      [[id:73b0620c-19e5-47bf-853d-23d94b004d9c][Tu, Diff Geom]], [[id:c18c29c3-deb1-4445-b484-bbfe5fe4f3ca][Lee, Riemannian Manifolds]], [[id:99da8b4a-a448-4375-a962-4a0464a405a6][Lee, RM: connections]]
@@ -91,6 +95,9 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
      [[id:d33e4c30-3822-4a0f-a62f-b7798081b6bf][Lee (SM) chapter 14]], [[id:4c3c4d51-8075-412c-be32-0ce536678509][Needham VDGF act V]]
    - [[id:04dcc969-42bd-4906-9145-d4f044524ee4][\Pi, projection operator]] resolution on "horizontal/vertical"? p 213
 ** [2023-06-03 Sat]
+   :PROPERTIES:
+   :VISIBILITY: children
+   :END:
 *** index D&P with references to Tu (DG), Needham, and whatever else we come across.
 *** for Craig -- see
 #+begin_src elisp
@@ -99,6 +106,9 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
 #+ATTR_ORG: :width 500
     [[file:Chapter_07/LieBracket_rho_theta.png]] [[file:Chapter_07/LieBracket_rho_phi.png]]
 ** [2023-05-07 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
    - Tu, Differential Geometry
    - Needham, VDGF
 *** Tu def 4.8, on vs along
@@ -142,14 +152,26 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
     6. Metric tensors and connections (\nabla)
     7. Covariant differentiation of tensors
 ** [2023-04-02 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
 *** Find exercises, or write up the point of the D&P ex.
-** [2023-03-05 Sun]
+** [2023-03-05 Sun] start VIII
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
 *** Let's have solutions for 7.2 and 7.4
 *** Start into VIII.
 ** [2023-02-05 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
 *** Read through VII.7 including the proof of 7.04
 *** All exercises are ok except 7.2 and 7.4
 ** [2023-01-08 Sun]
+   :PROPERTIES:
+   :VISIBILITY: folded
+   :END:
 *** Sec VII.6
 *** Ex VII.6.1
     see solution
@@ -171,17 +193,17 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
       so in this case, another curve that is a reparameterization of c(t) could
       be h(s) = c(t+s)
       h(s) = (t+s)^3/3^3
-    
+
     - v is not differentiable because it goes to \infty at 0
 *** Sec VII.7
     - discussed, see Notes.org file (D&P section)
     - Theorem 7.04 proof needs to be looked at carefully
     - We will try to have solutions to all problems in this section by next
       meeting.
-    
+
 ** [2022-12-11 Sun]
    :PROPERTIES:
-   :VISIBILITY: all
+   :VISIBILITY: folded
    :END:
 *** good book: [[Marcel Berger 2003][Berger: Panoramic View of Riemannian Geometry]]
 *** Ex VII.4.6
@@ -211,7 +233,7 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
     - what do they mean by "even if f is not affine" (not linear/translational)
 ** [2022-11-06 Sun]
    :PROPERTIES:
-   :VISIBILITY: children
+   :VISIBILITY: folded
    :END:
 *** [BKT] D&P, Ex. V.1.1 - Is Peter's soln. showing subspace, not vector space?
     yes, because of laziness.
@@ -259,7 +281,6 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
     - (^0,_2):
     - (^3,_1,^1,_2):
 *** Ex VII.4.7 Sure, but we don't care...
-
 ** [2022-10-09 Sun] VII.3 DONE
    :PROPERTIES:
    :VISIBILITY: folded
@@ -325,7 +346,6 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
      c. c: M is rod in R^2. f: (rod in R^2) to (length of rod)
         (x1,y1,x2,y2):   f: (p1,p2,p3,p4)->  ||(|p3-p1|, |p4-p2|)||
         "and f^\leftarrow(1) is the set in question which we now know is a manifold."
-
 ** [2022-08-07 Sun]
    :PROPERTIES:
    :VISIBILITY: folded
@@ -532,7 +552,6 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
    :VISIBILITY: folded
    :END:
    - VII.1.x
-
 ** [2021-08-01 Sun]
    :PROPERTIES:
    :VISIBILITY: folded
@@ -671,7 +690,6 @@ https://math.stackexchange.com/questions/108010/when-is-the-closure-of-an-open-b
     c.
 
     d. existence and uniqueness of f-hat
-
 ** [2021-01-10 Sun]
    :PROPERTIES:
    :VISIBILITY: folded
@@ -838,7 +856,6 @@ vector space X but not on every subspace of X.
 *** Chap III - dual space
     see notes by JV
     see notes by NBA (duality_daily)
-
 ** [2020-06-28 Sun]
    :PROPERTIES:
    :VISIBILITY: folded
