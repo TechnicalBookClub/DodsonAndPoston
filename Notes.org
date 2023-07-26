@@ -1,4 +1,5 @@
 #+STARTUP: overview entitiespretty latexpreview
+#+OPTIONS: broken-links:mark
 #+COLUMNS: %25ITEM %NOTER_DOCUMENT %NUM_COLUMNS
 #+TITLE: Notes from D&P and related books
 https://github.com/TechnicalBookClub/DodsonAndPoston
@@ -6,7 +7,7 @@ https://github.com/TechnicalBookClub/DodsonAndPoston
   :PROPERTIES:
   :NOTER_DOCUMENT: DodsonCTJ+PostonT_TensorGeometry.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 445
+  :NOTER_PAGE: 250
   :END:
 ** Contents
    :PROPERTIES:
@@ -615,7 +616,13 @@ will be easiest that way.
     :PROPERTIES:
     :NOTER_PAGE: (250 0.11594202898550725 . 0.12087912087912088)
     :END:
-See [[id: 781e5c4b-4a76-4e24-9f52-1888867e86fd][Tu, Differential Geometry]]
+See [[id: 781e5c4b-4a76-4e24-9f52-1888867e86fd][Tu, Differential Geometry]] for confirmation that this is correct.
+
+My [PHM] confusion with this: What object is w(u \cdot v)?  Naively, the RHS looks
+like scalars, but the LHS looks like a vector.  This confusion has led me into
+[[id:20230716T122002.118197][Needham, Act V]] since it looks like I need to understand forms deeply to resolve
+this confusion.
+
 ** Bibliography
    :PROPERTIES:
    :NOTER_PAGE: (434 . 0.000213)
@@ -628,7 +635,7 @@ See [[id: 781e5c4b-4a76-4e24-9f52-1888867e86fd][Tu, Differential Geometry]]
   :PROPERTIES:
   :NOTER_DOCUMENT: NeedhamT_VDGF.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 421
+  :NOTER_PAGE: 423
   :END:
 
 #+DOWNLOADED: screenshot @ 2023-04-22 18:19:35
@@ -936,6 +943,7 @@ simply is ∇_v.
 ** Chapter 32 1-Forms
    :PROPERTIES:
    :NOTER_PAGE: 374
+   :ID:       20230716T122002.118197
    :END:
    AKA covariant vectors or covectors.
 *** Contraction: \langle\omega, v\rangle
@@ -1040,11 +1048,23 @@ in R^4, \exists 6 basis 2-forms
    :PROPERTIES:
    :NOTER_PAGE: 421
    :END:
+*** Typo: (32.11) should be (32.10)
+    :PROPERTIES:
+    :NOTER_PAGE: (421 0.3581765557163531 . 0.6594488188976377)
+    :END:
 
 *** 36.3 Leibniz rule for forms
     :PROPERTIES:
     :NOTER_PAGE: (423 0.723589001447178 . 0.14271653543307086)
     :END:
+
+*** First step uses (36.6)
+    :PROPERTIES:
+    :NOTER_PAGE: (424 0.29232995658466 . 0.33)
+    :ID:       20230719T200904.850734
+    :END:
+    d([\phi_i dx^i] ^ [\Psi_{jk }dx^j ^ dx^k]) =  d(\phi_i \Psi_{jk} ^ dx^i ^ dx^j ^ dx^k)
+                               = d\phi_i \Psi_{jk} ^ dx^i ^ dx^j ^ dx^k
 
 ** Chapter 39 Exercises for Act V
    :PROPERTIES:
@@ -1208,10 +1228,12 @@ smooth functions.
     :PROPERTIES:
     :NOTER_PAGE: (249 0.6855072463768116 . 0.11758241758241758)
     :END:
-**** Theorem 9.42. Equivalent statements on vector fields
+**** Theorem 9.42. Equivalent statements on vector fields  :LieBracket:polar:
      :PROPERTIES:
      :NOTER_PAGE: (249 0.8398550724637681 . 0.12197802197802197)
+     :ID:       20230716T153754.453702
      :END:
+
 #+BEGIN_QUOTE
 For smooth vector fields V and W on a smooth manifold M; the
 following are equivalent:
@@ -1345,6 +1367,7 @@ to contravariant tensors and tensors of mixed variance.
 ** Exterior Derivatives (14)
    :PROPERTIES:
    :NOTER_PAGE: (380 0.7036231884057971 . 0.12527472527472527)
+   :ID:       20230716T130720.845428
    :END:
 
 * TuLW Introduction to Manifolds
@@ -1564,7 +1587,7 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
 * Lee Riemmanian Manifolds
   :PROPERTIES:
   :NOTER_DOCUMENT: Lee Riemmanian Manifolds.pdf
-  :NOTER_PAGE: 150
+  :NOTER_PAGE: 67
   :END:
 ** Properties of Connections
    :PROPERTIES:
@@ -1572,12 +1595,24 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
    :ID:       99da8b4a-a448-4375-a962-4a0464a405a6
    :END:
    product rule (Leibniz) (Xf)Y see Oneill.
+*** product rule for connections
+    :PROPERTIES:
+    :NOTER_PAGE: (67 0.18491660623640319 . 0.0761904761904762)
+    :ID:       20230716T141445.392843
+    :END:
+
+** Lemma 4.7. F and (\nabla F)
+   :PROPERTIES:
+   :NOTER_PAGE: (71 0.5859318346627992 . 0.07857142857142858)
+   :ID:       20230716T141045.732896
+   :END:
+   if F is a (^k_l) tensor, then \nabla F is a (^{k+1}_l) tensor
 ** Lemma 5.1: The /tangential connection/
    :PROPERTIES:
    :NOTER_PAGE: (83 0.40681653372008697 . 0.06666666666666667)
    :ID:       c18c29c3-deb1-4445-b484-bbfe5fe4f3ca
    :END:
-   Same (Xf)Y term in the definition of this connection
+   Same (Xf)Y term in the [[id:20230716T141445.392843][definition of connections]]
 ** Tangential and normal projections
    :PROPERTIES:
    :NOTER_PAGE: (150 0.6410442349528643 . 0.08571428571428572)
@@ -1586,7 +1621,7 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
 * TuLW DifferentialGeometry
   :PROPERTIES:
   :NOTER_DOCUMENT: TuLW_DifferentialGeometry.pdf
-  :NOTER_PAGE: 40
+  :NOTER_PAGE: 62
   :END:
 #+DOWNLOADED: screenshot @ 2023-04-22 18:20:16
 [[file:.figs/TuLW_DifferentialGeometry/2023-04-22_18-20-16_screenshot.png]]

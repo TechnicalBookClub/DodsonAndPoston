@@ -91,9 +91,31 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
    - [[id:0f6f023f-b2b4-4769-922a-ef75170af998][connections]] "This suggests...", pg 216.
      Where is (Xf)Y first mentioned in each of the texts?
      [[id:73b0620c-19e5-47bf-853d-23d94b004d9c][Tu, Diff Geom]], [[id:c18c29c3-deb1-4445-b484-bbfe5fe4f3ca][Lee, Riemannian Manifolds]], [[id:99da8b4a-a448-4375-a962-4a0464a405a6][Lee, RM: connections]]
+     Geometrically, what is (Xf)Y?
+     Algebraically, (Xf) is a scalar, calculated as (\partial_{X}f).
+
+     example with X = i, Y = xi + yj, f = (x^2 + y^2)^{-1/2}.
+     (see [[id:20230716T153754.453702][here for useful derivatives]])
+     - useful derivatives
+       i (x/r) = y^2/r^3
+       i (y/r) = -xy/r^3 = j (x/r)
+       j (y/r) = x^2/r^3
+
+   - Does a directional derivative (\nabla_v) turn a p-form into a (p+1) form?
+     [[id:20230716T141045.732896][Lee (RM) Lemma 4.7]] is suggestive.
+
    - Exterior derivatives -- need to discuss this vs. Covariant derivatives
-     [[id:d33e4c30-3822-4a0f-a62f-b7798081b6bf][Lee (SM) chapter 14]], [[id:4c3c4d51-8075-412c-be32-0ce536678509][Needham VDGF act V]]
+     [[id:20230716T130720.845428][Lee (SM) chapter 14]], [[id:20230716T122002.118197][Needham VDGF act V]]
    - [[id:04dcc969-42bd-4906-9145-d4f044524ee4][\Pi, projection operator]] resolution on "horizontal/vertical"? p 213
+   - Stackexchange, Michael Albanese
+     [[https://math.stackexchange.com/questions/1749725/equivalent-definition-of-metric-compatibility-for-a-connection-what-does-nabl][compatability]]:
+     "Yes, ∇_{𝑋}𝑓=(𝑑𝑓)(𝑋)=𝑋𝑓. –Michael Albanese Mar 31 at 21:43"
+     [[https://math.stackexchange.com/questions/209241/exterior-derivative-vs-covariant-derivative-vs-lie-derivative][DiffGeo derivatives discussion]]:
+     "In differential geometry, there are several notions of differentiation, namely:
+
+        - Exterior Derivative, 𝑑
+        - Covariant Derivative/Connection, ∇
+        - Lie Derivative, L."
 ** [2023-06-03 Sat]
    :PROPERTIES:
    :VISIBILITY: children
