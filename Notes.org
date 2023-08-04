@@ -2334,9 +2334,90 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
    :NOTER_PAGE: 58
    :END:
 
+* OneillB Elementary Differential Geometry
+  1st edition (1966)
+** I Calculus on Euclidean space
+*** I.5 1-forms (p 22)
+
+**** I.5.2 Def: the differential $df$ is a 1-form (p 23)
+     If $f$ is a differentiable real-valued function on $\mathbb{E}^3$, $df(\vec{v}_p) = \vec{v}_p[f]$
+     examples:
+     - $dx_i[\vec{v}_p] = v_i$
+     - in $\mathbb{E}^3$, any 1-form has the form $f dx + g dy + h dz$, where f,g,
+       and h are differentiable real valued functions
+
+
+     interpretation:
+     - on the RHS, the vector acting on a function is the directional derivative
+       in the vector direction.
+     - on the LHS, $df = f_x dx + f_y dy + f_z dz$.
+     - in components, the expression above is $v_x \partial_x f + v_y \partial_y f + v_z \partial_z f$
+
+*** I.6 Differential forms (p 26)
+
+**** I.6.3 Def: exterior derivative of a 1-form
+     :PROPERTIES:
+     :ID:       20230803T201728.978256
+     :END:
+     if $\phi = \sum f_i dx_i$ is a 1 form on $\mathbb{E}^3$, the /exterior derivative/ of
+     $\phi$ is the 2-form $d\phi = \sum df_i \wedge dx_i$
+
+*** I.7 Mappings (between spaces or manifolds) (p 32)
+
+**** I.7.4 Def: Derivative map F_* of F (p 35)
+     :PROPERTIES:
+     :ID:       20230803T200807.496400
+     :END:
+     Let $F \colon \mathbb{E}^n \rightarrow \mathbb{E}^m$ be a mapping.  If $\vec{v} \in
+     T_{\mathbf{p}} \mathbb{E}^n$, then let $F_*(\vec{v}) \in T_{F(\mathbf{p})} \mathbb{E}^m$ be the initial velocity of the curve
+     $t \rightarrow F(\mathbf{p} + t\vec{v})$.  $F_*$ is the /derivative map/ of $F$.
+
+     This is the equivalent of $D_x f$ in D&P.
+
+**** I.7.8 Thm: F_* preserves the velocity of curves (p 38)
+     Given curve $\alpha$ and mapping $F$, if curve $\beta = F(\alpha)$, then $\beta' = F_*(\alpha')$
+
+**** I.7.9 Thm: Inverse function theorem (p 39)
+     Statement w/o proof of the theorem with commentary
+
+     ``The proof is based on the idea that at points $\mathbf{p + \Delta p}$ very near
+     $\mathbf{p}$, $F(\mathbf{p + \Delta p}) \approx F(\mathbf{p}) + F_*(\mathbf{\Delta p})$''
+
+*** I.8 Summary (p 41)
+    Oneill gives a differentiation operation for each object introduced:
+
+    | object        | diff op                |
+    |---------------+------------------------|
+    | function in R | directional derivative |
+    | form          | exterior derivative    |
+    | curve         | velocity               |
+    | mapping       | derivative map         |
+    | ...           |                        |
+    | vector field  | connection (??)        |
+
+    All of the differentiation operations here (first 4) reduce to ordinary or
+    partial derivatives of real-valued coordinate functions, but the
+    /definitions/ do not involve coordinates.
+
+** II Frame Fields
+
+*** II.1.4 Def: /frame/ (p 44)
+    A frame at point p is a set {e_1, e_2, ..., e_n} mutually orthogonal unit
+    vectors in $\mathbb{E}^n$
+
+*** II.2.2 Def: /vector field *on* a curve/ (p 52)
+    This is NOT the same definition used in Tu or D&P -- *on* here does not
+    require that the vectors be tangent to the curve itself.  In Tu and D&P,
+    this would be *along* a curve.  Oneill does not seem to use any terminology
+    to describe the set of vectors tangent to the curve aside from calling it
+    a parameterization of the velocity of the curve.
+
+*** II.5 Covariant derivatives (p 77)
+
 * Derivatives
 ** of function between...
    - D&P: [[id:20230725T172717.755838][affine spaces]] [[id:20230725T174736.910676][manifolds]] $D_x f$
+   - Oneill: [[id:20230803T200807.496400][I.7.4 Derivative map F_* of F (p 35)]]
 ** exterior derivatives (div, curl, grad)
    - Tu (IM): [[id:20230729T120810.676935][4 Differential forms on R^n]] "from C^\infty function f:U \rightarrow
      R, we can construct a 1-form $df$, called the /differential of f/
@@ -2344,6 +2425,8 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
    - Needham [[id:20230730T175415.425001][Chapter 36 Differentiation]] introduces exterior derivative, relating
      it to the intrinsic/covariant/Levi-Civita derivative and uses it to derive
      div, curl and grad for 1-3 forms in R^3.
+   - Oneill: [[id:20230803T201728.978256][I.6.3 Def: exterior derivative of a 1-form]]
+
 ** "higher derivatives"
    D&P: [[id:20230725T173202.003628][VII.1.02. Higher Derivatives.]] $\^{D} f$ "D-hat"
 ** partial derivatives
