@@ -812,6 +812,7 @@ angular excess is the total (area integrated) curvature.
 *** definition: Torsion
     :PROPERTIES:
     :NOTER_PAGE: (135 0.33212735166425467 . 0.13385826771653545)
+    :ID:       20230730T180941.170844
     :END:
 ``rate of rotation of the osculating plane is called the torsion, denoted \tau.''
 *** definition: binormal of a curve
@@ -866,15 +867,20 @@ angular excess is the total (area integrated) curvature.
 *** 15.1 Directional Derivatives (\nabla_v)
     :PROPERTIES:
     :NOTER_PAGE: (178 0.2568740955137482 . 0.140748031496063)
+    :ID:       20230730T130849.198068
     :END:
 
 *** 15.2 The Shape Operator S
     :PROPERTIES:
     :NOTER_PAGE: (180 0.7337192474674384 . 0.140748031496063)
+    :ID:       20230730T131703.026855
     :END:
     ``is simply defined to be the negative of the directional derivative of n
     along v''
     $S(v) = -\nabla_{v}n$
+
+    This encodes the same information as the Second Fundamental Form (see 15.9
+    and Tu (DG) [[id:20230730T170155.955655][Proposition 5.5: Curvature is given by the second fundamental form]])
 
 *** 15.3 Geometric effect of S
     :PROPERTIES:
@@ -987,7 +993,7 @@ G.''
 *** condition for parallel transport
     :PROPERTIES:
     :NOTER_PAGE: (272 0.20911722141823444 . 0.2047244094488189)
-    :ID:       ade54283-c817-4d4d-bdc8-fdb1d8df37c8
+    :ID:       20230730T120552.559208
     :END:
 
 *** Here is an extrinsic way of looking at the intrinsic derivative.
@@ -997,6 +1003,7 @@ G.''
 *** Eqn 23.3 D_{v}w
     :PROPERTIES:
     :NOTER_PAGE: (272 0.33212735166425467 . 0.3228346456692913)
+    :ID:       20230730T171946.233278
     :END:
     same as Eqn 22.1, with \nabla_{v}w dropped in for w
 
@@ -1023,6 +1030,21 @@ simply is ∇_v.
    :PROPERTIES:
    :NOTER_PAGE: 298
    :END:
+** Notation change for *intrinsic derivative*
+   :PROPERTIES:
+   :NOTER_PAGE: (314 0.8147612156295224 . 0.2992125984251969)
+   :ID:       20230730T172826.179743
+   :END:
+#+BEGIN_QUOTE
+we adopt the standard choice of a bold nabla symbol—∇—to represent the
+intrinsic derivative,
+#+END_QUOTE
+** 29.5 [v , u] ≡ ∇_v u − ∇_u v.
+   :PROPERTIES:
+   :NOTER_PAGE: (317 0.5137481910274964 . 0.3828740157480315)
+   :ID:       20230730T172457.194859
+   :END:
+
 ** Chapter 32 1-Forms
    :PROPERTIES:
    :NOTER_PAGE: 374
@@ -1036,6 +1058,12 @@ simply is ∇_v.
     Needham uses v(\omega) or \omega(v) more than the angle bracket form of the
     contraction.  Elsewhere, he also uses \cdot for the dot product of vectors (not
     1-forms and vectors).
+*** 32.3.1 w vs \omega for work
+    :PROPERTIES:
+    :NOTER_PAGE: (376 0.8979739507959479 . 0.12598425196850394)
+    :END:
+    Needham is using \omega here because he writes 1-forms as lowercase Greek letters
+    and he's making the point that work is a 1-form.
 *** 32.3.4 Row Vectors
     :PROPERTIES:
     :NOTER_PAGE: (381 0.19536903039073805 . 0.140748031496063)
@@ -1073,6 +1101,9 @@ simply is ∇_v.
     :END:
     In this section, the distinction between gradient (\nabla f)and "exterior
     derivative" 1-form (df) is made.
+
+    Note the bold \nabla here -- (32.10) identifies the *exterior derivative*
+    $\bf{d}$ with the *intrinsic derivative* $D_{\bf{v}}$ or $\bf{\nabla}_{\bf{v}}$
 *** 32.6.3 The Cartesian 1-Form Basis: {dxj }
     :PROPERTIES:
     :NOTER_PAGE: (385 0.3082489146164978 . 0.140748031496063)
@@ -1130,6 +1161,7 @@ in R^4, \exists 6 basis 2-forms
 ** Chapter 36 Differentiation
    :PROPERTIES:
    :NOTER_PAGE: 421
+   :ID:       20230730T175415.425001
    :END:
 *** Typo: (32.11) should be (32.10)
     :PROPERTIES:
@@ -1867,6 +1899,7 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
 *** Proposition 5.5: Curvature is given by the second fundamental form
     :PROPERTIES:
     :NOTER_PAGE: (50 0.08840579710144927 . 0.12417582417582418)
+    :ID:       20230730T170155.955655
     :END:
     $\kappa(X_p) = \langle L(X_p), X_p \rangle = II(X_p, X_p)$
 *** Proposition 5.6: Principal directions and curvatures
@@ -2304,9 +2337,13 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
 * Derivatives
 ** of function between...
    - D&P: [[id:20230725T172717.755838][affine spaces]] [[id:20230725T174736.910676][manifolds]] $D_x f$
+** exterior derivatives (div, curl, grad)
    - Tu (IM): [[id:20230729T120810.676935][4 Differential forms on R^n]] "from C^\infty function f:U \rightarrow
      R, we can construct a 1-form $df$, called the /differential of f/
    - Tu (IM) extends this to [[id:20230729T121431.089413][4.4 The Exterior Derivative]]
+   - Needham [[id:20230730T175415.425001][Chapter 36 Differentiation]] introduces exterior derivative, relating
+     it to the intrinsic/covariant/Levi-Civita derivative and uses it to derive
+     div, curl and grad for 1-3 forms in R^3.
 ** "higher derivatives"
    D&P: [[id:20230725T173202.003628][VII.1.02. Higher Derivatives.]] $\^{D} f$ "D-hat"
 ** partial derivatives
@@ -2322,8 +2359,11 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
     D&P: [[id:20230725T175305.593940][df]]: TM \rightarrow R (not TR)
     not to be confused with the difference function for affine spaces.
 ** Lie derivative/Lie bracket
-   D&P: [[id:20230725T181949.929506][Ex VII.7.4]] but don't look here!
-   Tu (DG): [[id:20230728T223937.753217][Lie derivative == Lie bracket (sec 4.2)]]
+   - D&P: [[id:20230725T181949.929506][Ex VII.7.4]] but don't look here!
+   - Tu (DG): [[id:20230728T223937.753217][Lie derivative == Lie bracket (sec 4.2)]]
+   - Needham: Gives the Lie bracket as [[id:20230730T172457.194859][29.5 [v , u] ≡ ∇_v u − ∇_u v.]]  In the
+     prior section (29.4), he makes a [[id:20230730T172826.179743][Notation change for *intrinsic
+     derivative*]], using a *bold \nabla* to indicate the intrinsic derivative.
 ** \nabla_t Directional derivative
    - First appears in [[id:20230726T115018.174611][D&P Ex VII.2.1]] as the Levi-Civita connection?
    - next in D&P as the [[id:20230726T115816.160029]["directional derivative"]]
@@ -2337,6 +2377,12 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
      $\nabla_X Y = pr(D_X Y)$ where \nabla_X is the Riemannian connection and D_X is the
      directional derivative
      $pr(D_X Y) = X - \langle X,N\rangle N$
+   - Needham: [[id:20230730T130849.198068][15.1 Directional Derivatives (\nabla_v)]] $\nabla_{\bf{v}} \bf{n}$ is the
+     "directional derivative of n along v".  Not sure if *along* here holds the
+     technical meaning that it does in D&P or Tu.  When n is the normal vector
+     to the surface, this derivative is the negative of [[id:20230730T131703.026855][15.2 The Shape Operator S]]
+   - Needham relates this "extrinsic derivative" to the intrinsic derivative via
+     the shape operator [[id:20230730T171946.233278][Eqn 23.3, section 23.2]]
 ** \nabla (connection on a manifold)
    - D&P [[id:20230728T171552.726112][3.01. Definition. A connection (\nabla)]] has properties
      Ci:   linear in the input tangent vector space
@@ -2346,6 +2392,8 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
      Cv:   continuous vector fields have continous connections
    - D&P: [[id:20230728T175332.381222][Levi-Civita connection for G]] when it is the symmetric connection
      compatible with G. (zero torsion? see [[id:20230728T180154.910466][5.01: T=0 ==> \nabla is symmetric]])
+     D&P call \nabla the /Levi-Civita connection/ after VIII.6.05 $\nabla \bf{v}$ a
+     /covariant differential/
    - Tu (DG): [[id:20230728T230427.182720][Definition 6.1. An affine connection]] the unique torsion-free,
      compatible affine connection is called a Riemannian or Levi-Civita
      connection.
@@ -2359,7 +2407,14 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
    - D&P: [[id:20230728T173259.327094][VIII.4.01]] $\tilde{\nabla}_{c^*} \bf{v} = 0$
    - Tu (DG): [[id:49a14fae-5296-41a3-bd2e-c324ef30f23c][14.5 Parallel Translation]] $DV/dt = 0$ on the interval over which
      the curve is defined.  (covariant derivative)
+   - Needham: [[id:20230730T120552.559208][condition for parallel transport]] $D_{\bf{v}} \bf{w_{||}} = 0$ in
+     Needham, D_v is the *intrinsic derivative*, which he notes is commonly
+     called the *covariant derivative* or the *Levi-Civita connection*.  In
+     contrast, he uses $\nabla_{\bf{v}} \bf{w}$ to denote the *extrinsically defined
+     rate of change."
 * Torsion
+https://jollywatt.github.io/simple-torsion-example - example of a connection
+with non-zero torsion.
 ** D&P VIII.6?
    [[id:20230728T180154.910466][5.01: T=0 ==> \nabla is symmetric]] according to Tu, this is an iff situation.
 ** Tu (DG)
@@ -2373,3 +2428,6 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
    X is on M and Y is along M?
 
    Appears again in the context of manifolds in [[id:20230728T230735.534842][6.2 Torsion and Curvature]].
+** Needham
+   Needham's [[id:20230730T180941.170844][definition: Torsion]] is a property of a curve in 3-space, so it
+   appears to be fundamentally different from the concept of torsion in D&P and Tu.
