@@ -120,6 +120,11 @@ between the tangent spaces of the affine spaces.
     :NOTER_PAGE: (170 0.2410518626734843 . 0.08582502768549281)
     :ID:       20230725T173813.456658
     :END:
+*** Jacobian matrix
+    :PROPERTIES:
+    :NOTER_PAGE: (170 0.46811594202898554 . 0.12637362637362637)
+    :ID:       20230820T105526.915089
+    :END:
 
 *** VII.1.04 Theorem (Inverse Function Theorem).
     :PROPERTIES:
@@ -163,6 +168,7 @@ between the tangent spaces of the affine spaces.
 *** VII.4.01. Covariant Vectors.
     :PROPERTIES:
     :NOTER_PAGE: (200 0.4101449275362319 . 0.12197802197802197)
+    :ID:       20230820T115912.282497
     :END:
     See Lee Prop 11.18
     or Needham Act V.  These are 1-forms.
@@ -449,7 +455,7 @@ between the tangent spaces of the affine spaces.
      In D&P-speak, "vertical" is vertical in their picture of TM, meaning that
      the vector lies in T_{p}M for some p \in M. +Or maybe not+ -- see definition in [[id: 46c5be84-dafa-4be7-9b2a-1344687cf48b][3.06.]]
 
-**** "we are free to decide what properties would be nice to have"
+**** "we are free to decide what properties would be nice to have" bottom of pg. 215
      :PROPERTIES:
      :NOTER_PAGE: (231 0.8007246376811594 . 0.11758241758241758)
      :END:
@@ -1674,6 +1680,12 @@ to contravariant tensors and tensors of mixed variance.
    :NOTER_PAGE: (105 0.1847826086956522 . 0.06528428093645484)
    :END:
    These are covered in section 13, p 140
+** 8.2 The Differential of a Map
+   :PROPERTIES:
+   :NOTER_PAGE: (106 0.6746376811594202 . 0.10590858416945373)
+   :ID:       20230820T105104.313779
+   :END:
+
 ** Theorem 20.4.
    :PROPERTIES:
    :NOTER_PAGE: (244 0.4492753623188406 . 0.10367892976588629)
@@ -1950,6 +1962,11 @@ torsion-free affine connection compatible with the metric, called the
     :END:
     ``There does not seem to be a good reason for calling T(X,Y) the torsion''
     Is this not the same torsion that appears in Needham Chapter 9?
+
+    [X,Y] = XY - YX
+          = D_X Y - D_Y X   because X(.) == D_X (.) in Euclidean space
+
+    T = \nabla_X Y - \nabla_Y X - [X, Y]  != 0
 
 *** A connection is compatible with the metric if...
     :PROPERTIES:
@@ -2334,7 +2351,8 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
    :NOTER_PAGE: 58
    :END:
 
-* OneillB Elementary Differential Geometry
+* O'NeillB Elementary Differential Geometry
+  https://archive.org/details/elementarydiffer0000barr/mode/2up
   1st edition (1966)
 ** I Calculus on Euclidean space
 *** I.5 1-forms (p 22)
@@ -2413,12 +2431,62 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
     a parameterization of the velocity of the curve.
 
 *** II.5 Covariant derivatives (p 77)
+    :PROPERTIES:
+    :ID:       20230805T082310.839163
+    :END:
+    Covariant derivatives apply to vector fields, but the notion "belongs
+    properly to the /geometry/ of Euclidean space."
 
+    Here, again, the O'neill uses "vector field *on* the curve" as a field that
+    is not necessarily tangent to the curve, which is *along* in other texts.
+**** Ex II.5.7 Lie bracket
+     The Lie bracket is introduced in this exercise simply as the /bracket/.
+     No mention of the torsion tensor.
+*** II.6 Frame fields (p 81)
+    Frenet (1847) equations covered here and in Needham apply to curves.  They
+    generalize /frame fields/ of surfaces (Darboux ~1880) and manifolds (Cartan
+    ~1900).
+
+    Frenet equations involve T,N,B,\kappa,\tau and are shown to be embedded in the frame
+    field equations.
+**** II.6.1 Def: /frame field/
+     A frame field is an orthonormal set of vector fields on a manifold.
+**** II.6.3 Examples: cylindrical, spherical
+     toroidal frame field is Ex II.6.4
+*** II.7 Connection forms (p 85)
+    $\omega_{ij}(\vec{v}) = \nabla_{\vec{v}} E_i \cdot E_j(\vec{p})$ where the E_i's are a frame
+    field on $\mathbb{E}^n$ and $\vec{v}$ is a tangent vector at point $\vec{p}$.
+
+    *Each* \omega_{ij} is a connection 1-form representing the initial rate of rotation
+    as E_i rotates toward E_j as p moves in the v direction.
+
+**** II.7.2 Thm: /connection equations/ of the frame field
+     Let E_1, E_2, E_3 be a frame field in $\mathbb{E}^3$, then the /connection
+     equations/ of the frame field for any vector field V are
+     $\nabla_V E_i = \sum_j \omega_{ij}(V) \cdot E_j$ due to the orthonormality of the frame.
+
+     Evidently, [\omega_{ij}] is a 3x3 antisymmetric matrix.  Note that the diagonal
+     elements are all zero (due to asymmetry) and the (1,3) and (3,1) are the
+     part of the connection equations (for surfaces) that do NOT appear in the
+     Frenet equations for curves.
+
+**** II.7.3 Thm: attitude matrix A = (a_{ij}) and the matrix of connection forms.
+     The attitude matrix relates the standard basis (U_j) unit vectors to an
+     arbitrary frame field (E_i) by
+     $E_i = a_{ij} U_j$
+
+     the matrix of connection forms is then the matrix product
+     $\omega  = dA\ A^T$ (see proof)
 * Derivatives
-** of function between...
-   - D&P: [[id:20230725T172717.755838][affine spaces]] [[id:20230725T174736.910676][manifolds]] $D_x f$
+** "Total derivative" of function between...
+   [[https://math.stackexchange.com/questions/911176/confusion-about-the-total-derivative][Total derivative]] (stack exchange)
+   In coordinates, this is a [[id:20230820T105526.915089][Jacobian matrix]]
+   - D&P: where f is a map between [[id:20230725T172717.755838][affine spaces]] [[id:20230725T174736.910676][manifolds]] $D_x f$
+   - Tu (IM): [[id:20230820T105104.313779][8.2 The Differential of a Map]] (F_*(X_p))f
    - Oneill: [[id:20230803T200807.496400][I.7.4 Derivative map F_* of F (p 35)]]
 ** exterior derivatives (div, curl, grad)
+   - D&P: [[id:20230820T115912.282497][VII.4.01. Covariant Vectors.]] 1-forms "dx" are covariant vectors
+     aka linear function on vectors.
    - Tu (IM): [[id:20230729T120810.676935][4 Differential forms on R^n]] "from C^\infty function f:U \rightarrow
      R, we can construct a 1-form $df$, called the /differential of f/
    - Tu (IM) extends this to [[id:20230729T121431.089413][4.4 The Exterior Derivative]]
@@ -2426,10 +2494,11 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
      it to the intrinsic/covariant/Levi-Civita derivative and uses it to derive
      div, curl and grad for 1-3 forms in R^3.
    - Oneill: [[id:20230803T201728.978256][I.6.3 Def: exterior derivative of a 1-form]]
-
+   - Frenkel: p 241 antisymetrization removes the Chrisoffel symbols (GL)
 ** "higher derivatives"
-   D&P: [[id:20230725T173202.003628][VII.1.02. Higher Derivatives.]] $\^{D} f$ "D-hat"
+   D&P: [[id:20230725T173202.003628][VII.1.02. Higher Derivatives.]] $\\\\^{D} f$ "D-hat"
 ** partial derivatives
+   maybe: partial derivatives are directional derivatives along basis directions.
    D&P: [[id:20230725T173813.456658][VII.1.03 Partial derivatives]]  $\frac{\partial f^i}{\partial x^j}$ or $\partial_j f^i$
 *** contravariant vectors
     D&P: [[id:20230725T180221.526751][contravariant vectors]]
@@ -2447,7 +2516,7 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
    - Needham: Gives the Lie bracket as [[id:20230730T172457.194859][29.5 [v , u] ≡ ∇_v u − ∇_u v.]]  In the
      prior section (29.4), he makes a [[id:20230730T172826.179743][Notation change for *intrinsic
      derivative*]], using a *bold \nabla* to indicate the intrinsic derivative.
-** \nabla_t Directional derivative
+** \nabla_t Directional derivative (same/related to partial derivative)
    - First appears in [[id:20230726T115018.174611][D&P Ex VII.2.1]] as the Levi-Civita connection?
    - next in D&P as the [[id:20230726T115816.160029]["directional derivative"]]
    - D&P: by [[id:20230728T174409.920698][VIII.6.03]], $\bf{w}(\cdot)$ and $\nabla_{\bf{w}}(\cdot)$ are equivalent
@@ -2466,7 +2535,9 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
      to the surface, this derivative is the negative of [[id:20230730T131703.026855][15.2 The Shape Operator S]]
    - Needham relates this "extrinsic derivative" to the intrinsic derivative via
      the shape operator [[id:20230730T171946.233278][Eqn 23.3, section 23.2]]
-** \nabla (connection on a manifold)
+   - [BT]: covariant derivative reduces to directional derivative in Euclidean space.
+** \nabla (connection on a manifold) (covariant derivative)
+   maybe covariant derivative is subset of connections (Levi-Civita connection)
    - D&P [[id:20230728T171552.726112][3.01. Definition. A connection (\nabla)]] has properties
      Ci:   linear in the input tangent vector space
      Cii:  linear in the vector field space
@@ -2498,6 +2569,7 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
 * Torsion
 https://jollywatt.github.io/simple-torsion-example - example of a connection
 with non-zero torsion.
+[[https://www.youtube.com/watch?v=j36o4DLLK2k][Schuler lecture 24]]
 ** D&P VIII.6?
    [[id:20230728T180154.910466][5.01: T=0 ==> \nabla is symmetric]] according to Tu, this is an iff situation.
 ** Tu (DG)
@@ -2514,3 +2586,22 @@ with non-zero torsion.
 ** Needham
    Needham's [[id:20230730T180941.170844][definition: Torsion]] is a property of a curve in 3-space, so it
    appears to be fundamentally different from the concept of torsion in D&P and Tu.
+** Frenkel
+   maybe connects the different concepts
+   - Torsion :: of a curve
+   - Torsion form :: 2-form (p 245, same as [[id:20230728T180154.910466][D&P 229]])
+   - Torsion :: in covariant differentials
+***
+* Relationship between forms, covariant and contravariant vectors
+  - (2 0) :: Tensor, covariant deg 2, contravariant deg 0
+    "eats two contravariant vectors, spits out a scalar"
+
+    \exists subspace of these Tensors that are antisymmetric, and those are 2-forms
+
+    Tu (IM) chapter 3 (exterior algebra of multivectors)
+
+  - multilinear functions/tensors :: break into Sym + Anti
+
+  - antisymmetric part :: forms
+
+  - symmetric part :: not forms (metrics?)

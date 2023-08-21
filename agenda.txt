@@ -1,6 +1,7 @@
 ;-*- Org -*- (org-latex-export-to-pdf)
 #+STARTUP: showall entitiespretty
 #+OPTIONS: broken-links:mark
+https://github.com/TechnicalBookClub/DodsonAndPoston
 
 * PLEASE ADD YOUR STATUS HERE
   (Don't worry about aligning these columns.  It only takes me [PHM] a
@@ -84,6 +85,19 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
   :PROPERTIES:
   :COLUMNS:  %20ITEM %VISIBILITY %TAGS
   :END:
+** [2023-09-17 Sun]
+   :PROPERTIES:
+   :VISIBILITY:
+   :END:
+** [2023-08-20 Sun]
+   :PROPERTIES:
+   :VISIBILITY:
+   :END:
+   - Discussion of derivatives rosetta stone
+   - GL: flesh out Frenkel ch 9 on exterior derivatives
+   - BT: difference between \nabla and \nabla_X
+   - RP: write up questions
+   - PM: write up questions [torsion WTF]
 ** [2023-07-23 Sun]
    :PROPERTIES:
    :VISIBILITY:
@@ -312,7 +326,7 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
      2. Tu (Intro to Manifolds) p. 129
      3. Lee (Intro to Smooth Manifolds) p. 66
      4. youtube vids (Frederic Schuller - Construction of the Tangent Bundle - Lec.10 from Lectures on the Geometric Anatomy of Theoretical Physics)
-	https://youtu.be/XZcKSoI17r0
+        https://youtu.be/XZcKSoI17r0
    - VII.3.1 product, direct sum, direct product, cartesian product
      a. is a vector space
      b. dimension
@@ -949,7 +963,7 @@ vector space X but not on every subspace of X.
              [PHM] formally, it satisfies the axioms of an affine space/subspace.
     - Ex 4b: [RJP] AX{y}=single pt {y}; begs question of inverse of A:Rn->Rq, q<n
              [PHM] probably cheating, but I leaned on group theory for this one
-	     [RJP] confusion due to wording of problem resolved: image of affine map is a single point => all vectors in domain live in null space
+             [RJP] confusion due to wording of problem resolved: image of affine map is a single point => all vectors in domain live in null space
     - Ex 4c:
     - Ex 5a:
     - Ex 5b:
