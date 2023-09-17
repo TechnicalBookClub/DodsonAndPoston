@@ -2664,3 +2664,74 @@ with non-zero torsion.
   :NOTER_DOCUMENT: Chapter_08/Covariant derivatives of basis functions_RJP.pdf
   :NOTER_PAGE: 1
   :END:
+* /Christoffel symbols defined for a sphere/
+  :PROPERTIES:
+  :NOTER_DOCUMENT: Christoffel symbols defined for a sphere.pdf
+  :NOTER_PAGE: 4
+  :END:
+  \theta is the angle from North (90-lat)
+  \varphi is the azimuthal angle (longitude)
+
+** e_\theta, e_\phi
+   :PROPERTIES:
+   :NOTER_PAGE: (2 0.3939174511223751 . 0.28631677600749766)
+   :END:
+  magnitude of e_{\varphi} = sin\theta
+  magnitude of e_{\theta} = 1 everywhere
+
+** normal vector
+   :PROPERTIES:
+   :NOTER_PAGE: (2 0.6285300506879072 . 0.28209934395501407)
+   :END:
+   formalism to get rid of things later.
+``eθ × eφ =''
+
+** just taking second derivatives
+   :PROPERTIES:
+   :NOTER_PAGE: (3 0.2338884866039102 . 0.30880974695407687)
+   :END:
+
+** note the magnitude of e_{\varphi,\theta}
+   :PROPERTIES:
+   :NOTER_PAGE: (3 0.6893555394641564 . 0.323805060918463)
+   :END:
+   cos\theta, wherease e_{\varphi} has mag sin\theta.
+
+   hence the appearance of cot\theta
+
+** Results
+   :PROPERTIES:
+   :NOTER_PAGE: (4 0.837074583635047 . 0.21508903467666354)
+   :END:
+   - \Gamma_{\theta,\theta} = 0 :: becaue we are  always on a GC.
+   - \Gamma_{\theta,\varphi} = cot\theta (\varphi) ::
+     The cos factor comes from the the projection of the unit e_\theta vector into
+     the "horizontal" plane.
+     The 1/sin factor must be attributed to the non-unit-vectorness of e_\varphi.
+     Since we are talking about a vector component in that direction, we need to
+     normalize against the magnitude of that vector.
+   - \Gamma_{\varphi,\theta} = cot\theta e_\varphi ::
+     The e_\varphi basis vector has magnitude sin\theta, which changes in magnitude as cos\theta
+     in the e_\theta direction.  As in the prior case, the change is entirely in the
+     e_\varphi basis direction, which is not a unit vector, so we need to normalize
+     against its magnitude, bringing in the 1/sin\theta factor.
+   - \Gamma_{\varphi,\varphi} = -sin\theta cos\theta e_\theta ::
+     On the equator (\theta = \pi/2), this is obviously zero because we are travelling on a
+     geodesic.
+
+     At \theta = \pi/4, the change in e_\varphi wrt \varphi is maximal.  The geodesic dips towards
+     the equator as one travels in the \varphi direction, bringing in the \theta component.
+
+     As we approach the poles, the geodesics cross the equator at more
+     perpendicular angle, becoming lines of longitude in the limit \theta \rightarrow 0 and \theta \rightarrow
+     \pi.  In the cylidrical projection of the sphere, the geodesics plateau near
+     the poles.  In this projection, the length of e_\varphi does *NOT* vary with \theta,
+     which is consistent with this Christoffel symbol going to zero at the
+     poles.
+
+     Sticking strictly with the spherical view, the sin\theta factor comes from the
+     magnitude of e_\varphi, while the cos\theta factor is the tilt of the geodesic wrt the
+     polar axis.  The tilt of the geodesic suppresses this Christoffel symbol
+     near the equator and intoduces the asymmetry about the equator.
+
+     Since e_\theta is a unit vector, there is nothing interesing in the denominator.
