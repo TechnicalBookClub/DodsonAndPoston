@@ -522,7 +522,11 @@ between the tangent spaces of the affine spaces.
      :PROPERTIES:
      :NOTER_PAGE: (234 0.19855072463768117 . 0.11978021978021978)
      :END:
-     Despite the suggestive index notation, Christoffel symbols are *not* tensors.
+     Despite the suggestive index notation, Christoffel symbols are *not*
+     tensors.
+
+     \Gamma^{k}_{ij} is the kth component of the "vertical part" of the derivative of \partial_{j} in
+     the direction of \partial_{i}.
 **** 3.04. Definition: vector field *along* c
      :PROPERTIES:
      :NOTER_PAGE: (234 0.8166666666666667 . 0.12857142857142856)
@@ -1187,6 +1191,12 @@ in R^4, \exists 6 basis 2-forms
     d([\phi_i dx^i] ^ [\Psi_{jk }dx^j ^ dx^k]) =  d(\phi_i \Psi_{jk} ^ dx^i ^ dx^j ^ dx^k)
                                = d\phi_i \Psi_{jk} ^ dx^i ^ dx^j ^ dx^k
 
+*** Christoffel symbols
+    :PROPERTIES:
+    :NOTER_PAGE: (485 0.8321273516642547 . 0.13582677165354332)
+    :END:
+    Needham forgoes using Christoffel symbols in favor of getting the Riemannian
+    curvature from the curvature 2-form.
 ** Chapter 39 Exercises for Act V
    :PROPERTIES:
    :NOTER_PAGE: 494
@@ -1739,7 +1749,11 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
     :NOTER_PAGE: (67 0.18491660623640319 . 0.0761904761904762)
     :ID:       20230716T141445.392843
     :END:
-
+*** Christoffel symbols
+    :PROPERTIES:
+    :NOTER_PAGE: (68 0.5917331399564901 . 0.0761904761904762)
+    :END:
+    same as Tu and D&P
 ** Lemma 4.7. F and (\nabla F)
    :PROPERTIES:
    :NOTER_PAGE: (71 0.5859318346627992 . 0.07857142857142858)
@@ -2478,6 +2492,18 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
      the matrix of connection forms is then the matrix product
      $\omega  = dA\ A^T$ (see proof)
 * Derivatives
+  |                        | Dodson+Poston | Tu     | Needham                 | O'neill | Lee |
+  |------------------------+---------------+--------+-------------------------+---------+-----|
+  | total derivative       | D_x            | F_*(X_p) |                         |         |     |
+  | exterior derivative    | N/A           | d      | d                       | d       |     |
+  | partial derivative     | \partial_j, $\partial/\partial x^j$  |        |                         |         |     |
+  | "differential""        | D or d        | -      | -                       | -       | -   |
+  | Lie derivative         |               |        | use intrinsic/covariant |         |     |
+  | directional derivative | \nabla_t            | D_X     | \nabla_v                      | v_p[f]  |     |
+  | covariant/intrinsic    | \nabla             | \nabla      | D_v                      |         |     |
+  | velocity along curve   | $\tilde{\nabla}_{c^*}$     | D/dt   | D_v                      |         |     |
+
+
 ** "Total derivative" of function between...
    [[https://math.stackexchange.com/questions/911176/confusion-about-the-total-derivative][Total derivative]] (stack exchange)
    In coordinates, this is a [[id:20230820T105526.915089][Jacobian matrix]]
@@ -2493,13 +2519,25 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
    - Needham [[id:20230730T175415.425001][Chapter 36 Differentiation]] introduces exterior derivative, relating
      it to the intrinsic/covariant/Levi-Civita derivative and uses it to derive
      div, curl and grad for 1-3 forms in R^3.
+     | p | d    |
+     |---+------|
+     | 0 | grad |
+     | 1 | curl |
+     | 2 | div  |
+
    - Oneill: [[id:20230803T201728.978256][I.6.3 Def: exterior derivative of a 1-form]]
    - Frenkel: p 241 antisymetrization removes the Chrisoffel symbols (GL)
 ** "higher derivatives"
-   D&P: [[id:20230725T173202.003628][VII.1.02. Higher Derivatives.]] $\\\\^{D} f$ "D-hat"
+   D&P: [[id:20230725T173202.003628][VII.1.02. Higher Derivatives.]] $\hat{D}^{}f$
 ** partial derivatives
    maybe: partial derivatives are directional derivatives along basis directions.
-   D&P: [[id:20230725T173813.456658][VII.1.03 Partial derivatives]]  $\frac{\partial f^i}{\partial x^j}$ or $\partial_j f^i$
+   - D&P :: [[id:20230725T173813.456658][VII.1.03 Partial derivatives]]  $\frac{\partial f^i}{\partial x^j}$ or $\partial_j f^i$
+     Note that partial derivatives only make sense /after/ we have chosen
+     charts.
+
+   - Lee (SM) :: [[id:20230820T195433.562062][C. Review of Calculus: Partial Derivatives]] Lee introduces
+     partial derivatives after specializing to maps between Euclidean spaces.
+
 *** contravariant vectors
     D&P: [[id:20230725T180221.526751][contravariant vectors]]
     intersection of partial derivative, vectors and
@@ -2535,8 +2573,12 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
      to the surface, this derivative is the negative of [[id:20230730T131703.026855][15.2 The Shape Operator S]]
    - Needham relates this "extrinsic derivative" to the intrinsic derivative via
      the shape operator [[id:20230730T171946.233278][Eqn 23.3, section 23.2]]
+
+   - O'neill: given tangent vector at p, v_p, and real-valued function, f,
+     v_p[f] is the directional derivative of f in the direction of v at p.
+
    - [BT]: covariant derivative reduces to directional derivative in Euclidean space.
-** \nabla (connection on a manifold) (covariant derivative)
+** \nabla (connection on a manifold) (covariant/intrinsic derivative)
    maybe covariant derivative is subset of connections (Levi-Civita connection)
    - D&P [[id:20230728T171552.726112][3.01. Definition. A connection (\nabla)]] has properties
      Ci:   linear in the input tangent vector space
@@ -2592,6 +2634,13 @@ with non-zero torsion.
    - Torsion form :: 2-form (p 245, same as [[id:20230728T180154.910466][D&P 229]])
    - Torsion :: in covariant differentials
 ***
+* Christoffel
+  - D&P :: $\nabla_{\partial_i}\partial_j = \Gamma^{k}_{ij}\partial_{k}$ see [[id:20230820T180556.443772][VIII.3.02. Coordinates -- Christoffel
+    symbols]]. This is "some vector in T_{p}M" where k indexes the basis vectors.
+    \nabla is a connection
+  - Needham :: forgoes this concept
+  - Tu (DG) :: same as D&P [[id:29c2f283-9cbc-4a43-be30-f925876d3c53][13.3 Christoffel Symbols]], \nabla is a connection
+  - O'neill :: N/A
 * Relationship between forms, covariant and contravariant vectors
   - (2 0) :: Tensor, covariant deg 2, contravariant deg 0
     "eats two contravariant vectors, spits out a scalar"
@@ -2605,3 +2654,13 @@ with non-zero torsion.
   - antisymmetric part :: forms
 
   - symmetric part :: not forms (metrics?)
+* /O'Neill - Elementary Differential Geometry/
+  :PROPERTIES:
+  :NOTER_DOCUMENT: O'Neill - Elementary Differential Geometry.pdf
+  :NOTER_PAGE: 33
+  :END:
+* /Covariant derivatives of basis functions_RJP/
+  :PROPERTIES:
+  :NOTER_DOCUMENT: Chapter_08/Covariant derivatives of basis functions_RJP.pdf
+  :NOTER_PAGE: 1
+  :END:
