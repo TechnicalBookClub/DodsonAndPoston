@@ -89,6 +89,26 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
    :PROPERTIES:
    :VISIBILITY:
    :END:
+
+   - Randy :: Metric connections: Prop 5.5, pg 118 of Lee’s Riemannian Manifolds
+     book lists equivalent conditions (a)-(g) for a connection ∇ on a Riemannian
+     manifold. While the proof of how they are derived from each other is
+     straightforward enough, I’m uncertain what (b) “g is parallel with respect
+     to ∇; ∇g = 0” means. The metric g_ij is defined as the inner product of the
+     basis vectors e_i and e_j, i.e., g_ij = <e_i,e_j>. Since e_i and e_j change
+     due to curvature for points along the manifold, as reflected in the
+     Christoffel symbols, I’m not sure what ∇g = 0 means.
+
+   - Randy :: The Riemannian connection (aka Levi-Civita) is defined, in part,
+     as having its Christoffel symbols as being symmetric; (Γ^k)_ij =
+     (Γ^k)_ji. D&P show on pg. 230 that the commutivity of the partial
+     derivatives in definition of (Γ^k)_ij leads to
+
+     (Γ^k)_ij = (∇_∂i)∂j = (∇_∂j)∂i = (Γ^k)_ji
+
+     so the (Γ^k)_ij are symmetric by definition. Why does this condition have to be imposed?
+
+
 ** [2023-08-20 Sun]
    :PROPERTIES:
    :VISIBILITY:
