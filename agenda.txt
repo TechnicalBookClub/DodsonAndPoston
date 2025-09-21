@@ -6,16 +6,17 @@ https://github.com/TechnicalBookClub/DodsonAndPoston
 * PLEASE ADD YOUR STATUS HERE
   (Don't worry about aligning these columns.  It only takes me [PHM] a
   keystroke to fix it.)
-  | Name         | is working on                            | Notes |
-  |--------------+------------------------------------------+-------|
-  | Peter [PHM]  | read Needham Act V in lieu of VIII       |       |
-  | Joe V        | Read thru VI.2, problems thru VI.1.4a.   |       |
-  | Randy [RJP]  | Reading Chap VII.5&6, selected exercises |       |
-  | Eric         | IV.2.2c                                  |       |
-  | Barney [BKT] | reading VII.4-7, VII.4 exercises         |       |
-  | Anna [AHL]   | Reading V, V probs                       |       |
-  | Craig        | Reading IV                               |       |
-  | Noah  [NBA]  | II.3                                     |       |
+  | Name         | is working on                           | Notes |
+  |--------------+-----------------------------------------+-------|
+  | Peter [PHM]  | read Needham Act V in lieu of VIII      |       |
+  | Joe V        | Read thru VI.2, problems thru VI.1.4a.  |       |
+  | Randy [RJP]  | Reading Chap IX & others, writing memos |       |
+  | Eric         | IV.2.2c                                 |       |
+  | Barney [BKT] | reading VII.4-7, VII.4 exercises        |       |
+  | Anna [AHL]   | Reading V, V probs                      |       |
+  | Craig        | Reading IV                              |       |
+  | Noah  [NBA]  | II.3                                    |       |
+  | Anand [AMG]  | Reading IX.5                            |       |
   #+TBLFM:
 
 * Authors' errata to 2009 printing added to Dodson-Poston folder
@@ -85,9 +86,190 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
   :PROPERTIES:
   :COLUMNS:  %20ITEM %VISIBILITY %TAGS
   :END:
+** [2025-10-19 Sun]
+
+** [2025-09-21 Sun]
+https://www.seas.upenn.edu/~jean/diffgeom-spr-I.pdf
+*** VIII.3.6 part b
+    "deduce that there is exactly one hozirontal vector..."
+    Needs a projection operator?
+*** sec VIII.3.05 discussion (p 219)
+    references ex VIII.3.4, p 221
+
+
+
+*** other
+
+
+   Anand continues with TS2M... section 6
+
+   Peter writes us his confusion on VIII.2  rolling with or without slipping
+   (next time)
+
+
+
+** [2025-08-24 Sun]
+   Anand Example of Tangent Space to Manifold AG July 10 2025.pdf
+   - went through sections 1-5
+   - request for references on "trivialization"
+     (see  pg 170-172 D&P)
+   Gary Ex VIII.3.6
+   - Part b
+     A      : D_v(\Pi) (maps TvTM to TpM)
+     ker(A) : (vertical vectors)
+     B      : (horizontal vectors, contains t-hat)
+
+     X      : TvTM (defined by v)
+     Y      : TpM  (t)
+
+   - Joe's proof for part a without reference to dimensions
+     Let  $c \in ker A|_B \subseteq ker A$
+     $c \in B \subseteq X$
+
+     0 + c and c + 0 are both decompositions of c into the
+     direct sum ker A \oplus B
+     which implies c=0 by uniqueness
+
+
+** [2025-06-01 Sun]
+** [2025-05-04 Sun]
+   - VIII.2.1, discussion by Anand.
+     stop at Equation 6, pg 8.
+
+** [2025-04-06 Sun]
+   - Section 2.4 of JV's Ex. VIII.1.1
+   - p 11 :: Tu and Lee define tangent bundle using /disjoint union/ rather than
+     union of  {x} x X.  D&P depend on implementation of the tangent bundle.
+   - p 12 :: in definition, "chart" should be "atlas"
+   - appendix ::  from wikipedia,  base is not subbasis
+   - AG's Ex. VIII.2.1
+   - one part is rolling w/ slipping
+   - second part is rolling w/o slipping
+   - in statement, assume a<0<b
+
+** [2025-03-02 Sun]
+   - [JV]: Ex VIII.1.1. See Chapter_08/vii-1-1-JV.pdf
+     pages 1-9 today.  very productive discussion
+   - [AG]: Ex VIII.1.2
+
+     #+DOWNLOADED: screenshot @ 2025-03-02 12:18:02
+     [[file:.figs/AGENDA_(reverse_chronological)/2025-03-02_12-18-02_screenshot.png]]
+
+** [2025-02-09 Sun]
+   - Barney: D&P's c^* vs Needham's \bf{v} wrt intrinsic derivative and geodesic
+     equation.
+
+
+   - PHM: Several sessions ago, Gary brought up the question of whether or not
+     a geodesic requires a constant-speed curve.  Collectively, we decided that
+     it does.  Needham, on pg 286 (Sec 29.5) mentions that if the speed of the
+     geodesic curve were allowed to vary, then the geodesic equation take on a
+     different form, namely that the intrinsic derivative is proportional to v
+     instea of zero.  Essentially that the acceleration and velocity vectors of
+     a particle on the curve are colinear.
+** [2025-01-12 Sun]
+** [2024-10-27 Sun]
+** [2024-10-06 Sun]
+   Gary, Barney, Craid, Anand, Randy, Peter
+
+   - Craig requests a primer on Lie theory
+   - Gary recommends Wu Ki Tung, Robert Gilmore
+   - YT resources:
+   - Question: are null curves/paths geodesics? no see D&P pg 268. (but some
+     are, eg photons)
+     How can you have "unit speed" on a null curve?
+   - Terminology (from Tu, Diff Geo, pg 9), but what are D&P's equivalent terms?
+     =parameterized curve=: map or function
+     =geometric curve=: image of the PC (a set of points)
+
+** [2024-09-08 Sun]
+   Larry S
+   Eric P
+   Gary L
+   Barney T
+   Randy P
+   Craig S
+   Peter M
+   Anand G
+** [2024-05-05 Sun]
+   - Ex IX.4.6 (p273)
+** [2024-04-07 Sun]
+   - Horizontal and vertical (p250 fig 2.1)
+     T_{p}M is a vector space with origin at p (1d)
+     TM manifold consisting of T_{x}M, x \in M.
+   - Horizontal and vertical
+     (AG) H is movement along the manifold
+     (AG) V is the change in the tangent vector magnitude
+     (GL) M: position space
+     TM : velocity space
+     TTM: acceleration space
+
+     (AG): vel/accel space doesn't cover all cases, consider velocity
+     vector fields (wind), scalar fields (temp)
+
+     accel not in same vector space as velocity vector, so for orbital motion,
+     what does it mean for accel \perp velocity?
+   -
+** [2024-03-10 Sun]
+   -
+** [2024-02-17 Sat]
+   -
+** [2024-01-28 Sun]
+   - [PM] complete the "horizonatal" paper.
+   - [PM] make the "derivatives" rosetta.
+** [2024-01-12 Fri] Peter catching up
+   :PROPERTIES:
+   :VISIBILITY: children
+   :END:
+   - get Eric's sage stuff into Dropbox
+   - january :: AG discussion on poincare half-plane (Ex IX.2.3)
+   - IX.2.04 -- lie algebra:lie group :: tangent space:manifold
+   - exponential map, normal coordinates (see Carrol, Lee, Frenkel)
+
+** [2023-10-15 Sun]
+   :PROPERTIES:
+   :VISIBILITY: children
+   :END:
+   *******- for sphere, ds^2 = d\theta^2 + sin^{2}\theta d\phi^2 + Qd\theta{}d\phi
+     g_{\theta\theta} = 1
+     g_{\phi\phi} = sin^{2}\theta
+     g_{\theta\phi} = Q/2 ?
+     g_{\phi\theta} = Q/2 ?
+
+   - Ex VIII.6.5
+     ds^2 =
+
+     constraint x^2 + y^2 + z^2 = 1
+
+     ds^2 = dx^2 + dy^2 + dz^2
+
+     z^2 = 1 - x^2 - y^2
+     -zdz  = xdx + ydy
+     dz^2 = (1/z^2) [x^2 dx^2 + y^2 dy^2 + 2xy dxdy]
+
+     ds^2 = dx^2 + dy^2 + (1/z^2) [x^2 dx^2 + y^2 dy^2 + 2xy dxdy]
+         = (z^2 + x^2)/z^2 dx^2  + (z^2 + y^2)/z^2 dy^2 + 2xy/z^2 dxdy
+         = (1-y^2)/z^2 dx^2  + (1-x^2)/z^2 dy^2 + 2xy/z^2 dxdy
+         = g_xx dx^2 + g_yy dy^2 + g_xy dxdy + g_yx dydx
+
+     so...
+     g_xx = (1-y^2)/z^2
+     g_yy = (1-x^2)/z^2
+     g_xy = g_yx = xy/z^2
+
+                | (1-y^2)    xy    |
+     G = (1/z^2) |                 |
+                |   xy    (1-x^2 ) |
+
+     to calculate \Gamma's, we also need G^{-1}.
+
+   - Spherical coords in n dimensions.
+     https://en.wikipedia.org/wiki/N-sphere#Spherical_coordinates
+     https://math.stackexchange.com/questions/56582/what-is-the-analogue-of-spherical-coordinates-in-n-dimensions
+
 ** [2023-09-17 Sun]
    :PROPERTIES:
-   :VISIBILITY:
+   :VISIBILITY: children
    :END:
 
    - Randy :: Metric connections: Prop 5.5, pg 118 of Lee’s Riemannian Manifolds
@@ -99,6 +281,12 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
      due to curvature for points along the manifold, as reflected in the
      Christoffel symbols, I’m not sure what ∇g = 0 means.
 
+        Answer: Asserting that ∇g = 0 for a Riemannian connection (part (b) of Prop. 5.5) really refers to applying the metric g to two PARALLEL vectors at points along a curve and getting a constant result, which is stated in part (e), i.e., using g(V,W) = <V,W>
+
+        ∇(g(V,W)) = (d/dt)<V,W> = 0
+
+since D_t(V) and D_t(W) = 0 because they are parallel. All this flows from the condition that the covariant derivative of the metric g obeys the product rule, eq. (5.1) pg. 118. This clarification however doesn't really illumunate the issue of g_ij changing along the curve. The hand wavy explanation is that the operator ∇ compensates for curvature (tangent acceleration) through the Christoffel symbols; see LeeRM, pg.103, eq.(4.16).
+
    - Randy :: The Riemannian connection (aka Levi-Civita) is defined, in part,
      as having its Christoffel symbols as being symmetric; (Γ^k)_ij =
      (Γ^k)_ji. D&P show on pg. 230 that the commutivity of the partial
@@ -107,11 +295,15 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
      (Γ^k)_ij = (∇_∂i)∂j = (∇_∂j)∂i = (Γ^k)_ji
 
      so the (Γ^k)_ij are symmetric by definition. Why does this condition have to be imposed?
+        Answer: The problem was in thinking the the quantity (∇_∂i)∂j - (∇_∂j)∂i = 0 because of the commutativity of the basis functions ∂i and ∂j, but this only holds for the Lie bracket for which [∂i,∂j] = ∂i(∂j) - ∂j(∂i) = 0 always due to the commutativity of the partial derivatives. The symmetry condition obtains only when the torsion is equal to 0, namely (using the definition of the Christoffel symbols)
 
+                T = (∇_∂i)∂j - (∇_∂j)∂i - [∂i,∂j] = (Γ_ij)^k - (Γ_ji)^k = 0
+
+since [∂i,∂j] = 0.
 
 ** [2023-08-20 Sun]
    :PROPERTIES:
-   :VISIBILITY:
+   :VISIBILITY: folded
    :END:
    - Discussion of derivatives rosetta stone
    - GL: flesh out Frenkel ch 9 on exterior derivatives
@@ -120,7 +312,7 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
    - PM: write up questions [torsion WTF]
 ** [2023-07-23 Sun]
    :PROPERTIES:
-   :VISIBILITY:
+   :VISIBILITY: folded
    :END:
    - [[id:0f6f023f-b2b4-4769-922a-ef75170af998][connections]] "This suggests...", pg 216.
      Where is (Xf)Y first mentioned in each of the texts?
@@ -152,7 +344,7 @@ Eigenchris: Lie Bracket, Flow, Torsion Tensor - Tensor Calculus #21 Youtube)
         - Lie Derivative, L."
 ** [2023-06-03 Sat]
    :PROPERTIES:
-   :VISIBILITY: children
+   :VISIBILITY: folded
    :END:
 *** index D&P with references to Tu (DG), Needham, and whatever else we come across.
 *** for Craig -- see

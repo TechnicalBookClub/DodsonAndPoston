@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{palatino}
+%\usepackage{rotate}
+%\usepackage{lscape} %\begin{landscape} \end{landscape}
+\usepackage[top=1.5in, bottom=1.5in, left=1in, right=1in]{geometry}
+
+
+\begin{document}
+\title{Derivatives in differential geometry}
+\author{Peter H. Mao}
+\date{\today}
+\maketitle
+\begin{abstract}
+  This is my attempt to bridge the nomenclature and notations of Dodson and
+  Poston, Tu (\emph{Introduction to Manifolds}), Lee (\emph{Introduction to
+    Riemannian Manifolds}), Needham and O'neill.
+
+\end{abstract}
+
+\section{Introduction}
+
+\section{Derivative or differential of a map}
+
+Dodson \& Poston introduce the \emph{derivative} in VII.1.01 (pg 151) with the
+notation $D_x f$ as the derivative of map $f$ at the point $x$ in the domain of
+$f$.  In VII.1.03 (pg 154), they introduce partial derivatives and note that the
+Jacobian matrix, consisting of partial derivatives at $x$, is a representation
+of $D_x f$.  D\&P distinguish the derivative from the \emph{differential of a
+  map} (VII.3.01, pg 171 and VII.3.02, pg 174), denoted
+$Df\colon TM \rightarrow TN$ (where $f\colon M \rightarrow N$).  Whereas the
+derivative is a map between vector spaces, the differential is a map between the
+collections of tangent spaces of domain and range manifolds (which are
+themselves also manifolds!).  The derivative is then the (domain) restriction of
+the differential to the tangent space of a particular point. (``We are just
+taking all the derivatives at once to make one big map.'')  In the special case
+where $f$ is a real-valued function, D\&P use the notation $df$ in place of $Df$
+for the differential, which they claim \emph{is} standard usage (pg 174).
+
+Tu introduces the \emph{differential of a map} in Section 8.2 (pg 87), with $F$
+as the map between manifolds and $p$ denoting a point in the domain manifold,
+with the notation $F_*(p)$ or $F_{*,p}$.  The Jacobian matrix is mentioned in
+the same section on pg 88, as the local-coordinate representation of the
+differential.  Tangent bundles are covered in Section 12 (pg 129), but unlike
+D\&P, Tu makes no use of differentiation in this section.
+
+Lee skips over this topic and goes straight into the Koszul connection (pg 85).
+
+Needham first introduces derivatives on pg 42 with no formal definition.  He
+indicates the derivative of a map $f$ with $f'$.
+
+\section{Partial derivative}
+
+Dodson \& Poston introduce the \emph{partial derivative} in VII.1.03 (p 153) as
+the components of the derivative once we have chosen charts.\footnote{The term
+  ``partial derivative'' is first used on p 150.}  The notation used in D\&P is
+the uncontroversial $\partial/\partial x^i$  or $\partial_i$.  (Note to self:
+sort out the whole vector/covector business in this notation.) Tu introduces
+this topic in section 6.6 (p 67) using the same notation.  Lee also appears to
+use the same notation, but does not specifically define the partial derivative.
+
+The Jacobian matrix is composed of partial derivatives of components of the
+function for which we are taking the derivative (D\&P p 154).
+
+Needham only mentions the Jacobian (p 375) in the context of using the area
+2-form instead of the Jacobian.
+
+\section{Exterior derivative}
+
+The exterior derivative is not covered by Dodson \& Poston because they don't do
+forms.  (not true:  Gary has something from Ch V, Barney claims that VII.1.03
+introduces the d)
+
+Needham: (p 355) $\bf{d}$, where $\bf{d}f(\bf{v}) = \bf{\nabla_v}f$.
+(p 394) $\bf{d}$ raises the degree of a form by 1, e.g. it takes 1 forms into 2
+forms, etc.
+(p 406) [37.2] exterior derivative of a form is a integeral ?!?
+(p 439) Cartan's first structural equation
+(p 457) generalized exterior derivative
+
+Tu:
+
+
+O'neill:
+
+
+Lee: Covered in Appendex B (p 401).
+
+
+Bamberg \& Sternberg: Chapters 7,8.
+
+
+
+\section{Lie, covariant, or intrinsic derivative}
+
+Identificationos based on geodesic equation
+D\&P p 246
+Needham p 244, p 284 ($D_v$ (intrinsic) vs $\nabla_v$ (directional)), p 286
+(intrinsic derivative, bold nabla).  Note that $D_v$ and $\bf{\nabla}_v$ are the
+same object, defined by equations 23.2 and 29.2 respectively.
+
+(Look up definition of unbolded $\nabla$)
+
+\section{Directional derivative}
+
+Same as exterior derivative? [RP]
+
+[JV] Only in the special case of the exterior derivative of a scalar field.
+
+[GL] df(\partial_x) = \frac{\partial f}{\partial x}, hence Needham 32.10.
+
+
+\section{velocity along curve}
+
+\end{document}

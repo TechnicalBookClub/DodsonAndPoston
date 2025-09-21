@@ -7,7 +7,7 @@ https://github.com/TechnicalBookClub/DodsonAndPoston
   :PROPERTIES:
   :NOTER_DOCUMENT: DodsonCTJ+PostonT_TensorGeometry.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 250
+  :NOTER_PAGE: 237
   :END:
 ** Contents
    :PROPERTIES:
@@ -40,6 +40,21 @@ https://github.com/TechnicalBookClub/DodsonAndPoston
     $d_x \colon {x} \times X \rightarrow T$ which is called a /freeing map/.
 
     Its inverse, $d^\leftarrow$ is called a /binding map/.
+** IV. Metric Vector Spaces
+   :PROPERTIES:
+   :NOTER_PAGE: (80 0.12318840579710146 . 0.12197802197802197)
+   :END:
+
+*** 1.01. Definition. A bilinear form
+    :PROPERTIES:
+    :NOTER_PAGE: (82 0.32753623188405795 . 0.12197802197802197)
+    :END:
+    - metric tensor :: symmetric, non-degenerate bilinear form
+      aka "metric"
+    - Riemannian metric :: (not defined in D&P)
+      positive definite metric tensor
+      smoothly variying (C^\infty?).  See LeeRM.
+
 ** V.1.10. Notation.
    :PROPERTIES:
    :NOTER_PAGE: (121 0.33768115942028987 . 0.12307692307692308)
@@ -63,6 +78,11 @@ By convention $X^0_0 = \mathbb{R}$.
      :NOTER_PAGE: (131 . 0.2753623188405797)
      :END:
      $\epsilon - \delta$ continuity
+**** 1.02. Definition. A metric (or distance function)
+     :PROPERTIES:
+     :NOTER_PAGE: (132 0.26594202898550723 . 0.12637362637362637)
+     :END:
+
 **** 1.06 continuity
      :PROPERTIES:
      :NOTER_PAGE: (136 . 0.641)
@@ -153,9 +173,16 @@ between the tangent spaces of the affine spaces.
     if $f$ is a real-valued function, then
     $df \colon TM \rightarrow \mathbb{R}$ is the "collection" of all $d_{f(q)} \circ D_qf$ where
     $D_qf \colon T_qM \rightarrow T_{f(q)}\mathbb{R}$ and
-    $d_{f(q)} \colon T_{f(q)} \rightarrow \mathbb{R}$
+    $d_{f(q)} \colon T_{f(q)} \rightarrow \mathbb{R}$ (this is the usual difference function of
+    affine spaces from II.1)
 
     this is NOT the same as $Df\colon TM \rightarrow T\mathbb{R}$.
+*** VII.3.03. Definition. The tangent bundle
+    :PROPERTIES:
+    :NOTER_PAGE: (190 0.8746376811594203 . 0.12307692307692308)
+    :ID:       20241227T105650.448268
+    :END:
+
 *** VII.3.03 Tangent bundle on a manifold, abbreviations
     :PROPERTIES:
     :NOTER_PAGE: (191 0.7760869565217392 . 0.11758241758241758)
@@ -172,6 +199,20 @@ between the tangent spaces of the affine spaces.
     :END:
     See Lee Prop 11.18
     or Needham Act V.  These are 1-forms.
+
+
+#+DOWNLOADED: screenshot @ 2025-02-09 10:25:55
+[[file:.figs/Dodson&Poston/2025-02-09_10-25-55_screenshot.png]]
+
+
+#+DOWNLOADED: screenshot @ 2025-02-09 10:26:40
+[[file:.figs/Dodson&Poston/2025-02-09_10-26-40_screenshot.png]]
+
+
+
+#+DOWNLOADED: screenshot @ 2025-02-09 10:33:35
+[[file:.figs/Dodson&Poston/2025-02-09_10-33-35_screenshot.png]]
+
 *** VII.4.02. Contravariant Vectors
     :PROPERTIES:
     :NOTER_PAGE: (201 0.11594202898550725 . 0.10197802197802197)
@@ -182,6 +223,28 @@ between the tangent spaces of the affine spaces.
 
     so for any vector field $\vec{v}$ and function $f$, we have
     $(\vec{v}f)(x) = df(\vec{v_x})$
+
+    see also [[id:20241215T104132.065281][Tu, Intro to Manifolds, section 2.1 Directional derivative]]
+*** df(b i )
+    :PROPERTIES:
+    :NOTER_PAGE: (201 0.17819460726846426 . 0.7470379146919431)
+    :END:
+    ...is a covector
+*** VII.5.01. Definition: Curve
+    :PROPERTIES:
+    :NOTER_PAGE: (205 0.5478260869565218 . 0.12417582417582418)
+    :END:
+    a curve or path is a map from an interval on the real line to a manifold or
+    affine space
+
+    c \colon J \rightarrow M
+
+    the image of the curve is a set in M.
+*** VII.5.02. Definition: Reparameterization
+    :PROPERTIES:
+    :NOTER_PAGE: (206 0.3536231884057971 . 0.12637362637362637)
+    :END:
+
 *** VII.6 Vector fields and flows
     :PROPERTIES:
     :NOTER_PAGE: (211 0.8456521739130435 . 0.10087912087912088)
@@ -382,6 +445,21 @@ between the tangent spaces of the affine spaces.
    :PROPERTIES:
    :NOTER_PAGE: 221
    :END:
+
+*** Exercises VIII.1
+    :PROPERTIES:
+    :NOTER_PAGE: (221 0.5492753623188406 . 0.12857142857142856)
+    :END:
+D_t(\phi \circ f) = D_t(\phi \circ g)
+
+D_t(\psi \circ \phi^-1 \circ \phi \circ f) = D_t(\psi \circ g)
+
+[AG] Equivalence classes of tangent curves are introduced so that they can be
+defined indepent of any underlying chart or affine space, ie, a coordinate-free
+description of the tangent curves.
+
+Part (d) refers to this section: [[id:20241227T105650.448268][VII.3.03. Definition. The tangent bundle]]
+
 *** VIII.2. Rolling Without Turning
     :PROPERTIES:
     :NOTER_PAGE: (223 0.47898550724637684 . 0.12637362637362637)
@@ -418,8 +496,8 @@ between the tangent spaces of the affine spaces.
 
      Here, we are in 1D, so the curve has no wiggle room in the manifold.
  #+BEGIN_QUOTE
- the embedded picture to represent the tangent spaces at p and 1O(p) to M
- and TM. For a vector t tangent to Mat
+ the embedded picture to represent the tangent spaces at p and w(p) to M
+ and TM. For a vector t tangent to M at p...
  #+END_QUOTE
 
 **** \Pi, the projection map and following equation
@@ -507,6 +585,7 @@ between the tangent spaces of the affine spaces.
 **** 3.02. Coordinates -- Christoffel symbols
      :PROPERTIES:
      :NOTER_PAGE: (233 0.44130434782608696 . 0.12197802197802197)
+     :ID:       20230820T180556.443772
      :END:
      Tu treats this topic in [[id:29c2f283-9cbc-4a43-be30-f925876d3c53][Section 13.3 of DG]].
  #+BEGIN_QUOTE
@@ -715,6 +794,34 @@ otherwise.''
     :NOTER_PAGE: (256 0.11159420289855072 . 0.11978021978021978)
     :END:
     Derivatives ($\nabla_{\bf{v}}$) and differentials ($\nabla$)of tensors.
+
+** IX.5. Geodesics in Embedded Manifolds
+   :PROPERTIES:
+   :NOTER_PAGE: (291 0.41449275362318844 . 0.12527472527472527)
+   :END:
+   "rolling without slipping or turning"
+
+** IX.6 metric tensor
+   :PROPERTIES:
+   :NOTER_PAGE: (298 0.34947538337368844 . 0.19951040391676864)
+   :END:
+   this one:
+   |   |  p |   q |   r |  s |
+   |---+----+-----+-----+----|
+   | a |    |     |     | .5 |
+   | b |    |     | -.5 |    |
+   | c |    | -.5 |     |    |
+   | d | .5 |     |     |    |
+
+   matrix mult:
+   |   |  p | q |  r | s |
+   |---+----+---+----+---|
+   | a | 1+ |   |    |   |
+   | b |    |   | 1+ |   |
+   | c |    |   |    |   |
+   | d |    |   |    |   |
+
+
 ** Bibliography
    :PROPERTIES:
    :NOTER_PAGE: (434 . 0.000213)
@@ -723,11 +830,23 @@ otherwise.''
    :PROPERTIES:
    :NOTER_PAGE: 437
    :END:
+   - VII.6 p196 :: c^*(t) tangent vector to curve c at point c(t).  Also interpretable
+     as the velocity of the curve at time t, v(c(t)).
+* /LeeJM_Introduction to Riemannian Manifolds 2nd ed_2018/
+  :PROPERTIES:
+  :NOTER_DOCUMENT: LeeJM_Introduction to Riemannian Manifolds 2nd ed_2018.pdf
+  :NOTER_PAGE: 413
+  :END:
+** Proposition 5.5 (Characterizations of Metric Connections).
+   :PROPERTIES:
+   :NOTER_PAGE: (130 0.6239130434782609 . 0.12967032967032968)
+   :END:
+
 * NeedhamT VDGF
   :PROPERTIES:
   :NOTER_DOCUMENT: NeedhamT_VDGF.pdf
   :NOTER_AUTO_SAVE_LAST_LOCATION: t
-  :NOTER_PAGE: 423
+  :NOTER_PAGE: 270
   :END:
 
 #+DOWNLOADED: screenshot @ 2023-04-22 18:19:35
@@ -1191,6 +1310,12 @@ in R^4, \exists 6 basis 2-forms
     d([\phi_i dx^i] ^ [\Psi_{jk }dx^j ^ dx^k]) =  d(\phi_i \Psi_{jk} ^ dx^i ^ dx^j ^ dx^k)
                                = d\phi_i \Psi_{jk} ^ dx^i ^ dx^j ^ dx^k
 
+*** evaluation of the differential area
+    :PROPERTIES:
+    :NOTER_PAGE: (441 0.455137481910275 . 0.48031496062992124)
+    :END:
+    (x dy) is a 1-form
+    \delta{}r is a vector?
 *** Christoffel symbols
     :PROPERTIES:
     :NOTER_PAGE: (485 0.8321273516642547 . 0.13582677165354332)
@@ -1501,14 +1626,23 @@ to contravariant tensors and tensors of mixed variance.
    :ID:       20230716T130720.845428
    :END:
 
+** Partial Derivatives
+   :PROPERTIES:
+   :NOTER_PAGE: (662 0.3108695652173913 . 0.12967032967032968)
+   :ID:       20230820T195433.562062
+   :END:
+   ``Now we specialize to maps between Euclidean spaces.''
+
+
 * TuLW Introduction to Manifolds
   :PROPERTIES:
   :NOTER_DOCUMENT: TuLW_Introduction_to_Manifolds.pdf
-  :NOTER_PAGE: 57
+  :NOTER_PAGE: 55
   :END:
 ** 2.1 Directional derivative
    :PROPERTIES:
    :NOTER_PAGE: (30 0.410289855072466 . 0.23957636566332)
+   :ID:       20241215T104132.065281
    :END:
    In D&P, this is denoted D_pf(v) for the directional derivative in direction v
    at point p of function f.
@@ -1694,6 +1828,10 @@ to contravariant tensors and tensors of mixed variance.
    :PROPERTIES:
    :NOTER_PAGE: (106 0.6746376811594202 . 0.10590858416945373)
    :ID:       20230820T105104.313779
+   :END:
+** §12 The Tangent Bundle
+   :PROPERTIES:
+   :NOTER_PAGE: 148
    :END:
 
 ** Theorem 20.4.
@@ -2498,9 +2636,9 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
   | exterior derivative    | N/A           | d      | d                       | d       |     |
   | partial derivative     | \partial_j, $\partial/\partial x^j$  |        |                         |         |     |
   | "differential""        | D or d        | -      | -                       | -       | -   |
-  | Lie derivative         |               |        | use intrinsic/covariant |         |     |
-  | directional derivative | \nabla_t            | D_X     | \nabla_v                      | v_p[f]  |     |
-  | covariant/intrinsic    | \nabla             | \nabla      | D_v                      |         |     |
+  | Lie derivative         |               |        | use covariant/intrinsic |         |     |
+  | directional derivative | \nabla_t            | D_X     | \nabla_v                      | v_p[f]   |     |
+  | covariant/intrinsic    | \nabla             | \nabla      | $D_v==\bf{\nabla}_v$      |         |     |
   | velocity along curve   | $\tilde{\nabla}_{c^*}$     | D/dt   | D_v                      |         |     |
 
 
@@ -2611,6 +2749,22 @@ valued function on $T_p \mathbb{R}^n \times T_p \mathbb{R}^n$.
 * Torsion
 https://jollywatt.github.io/simple-torsion-example - example of a connection
 with non-zero torsion.
+
+There is a sign error in \Gamma_x (3rd equation), but it doesn't hurt (or help) the
+exposition.  From the 3rd eqn on, replace k with -k.
+
+The vector field u(x,y) in this example defines a set of geodesics on the plane.
+I believe these are U-shaped curves over the intervals x \in (-\pi/2 + n\pi, pi/2 +
+n\pi) with right-ward flow for even n and left-ward flow for odd n.
+
+From the requirement that \nabla_{\mu}u = 0 (rather than direct calculation), the nonzero
+Chrisoffel symbols are
+\Gamma^x_{x,y} = k
+\Gamma^y_{x,x} = -k
+
+Right now [2023-09-17 Sun 22:12], I don't understand the geometric
+interpretation of these Chrisoffel symbols.
+
 [[https://www.youtube.com/watch?v=j36o4DLLK2k][Schuler lecture 24]]
 ** D&P VIII.6?
    [[id:20230728T180154.910466][5.01: T=0 ==> \nabla is symmetric]] according to Tu, this is an iff situation.
@@ -2658,11 +2812,6 @@ with non-zero torsion.
   :PROPERTIES:
   :NOTER_DOCUMENT: O'Neill - Elementary Differential Geometry.pdf
   :NOTER_PAGE: 33
-  :END:
-* /Covariant derivatives of basis functions_RJP/
-  :PROPERTIES:
-  :NOTER_DOCUMENT: Chapter_08/Covariant derivatives of basis functions_RJP.pdf
-  :NOTER_PAGE: 1
   :END:
 * /Christoffel symbols defined for a sphere/
   :PROPERTIES:
@@ -2735,3 +2884,22 @@ with non-zero torsion.
      near the equator and intoduces the asymmetry about the equator.
 
      Since e_\theta is a unit vector, there is nothing interesing in the denominator.
+
+
+* /Covariant derivatives geodesic and non-geodesic curves on a sphere_RJP/
+  :PROPERTIES:
+  :NOTER_DOCUMENT: Chapter_08/Covariant derivatives geodesic and non-geodesic curves on a sphere_RJP.pdf
+  :NOTER_PAGE: 7
+  :END:
+  *Very* nice writeup, Randy!
+** non geodesic solution
+   :PROPERTIES:
+   :NOTER_PAGE: (7 0.6278059377262853 . 0.09137769447047797)
+   :END:
+   Indeed, this is zero at the equator (\pi/2), but why is the total derivative
+   maximal at \pm\pi/4?  shouldn't it be monotonically increasing in magnitude
+   toward the poles?
+
+   My guess is that this should look more like -cot(2\theta_0) -- asymmetric about the
+   equator, with zero derivative wrt \theta_0, and heading to \pm\infty at the poles.  Did a
+   1/\cos(2\theta_0) get dropped somewhere?
