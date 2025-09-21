@@ -8,6 +8,8 @@ https://github.com/TechnicalBookClub/DodsonAndPoston
   keystroke to fix it.)
   | Name         | is working on                           | Notes |
   |--------------+-----------------------------------------+-------|
+  | Larry        |                                         |       |
+  | Gary         |                                         |       |
   | Peter [PHM]  | read Needham Act V in lieu of VIII      |       |
   | Joe V        | Read thru VI.2, problems thru VI.1.4a.  |       |
   | Randy [RJP]  | Reading Chap IX & others, writing memos |       |
@@ -167,7 +169,8 @@ https://www.seas.upenn.edu/~jean/diffgeom-spr-I.pdf
      different form, namely that the intrinsic derivative is proportional to v
      instea of zero.  Essentially that the acceleration and velocity vectors of
      a particle on the curve are colinear.
-** [2025-01-12 Sun]
+** [2025-01-19 Sun]
+   Discussed problem summaries in chapter VIII.
 ** [2024-10-27 Sun]
 ** [2024-10-06 Sun]
    Gary, Barney, Craid, Anand, Randy, Peter
@@ -191,8 +194,26 @@ https://www.seas.upenn.edu/~jean/diffgeom-spr-I.pdf
    Craig S
    Peter M
    Anand G
+** [2024-07-07 Sun]
+   - Ex. IX.5.3 cylindrical coordinates problem
+** [2024-06-02 Sun]
+   - RP: "constant metric"?
 ** [2024-05-05 Sun]
    - Ex IX.4.6 (p273)
+     presentations by Eric (ipynb) and Anand (pdf)
+
+   - n = c/v :: is v group or phase?
+     [PHM] I argued that it is group velocity, but I was wrong (reference Bekefi
+     & Barrett p 426)
+
+     Phase velocity is v = \omega/k, while group velocity is v_g = d\omega/dk.
+
+     On pg 433, they spell out phase and group velocity in terms of the
+     refactive index:
+
+     \[v = \frac{c}{n(\omega)}\]
+     and
+     \[v_g = \frac{c}{[n(\omega) + \omega(\frac{dn}{d\omega})]}\]
 ** [2024-04-07 Sun]
    - Horizontal and vertical (p250 fig 2.1)
      T_{p}M is a vector space with origin at p (1d)
@@ -230,7 +251,7 @@ https://www.seas.upenn.edu/~jean/diffgeom-spr-I.pdf
    :PROPERTIES:
    :VISIBILITY: children
    :END:
-   *******- for sphere, ds^2 = d\theta^2 + sin^{2}\theta d\phi^2 + Qd\theta{}d\phi
+   - for sphere, ds^2 = d\theta^2 + sin^{2}\theta d\phi^2 + Qd\theta{}d\phi
      g_{\theta\theta} = 1
      g_{\phi\phi} = sin^{2}\theta
      g_{\theta\phi} = Q/2 ?
