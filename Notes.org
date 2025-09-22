@@ -261,7 +261,7 @@ between the tangent spaces of the affine spaces.
      :NOTER_PAGE: (213 0.5051282051282051 . 0.10305699481865285)
      :ID:       20230725T181208.083170
      :END:
-     - $\phi(U,t) \sub M$ where
+     - $\phi(U,t) \subset M$ where
        $U \subset M$, open and $t$ is a parameter in an open interval
      - KEY POINT: by condition (ii), local flows are made up of solution curves.
 **** 6.05. Corollary $\phi_{t+s} = \phi_t \circ \phi_s$
@@ -1040,7 +1040,7 @@ earlier parts of this book by ellipses.
     :PROPERTIES:
     :NOTER_PAGE: (193 0.33212735166425467 . 0.1889763779527559)
     :END:
-    $\mathcal{K}_{ext} = |[S]| = -\tau^2
+    $\mathcal{K}_{ext} = |[S]| = -\tau^2$
 *** 15.9 Classical Terminology and Notation: The Three Fundamental Forms
     :PROPERTIES:
     :NOTER_PAGE: (193 0.48118668596237335 . 0.14271653543307086)
@@ -1656,7 +1656,7 @@ to contravariant tensors and tensors of mixed variance.
     :PROPERTIES:
     :NOTER_PAGE: (32 0.25869565217391305 . 0.06729096989966554)
     :END:
-    Linear map C^{\inf}_p \rightarrow \mathbb{R} satisfying the Leibniz rule is a
+    Linear map $C^{\inf}_p \rightarrow \mathbb{R}$ satisfying the Leibniz rule is a
     derivation
 *** 2.4 Vector fields
     :PROPERTIES:
@@ -1709,8 +1709,8 @@ to contravariant tensors and tensors of mixed variance.
     :PROPERTIES:
     :NOTER_PAGE: (49 0.44347826086956527 . 0.08312151616499443)
     :END:
-    The algebra "can be written as a direct sum  of vector spaces over K such
-    that A^k \times A^l \mapsto A^{k+l}.
+    The algebra "can be written as a direct sum of vector spaces over K such
+    that $A^k \times A^l \mapsto A^{k+l}$.
 
 ** §4 Differential forms on R^n
    :PROPERTIES:
@@ -1846,11 +1846,11 @@ tive LX Y coincides with the Lie bracket [X ,Y ].
    :PROPERTIES:
    :NOTER_PAGE: 342
    :END:
-*** Lemma A.10. Every open set in \mathbb{R}^n contains a rational point.
+*** Lemma A.10. Every open set in $\mathbb{R}^n$ contains a rational point.
     :PROPERTIES:
     :NOTER_PAGE: (342 0.23405797101449277 . 0.06703296703296702)
     :END:
-*** Prop A.11 collection of open balls w/ rational centers/radii is a basis for R^n
+*** Prop A.11 collection of open balls w/ rational centers/radii is a basis for $R^n$
     :PROPERTIES:
     :NOTER_PAGE: (342 0.3572463768115942 . 0.0649450549450549)
     :END:
