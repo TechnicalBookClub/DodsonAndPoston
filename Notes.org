@@ -1,6 +1,7 @@
 #+STARTUP: overview entitiespretty latexpreview
 #+OPTIONS: broken-links:mark
 #+COLUMNS: %25ITEM %NOTER_DOCUMENT %NUM_COLUMNS
+#+LATEX_HEADER: \usepackage{commonunicode}
 #+TITLE: Notes from D&P and related books
 https://github.com/TechnicalBookClub/DodsonAndPoston
 * Dodson&Poston
@@ -722,11 +723,11 @@ Part (d) refers to this section: [[id:20241227T105650.448268][VII.3.03. Definiti
      :PROPERTIES:
      :NOTER_PAGE: (242 0.16086956521739132 . 0.12307692307692308)
      :END:
-***** typo: should be \~c
+***** typo: should be $\tilde{c}$
       :PROPERTIES:
       :NOTER_PAGE: (242 0.22681159420289856 . 0.42637362637362636)
       :END:
-      $\Pi \circ \~c$
+      $\Pi \circ \tilde{c}$
 **** 4.06. Corollary. (connection)
      :PROPERTIES:
      :NOTER_PAGE: (242 0.7521739130434782 . 0.12197802197802197)
@@ -1203,7 +1204,7 @@ intrinsic derivative,
     :PROPERTIES:
     :NOTER_PAGE: (382 0.2460202604920405 . 0.5196850393700787)
     :END:
-    basis vectors in [b] should be $\~{e}_1, \~{e}_2$.  The poins is that when e_2
+    basis vectors in [b] should be $\tilde{e}_1, \tilde{e}_2$.  The poins is that when e_2
     changes, \omega^1 is also affected.
 *** duality of sets, not elements -- important!
     :PROPERTIES:
@@ -1277,7 +1278,7 @@ in R^4, \exists 6 basis 2-forms
     :PROPERTIES:
     :NOTER_PAGE: (414 0.12301013024602026 . 0.14173228346456693)
     :END:
-*** 35.7 Is Ψ ∧ Ψ ̸= 0 Possible?
+*** 35.7 Is Ψ ∧ Ψ ≠ 0 Possible?
     :PROPERTIES:
     :NOTER_PAGE: (420 0.40448625180897246 . 0.1437007874015748)
     :END:
